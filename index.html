@@ -90,6 +90,102 @@ box-shadow:0 15px 40px rgba(0,0,0,0.15);
 .logo img{
 height:80px;
 }
+.pricing-section{
+text-align:center;
+margin-top:80px;
+}
+
+.pricing-sub{
+color:#666;
+max-width:700px;
+margin:auto;
+margin-bottom:50px;
+}
+
+.pricing-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.pricing-card{
+background:white;
+padding:40px;
+border-radius:16px;
+width:300px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+position:relative;
+}
+
+.pricing-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+.pricing-card h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:36px;
+font-weight:bold;
+margin:10px 0;
+}
+
+.billing{
+color:#777;
+margin-bottom:20px;
+}
+
+.pricing-card ul{
+list-style:none;
+padding:0;
+margin-bottom:25px;
+}
+
+.pricing-card li{
+margin:10px 0;
+}
+
+.pricing-btn{
+display:inline-block;
+padding:12px 25px;
+background:#4f7cff;
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+}
+
+.pricing-btn:hover{
+background:#355df5;
+}
+
+.featured{
+border:2px solid #4f7cff;
+transform:scale(1.05);
+}
+
+.badge{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#4f7cff;
+color:white;
+padding:5px 14px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+}
+
+.pricing-note{
+margin-top:30px;
+color:#666;
+font-size:14px;
+}
 </style>
 </head>
 <body>
@@ -202,7 +298,82 @@ Protection continue de vos contenus et suppression rapide des leaks sur Internet
 </p>
 
 <div style="display:flex;justify-content:center">
-<img src="tarifs.png" alt="Tarifs Shield Digital" style="max-width:900px;width:100%;border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.15)">
+<div class="pricing-section">
+
+<h2>Choisissez votre niveau de protection</h2>
+
+<p class="pricing-sub">
+Protection continue de vos contenus et suppression rapide des leaks sur Internet.
+</p>
+
+<div class="pricing-container">
+
+<div class="pricing-card">
+
+<h3>Shield Flash</h3>
+
+<div class="price">99€</div>
+<div class="billing">Paiement unique</div>
+
+<ul>
+<li>Retrait de 1 à 3 liens</li>
+<li>Action sous 24h</li>
+<li>Google & moteurs inclus</li>
+<li>Rapport de clôture</li>
+</ul>
+
+<a class="pricing-btn" href="#contact">Demander une intervention</a>
+
+</div>
+
+
+<div class="pricing-card featured">
+
+<div class="badge">Le plus choisi</div>
+
+<h3>Shield Premium</h3>
+
+<div class="price">299€</div>
+<div class="billing">/ mois</div>
+
+<ul>
+<li>Veille active 24h/24</li>
+<li>Retrait illimité</li>
+<li>Déréférencement complet</li>
+<li>Rapport mensuel détaillé</li>
+<li>Support prioritaire</li>
+</ul>
+
+<a class="pricing-btn" href="#contact">Demander un scan</a>
+
+</div>
+
+
+<div class="pricing-card">
+
+<h3>Shield Ultimate</h3>
+
+<div class="price">499€</div>
+<div class="billing">Intervention complète</div>
+
+<ul>
+<li>Nettoyage massif (+50 liens)</li>
+<li>Audit forums & Telegram</li>
+<li>Analyse sécurité comptes</li>
+<li>Expertise personnalisée</li>
+</ul>
+
+<a class="pricing-btn" href="#contact">Demander un audit</a>
+
+</div>
+
+</div>
+
+<p class="pricing-note">
+Paiement sécurisé. Aucun accès à vos comptes n'est requis.
+</p>
+
+</div>
 </div>
 
 </section>
