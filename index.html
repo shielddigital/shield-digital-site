@@ -271,31 +271,33 @@ display: flex;
 }
 
 }
-.menu-toggle{
-display:none;
-font-size:40px;
-cursor:pointer;
-color:white;
+/* Cache le menu hamburger sur PC (par défaut) */
+.menu-toggle {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
 }
 
-@media (max-width:768px){
+/* Pour les écrans plus petits (moins de 768px), afficher le menu hamburger */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block !important;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
 
-.menu-toggle{
-display:block;
-position:absolute;
-right:20px;
-top:25px;
-}
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
 
-.nav-menu{
-display:none;
-flex-direction:column;
-text-align:center;
-margin-top:20px;
-}
-
-.nav-menu.active{
-display:flex;
+    .nav-menu.active {
+        display: flex;
+    }
 }
 
 }
