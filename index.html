@@ -271,6 +271,34 @@ display: flex;
 }
 
 }
+.menu-toggle{
+display:none;
+font-size:40px;
+cursor:pointer;
+color:white;
+}
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+position:absolute;
+right:20px;
+top:25px;
+}
+
+.nav-menu{
+display:none;
+flex-direction:column;
+text-align:center;
+margin-top:20px;
+}
+
+.nav-menu.active{
+display:flex;
+}
+
+}
 </style>
 </head>
 <body>
