@@ -498,14 +498,14 @@ Nos outils permettent d’identifier rapidement les contenus diffusés illégale
 <h2>Contact</h2>
 
 <div class="contact-box">
-<form>
-<input type="text" placeholder="Nom" />
-<input type="email" placeholder="Email" />
-<textarea rows="4" placeholder="Votre message"></textarea>
-<button type="submit">Envoyer la demande</button>
-<p class="contact-note">
-🔒 Réponse sous 24h • Demande confidentielle
-</p>
+<form action="https://formspree.io/f/contact@shield-digital.fr" method="POST">
+    <input type="text" name="name" placeholder="Nom" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer la demande</button>
+    <p class="contact-note">
+        🔒 Réponse sous 24h • Demande confidentielle
+    </p>
 </form>
 
 <p style="text-align:center;margin-top:20px">Ou contactez-nous directement :</p>
