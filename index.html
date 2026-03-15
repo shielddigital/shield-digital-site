@@ -284,14 +284,6 @@ display:flex;
 }
 </style>
 </head>
-<script>
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.nav-menu');
-
-toggle.addEventListener('click', () => {
-menu.classList.toggle('active');
-});
-</script>
 <body>
 
 <header>
@@ -568,6 +560,13 @@ padding:14px 18px;border-radius:50px;font-weight:bold;
 text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:999;">
 📩 Instagram
 </a>
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.nav-menu');
 
+toggle.addEventListener('click', () => {
+menu.classList.toggle('active');
+});
+</script>
 </body>
 </html>
