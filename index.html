@@ -260,24 +260,29 @@ display:none;
   color: white;
 }
 
+.nav-menu {
+display: flex;
+gap: 30px;
+}
+
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block !important;
-    position: absolute;
-    right: 20px;
-    top: 25px;
-  }
 
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 20px;
-  }
+.menu-toggle {
+display: block !important;
+position: absolute;
+right: 20px;
+top: 25px;
+}
 
-  .nav-menu.active {
-    display: flex;
-  }
+.nav-menu {
+display: none;
+flex-direction: column;
+text-align: center;
+margin-top: 20px;
+}
+
+.nav-menu.active {
+display: flex;
 }
 
 }
