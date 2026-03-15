@@ -253,19 +253,61 @@ font-weight:600;
 text-decoration:underline;
 }
 }
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+.nav-menu{
+display:flex;
+gap:30px;
+}
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-menu{
+display:none;
+flex-direction:column;
+text-align:center;
+margin-top:20px;
+}
+
+.nav-menu.active{
+display:flex;
+}
+
+}
 </style>
 </head>
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.nav-menu');
+
+toggle.addEventListener('click', () => {
+menu.classList.toggle('active');
+});
+</script>
 <body>
 
 <header>
+
 <div class="logo">
-<img src="logo.png" alt="Shield Digital Logo" />
+<img src="logo.png">
 </div>
-<nav>
+
+<div class="menu-toggle">☰</div>
+
+<nav class="nav-menu">
 <a href="#services">Services</a>
 <a href="#pricing">Tarifs</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 <section class="hero">
