@@ -35,35 +35,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Poppins,Arial;
-  background:url("bg.png") center center / cover no-repeat fixed;
-  color:#0f172a;
-}
+body{margin:0;font-family:Poppins,Arial;background:#f6f9ff;color:#0f172a}
 
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 60px;
-  background:transparent;
-  box-shadow:none;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 60px;background:white;box-shadow:0 4px 14px rgba(0,0,0,.06);position:sticky;top:0;z-index:10}
 
 .logo img{height:55px}
 
 nav a{margin-left:28px;text-decoration:none;color:#0f172a;font-weight:500}
 
-.hero{
-  padding:140px 20px;
-  text-align:center;
-  background:transparent;
-  color:white;
-}
+.hero{padding:140px 20px;text-align:center;background:linear-gradient(135deg,#2563eb,#38bdf8);color:white}
+
 .hero h1{font-size:54px;margin-bottom:20px}
 .hero p{font-size:20px;max-width:750px;margin:auto}
 
@@ -328,33 +309,7 @@ margin-top:25px;
 .btn-bottom:hover {
   background: #1e4ed8;
 }
-#maintenance{
-  position:fixed;
-  inset:0;
-  background:url("bg.png") center center / cover no-repeat fixed;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:99999;
-}
-
-#maintenance::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-}
-
-#maintenance .box{
-  position:relative;
-  z-index:2;
-  background:rgba(255,255,255,0.08);
-  padding:50px;
-  border-radius:20px;
-  backdrop-filter:blur(10px);
-  color:white;
-  text-align:center;
-} 
+ 
 </style>
 </head>
 <body>
@@ -400,15 +355,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 </section>
-<section style="margin-top:60px; text-align:center; background:transparent; color:white;">
+<section style="margin-top:60px; text-align:center;">
   <h2>Suppression de contenu piraté et protection DMCA</h2>
-<p style="max-width:700px; margin:auto; color:rgba(255,255,255,0.88);">
+  <p style="max-width:700px; margin:auto;">
   Shield Digital aide les créateurs, influenceurs et professionnels à détecter et supprimer les contenus piratés sur Internet.
   Grâce à des procédures DMCA rapides, nous protégeons votre image, vos revenus et votre réputation en ligne.
   </p>
 </section>
 
-<section id="process" style="padding:80px 20px; background:transparent; text-align:center; color:white;">
+<section id="process" style="padding:80px 20px; background:#f8fafc; text-align:center;">
 <h2 style="font-size:36px; margin-bottom:40px;">Comment fonctionne Shield Digital</h2>
 
 <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;max-width:1000px;margin:auto;">
@@ -663,19 +618,5 @@ e.preventDefault();
 }
 });
 </script>
-  <div id="maintenance">
-  <div class="box">
-    <h1>🔧 Site en maintenance</h1>
-    <p>Nous améliorons actuellement l’expérience.</p>
-    <p>Retour dans quelques heures.</p>
-  </div>
-</div>
-
-<script>
-  const access = prompt("Accès privé :");
-
-  if(access === "shield123"){
-    document.getElementById("maintenance").style.display = "none";
-  }
-</script>
 </body>
+
