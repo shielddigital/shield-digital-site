@@ -297,38 +297,162 @@ border:1px solid rgba(255,255,255,0.15);
 .hero p{
 margin-top:25px;
 }
-.btn.primary {
 .btn-bottom {
   background: #2563eb;
   color: white;
-  padding: 14px 28px;
   border-radius: 10px;
-  text-decoration: none;
   padding: 14px 28px;
   font-weight: 600;
   display: inline-block;
-  transition: 0.2s;
 }
 
-.btn.primary:hover {
 .btn-bottom:hover {
   background: #1e4ed8;
 }
+  body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url("background.jpg") center/cover no-repeat;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85));
+  z-index: -1;
+}
 </style>
-@@ -384,7 +382,7 @@
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQVK5V7W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+<div class="logo">
+<img src="logo.png" alt="Shield Digital Logo" />
+</div>
+<nav>
+<a href="#services">Services</a>
+<a href="#pricing">Tarifs</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Supprimez vos contenus piratés</h1>
+
+<div class="protection-badge">
+
+<p>Reprenez le contrôle de votre image et de vos revenus</p>
+
+<a class="btn primary" href="#contact">Obtenir mon scan gratuit</a>
+<a class="btn secondary" href="#pricing">Voir les tarifs</a>
+<p style="margin-top: 20px; font-size: 14px; opacity: 0.7;">
+
+<div class="stats">
+<div class="stat">
+<h3>1000+</h3>
+<p>Liens détectés</p>
+</div>
+<div class="stat">
+<h3>24h</h3>
+<p>Temps moyen d'intervention</p>
+</div>
+<div class="stat">
+<h3>100%</h3>
+<p>Confidentialité</p>
+</div>
+</div>
+
+</section>
+<section style="margin-top:60px; text-align:center;">
+  <h2>Suppression de contenu piraté et protection DMCA</h2>
+  <p style="max-width:700px; margin:auto;">
+  Shield Digital aide les créateurs, influenceurs et professionnels à détecter et supprimer les contenus piratés sur Internet.
+  Grâce à des procédures DMCA rapides, nous protégeons votre image, vos revenus et votre réputation en ligne.
+  </p>
+</section>
+
+<section id="process" style="padding:80px 20px; background:#f8fafc; text-align:center;">
+<h2 style="font-size:36px; margin-bottom:40px;">Comment fonctionne Shield Digital</h2>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;max-width:1000px;margin:auto;">
+
+<div style="flex:1;min-width:250px;">
+<h3>1️⃣ Analyse gratuite</h3>
+<p>Nous analysons Internet pour détecter vos contenus piratés et identifier les fuites.</p>
+</div>
+
+<div style="flex:1;min-width:250px;">
+<h3>2️⃣ Suppression rapide</h3>
+<p>Nous envoyons des demandes DMCA officielles et supprimons les contenus illégaux rapidement.</p>
+</div>
+
+<div style="flex:1;min-width:250px;">
+<h3>3️⃣ Protection continue</h3>
 <p>Nous surveillons en continu pour éviter que vos contenus soient republiés.</p>
 </div>
 <div style="text-align:center; margin-top:30px;">
-<a href="#contact" class="btn primary">
 <a href="#contact" class="btn primary btn-bottom">
   Lancer mon scan gratuit
 </a>
   <p style="margin-top:15px; opacity:0.8;">
-@@ -432,191 +430,191 @@
+    Vous n’avez rien à faire. On s’occupe de tout.
+  </p>
+</div>
+</section>
+<section id="services" class="section">
+<h2>Où nous traquons les leaks</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📱 Telegram & groupes privés</h3>
+<p>Surveillance des groupes Telegram, forums privés et réseaux de partage où circulent des contenus piratés.</p>
+</div>
+
+<div class="card">
+<h3>🌐 Sites de leaks</h3>
+<p>Détection et suppression sur les sites spécialisés dans la diffusion de contenus piratés et plateformes illégales.</p>
+</div>
+
+<div class="card">
+<h3>🔍 Moteurs de recherche</h3>
+<p>Déréférencement des liens pirates sur Google pour empêcher leur visibilité et protéger votre image.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Protection de contenu sur toutes les plateformes</h2>
+<p style="max-width:600px; margin:10px auto 30px; text-align:center; opacity:0.8;">
+Vos contenus sont protégés partout, même là où vous ne les voyez pas.
+</p>
+<div class="platforms">
+<div class="platform">📸 Instagram</div>
+<div class="platform">▶️ YouTube</div>
+<div class="platform">🎮 Twitch</div>
+<div class="platform">🐦 X (Twitter))</div>
+<div class="platform">🔞 OnlyFans</div>
+<div class="platform">💎 MYM</div>
+<div class="platform">🔥 Fansly</div>
+<div class="platform">💬 Telegram</div>
 <div class="platform">💰 Patreon</div>
 </div>
 <div style="text-align:center; margin-top:25px;">
-<a href="#contact" class="btn primary">
 <a href="#contact" class="btn primary btn-bottom">
   Lancer mon scan gratuit
 </a>
