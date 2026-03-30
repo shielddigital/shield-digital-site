@@ -328,7 +328,33 @@ margin-top:25px;
 .btn-bottom:hover {
   background: #1e4ed8;
 }
- 
+#maintenance{
+  position:fixed;
+  inset:0;
+  background:url("bg.png") center center / cover no-repeat fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:99999;
+}
+
+#maintenance::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+#maintenance .box{
+  position:relative;
+  z-index:2;
+  background:rgba(255,255,255,0.08);
+  padding:50px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  color:white;
+  text-align:center;
+} 
 </style>
 </head>
 <body>
@@ -636,5 +662,20 @@ if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "s")){
 e.preventDefault();
 }
 });
+</script>
+  <div id="maintenance">
+  <div class="box">
+    <h1>🔧 Site en maintenance</h1>
+    <p>Nous améliorons actuellement l’expérience.</p>
+    <p>Retour dans quelques heures.</p>
+  </div>
+</div>
+
+<script>
+  const access = prompt("Accès privé :");
+
+  if(access === "shield123"){
+    document.getElementById("maintenance").style.display = "none";
+  }
 </script>
 </body>
