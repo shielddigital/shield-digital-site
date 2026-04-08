@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-68583RGCL8');
 </script>
 <!-- Google Tag Manager -->
@@ -23,7 +22,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Shield Digital | Suppression de contenu piraté & protection DMCA</title>
 <meta name="description" content="Suppression de contenu piraté et protection contre les leaks. Shield Digital détecte et supprime vos contenus rapidement grâce aux procédures DMCA. Scan gratuit.">
 <link rel="icon" type="image/png" href="/logo.png">
-
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Shield Digital - Protection contre les leaks">
 <meta property="og:description" content="Shield Digital protège votre contenu et supprime les fuites sur Internet. Sécurisez votre image et vos revenus avec un scan gratuit.">
@@ -31,283 +29,442 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://shield-digital.fr/logo.png">
 <meta name="author" content="Shield Digital">
-<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#0a0e1a">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Poppins,Arial;background:#f6f9ff;color:#0f172a}
-
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 60px;
-  background:#ffffff;
-  box-shadow:0 12px 30px rgba(15,23,42,.08);
-  border-bottom:1px solid #eaf1fb;
-  position:sticky;
-  top:0;
-  z-index:10;
+* { box-sizing: border-box; }
+ 
+/* ===================== FOND PARTICULES ===================== */
+body {
+  margin: 0;
+  font-family: Poppins, Arial;
+  background: #0a0e1a;
+  color: #e2e8f0;
 }
-
-.logo img{height:55px}
-
-nav a{margin-left:28px;text-decoration:none;color:#0f172a;font-weight:500}
-
-.hero{padding:140px 20px;text-align:center;background:linear-gradient(135deg,#2563eb,#38bdf8);color:white}
-
-.hero h1{font-size:54px;margin-bottom:20px}
-.hero p{font-size:20px;max-width:750px;margin:auto}
-
-.btn{display:inline-block;margin:30px 12px;padding:16px 36px;border-radius:8px;text-decoration:none;font-weight:600}
-.primary{background:white;color:#2563eb}
-.secondary{border:2px solid white;color:white}
-
-.section{padding:100px 20px;max-width:1200px;margin:auto}
-
-.section h2{text-align:center;margin-bottom:55px;font-size:36px}
-
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-
-.card{background:white;border-radius:14px;padding:35px;box-shadow:0 12px 35px rgba(0,0,0,.05);transition:.25s}
-
-.card:hover{transform:translateY(-8px)}
-
-.platforms{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
-
-.platform{background:#e7efff;padding:12px 18px;border-radius:20px;font-weight:500}
-
-.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-
-.price-card{background:white;border-radius:16px;padding:40px;text-align:center;box-shadow:0 12px 35px rgba(0,0,0,.06);position:relative}
-
-.price-card.recommended{border:3px solid #2563eb;transform:scale(1.06)}
-
-.badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#2563eb;color:white;padding:6px 14px;border-radius:8px;font-size:12px}
-
-.price{font-size:46px;margin:14px 0;font-weight:700}
-
-ul{list-style:none;padding:0;margin:20px 0}
-
-ul li{margin:8px 0}
-
-.contact-box{background:white;border-radius:16px;padding:45px;max-width:600px;margin:auto;box-shadow:0 12px 35px rgba(0,0,0,.06)}
-
-form{display:grid;gap:15px}
-
-input,textarea{padding:14px;border-radius:8px;border:1px solid #dbeafe;font-family:Poppins}
-
-button{padding:16px;background:#2563eb;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer}
-
-.stats{display:flex;justify-content:center;gap:60px;margin-top:40px;flex-wrap:wrap}
-
-.stat{text-align:center}
-.stat h3{font-size:40px;margin:0;color:white}
-
-footer{margin-top:80px;padding:50px;text-align:center;background:#0f172a;color:white}
-
-.footer-small{opacity:.7;font-size:14px}
-header{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-background:transparent;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+ 
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
-.btn:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+ 
+header, section, footer, .hero {
+  position: relative;
+  z-index: 1;
 }
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
+/* =========================================================== */
+ 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 16px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(99, 195, 255, 0.1);
+  z-index: 100;
 }
-.logo img{
-height:80px;
+ 
+.logo img { height: 60px; }
+ 
+nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  transition: color 0.2s;
 }
-.pricing-section{
-text-align:center;
-margin-top:80px;
+nav a:hover { color: #63c3ff; }
+ 
+/* HERO */
+.hero {
+  padding: 160px 20px 100px;
+  text-align: center;
+  color: white;
 }
-
-.pricing-sub{
-color:#666;
-max-width:700px;
-margin:auto;
-margin-bottom:50px;
+ 
+.hero h1 {
+  font-size: 54px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 0 40px rgba(99,195,255,0.3);
 }
-
-.pricing-container{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
+ 
+.hero p {
+  font-size: 20px;
+  max-width: 750px;
+  margin: auto;
+  color: rgba(255,255,255,0.75);
 }
-
-.pricing-card{
-background:white;
-padding:40px;
-border-radius:16px;
-width:300px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.3s;
-position:relative;
+ 
+.btn {
+  display: inline-block;
+  margin: 20px 12px;
+  padding: 16px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.pricing-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.12);
+ 
+.primary {
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 0 20px rgba(37,99,235,0.4);
 }
-
-.pricing-card h3{
-margin-bottom:10px;
+.primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.5);
 }
-
-.price{
-font-size:36px;
-font-weight:bold;
-margin:10px 0;
+ 
+.secondary {
+  border: 2px solid rgba(99,195,255,0.6);
+  color: #63c3ff;
 }
-
-.billing{
-color:#777;
-margin-bottom:20px;
+.secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(99,195,255,0.08);
 }
-
-.pricing-card ul{
-list-style:none;
-padding:0;
-margin-bottom:25px;
+ 
+.protection-badge {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(99,195,255,0.2);
+  padding: 30px 40px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 30px auto 0;
 }
-
-.pricing-card li{
-margin:10px 0;
+ 
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
-
-.pricing-btn{
-display:inline-block;
-padding:12px 25px;
-background:#4f7cff;
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
+ 
+.stat { text-align: center; }
+.stat h3 {
+  font-size: 40px;
+  margin: 0;
+  color: #63c3ff;
 }
-
-.pricing-btn:hover{
-background:#355df5;
+.stat p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  margin: 4px 0 0;
 }
-
-.featured{
-border:2px solid #4f7cff;
-transform:scale(1.05);
+ 
+/* SECTIONS */
+.section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
-
-.badge{
-position:absolute;
-top:-12px;
-left:50%;
-transform:translateX(-50%);
-background:#4f7cff;
-color:white;
-padding:5px 14px;
-border-radius:20px;
-font-size:12px;
-font-weight:600;
+ 
+.section h2 {
+  text-align: center;
+  margin-bottom: 55px;
+  font-size: 36px;
+  color: #ffffff;
 }
-
-.pricing-note{
-margin-top:30px;
-color:#666;
-font-size:14px;
+ 
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
-.faq-section{
-margin-top:100px;
-text-align:center;
+ 
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(99,195,255,0.12);
+  border-radius: 14px;
+  padding: 35px;
+  transition: 0.25s;
+  color: #e2e8f0;
 }
-
-.faq-container{
-max-width:800px;
-margin:auto;
-margin-top:40px;
+ 
+.card h3 { color: #ffffff; }
+.card p { color: rgba(255,255,255,0.65); }
+ 
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(99,195,255,0.35);
+  background: rgba(99,195,255,0.06);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
-
-.faq-item{
-background:white;
-padding:25px;
-border-radius:12px;
-margin-bottom:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-text-align:left;
+ 
+/* PLATFORMS */
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
 }
-
-.faq-item h3{
-margin-bottom:10px;
-font-size:18px;
+ 
+.platform {
+  background: rgba(99,195,255,0.08);
+  border: 1px solid rgba(99,195,255,0.2);
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #a5d8ff;
+  transition: 0.2s;
 }
-
-.faq-item p{
-color:#666;
+.platform:hover {
+  background: rgba(99,195,255,0.15);
+  border-color: rgba(99,195,255,0.5);
 }
-.trust-section{
-margin-top:100px;
-text-align:center;
+ 
+/* PRICING */
+.pricing-section { text-align: center; margin-top: 20px; }
+ 
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
-
-.trust-points{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:30px;
-flex-wrap:wrap;
+ 
+.pricing-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(99,195,255,0.12);
+  border-radius: 16px;
+  padding: 40px;
+  width: 300px;
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+  color: #e2e8f0;
 }
-
-.trust-points div{
-background:white;
-padding:15px 25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+ 
+.pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(99,195,255,0.35);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
+ 
+.pricing-card h3 { color: #ffffff; margin-bottom: 10px; }
+ 
+.price {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #63c3ff;
+}
+ 
+.billing { color: rgba(255,255,255,0.5); margin-bottom: 20px; }
+ 
+.pricing-card ul { list-style: none; padding: 0; margin-bottom: 25px; }
+.pricing-card li { margin: 10px 0; color: rgba(255,255,255,0.75); }
+ 
+.pricing-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+ 
+.pricing-btn:hover {
+  background: #1d4ed8;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.4);
+}
+ 
+.featured {
+  border: 2px solid #63c3ff;
+  transform: scale(1.05);
+  background: rgba(99,195,255,0.07);
+}
+ 
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563eb;
+  color: white;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+ 
+.pricing-note {
+  margin-top: 30px;
+  color: rgba(255,255,255,0.45);
+  font-size: 14px;
+}
+ 
+/* FAQ */
+.faq-section { margin-top: 80px; text-align: center; }
+ 
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+ 
+.faq-item {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(99,195,255,0.1);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+ 
+.faq-item h3 { margin-bottom: 10px; font-size: 18px; color: #ffffff; }
+.faq-item p { color: rgba(255,255,255,0.6); margin: 0; }
+ 
+/* TRUST */
+.trust-section { margin-top: 80px; text-align: center; }
+.trust-section p { color: rgba(255,255,255,0.65); max-width: 700px; margin: 10px auto 30px; }
+ 
+.trust-points {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+ 
+.trust-points div {
+  background: rgba(99,195,255,0.07);
+  border: 1px solid rgba(99,195,255,0.2);
+  padding: 12px 22px;
+  border-radius: 10px;
+  color: #a5d8ff;
+  font-weight: 500;
+}
+ 
+/* PROCESS */
+.process-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+ 
+.process-section h2 { font-size: 36px; margin-bottom: 40px; color: #ffffff; }
+ 
+.process-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+ 
+.process-step {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(99,195,255,0.1);
+  border-radius: 14px;
+  padding: 30px;
+}
+.process-step h3 { color: #ffffff; }
+.process-step p { color: rgba(255,255,255,0.6); }
+ 
+/* CONTACT */
+.contact-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(99,195,255,0.15);
+  border-radius: 16px;
+  padding: 45px;
+  max-width: 600px;
+  margin: auto;
+}
+ 
+form { display: grid; gap: 15px; }
+ 
+input, textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(99,195,255,0.2);
+  font-family: Poppins;
+  background: rgba(255,255,255,0.05);
+  color: #ffffff;
+  outline: none;
+  transition: border 0.2s;
+}
+input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.35); }
+input:focus, textarea:focus { border-color: rgba(99,195,255,0.5); }
+ 
+button {
+  padding: 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 16px;
+  transition: 0.2s;
+}
+button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.4);
+}
+ 
 .contact-note {
-font-size: 13px;
-color: #777;
-margin-top: 12px;
-text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 12px;
+  text-align: center;
 }
-.contact-email{
-text-align:center;
-margin-top:10px;
+ 
+.contact-email { text-align: center; margin-top: 10px; }
+.contact-email a {
+  color: #63c3ff;
+  text-decoration: none;
+  font-weight: 600;
 }
-
-.contact-email a{
-color:#111;
-color:#2f63d8;
-text-decoration:none;
-font-weight:600;
+.contact-email a:hover { text-decoration: underline; }
+ 
+/* FOOTER */
+footer {
+  margin-top: 80px;
+  padding: 50px;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(99,195,255,0.1);
+  color: rgba(255,255,255,0.7);
 }
-
-.contact-email a:hover{
-text-decoration:underline;
+ 
+footer a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
 }
+footer a:hover { color: #63c3ff; }
+ 
+.footer-small { opacity: 0.5; font-size: 14px; }
+ 
+/* INTRO TEXT */
+.intro-section {
+  padding: 60px 20px 0;
+  text-align: center;
 }
-.protection-badge{
-background:#0f172a;
-color:white;
-padding:10px 18px;
-border-radius:20px;
-display:block;
-width:fit-content;
-margin:25px auto;
-font-size:14px;
-border:1px solid rgba(255,255,255,0.15);
-}
-.hero p{
-margin-top:25px;
-}
+.intro-section h2 { color: #ffffff; font-size: 32px; }
+.intro-section p { max-width: 700px; margin: auto; color: rgba(255,255,255,0.65); }
+ 
+/* BTN BOTTOM */
 .btn-bottom {
   background: #2563eb;
   color: white;
@@ -315,319 +472,330 @@ margin-top:25px;
   padding: 14px 28px;
   font-weight: 600;
   display: inline-block;
+  text-decoration: none;
+  transition: 0.2s;
+  margin-top: 20px;
 }
-
 .btn-bottom:hover {
-  background: #1e4ed8;
+  background: #1d4ed8;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.4);
 }
-} 
+ 
+@media (max-width: 768px) {
+  header { padding: 16px 20px; }
+  .hero h1 { font-size: 32px; }
+  .hero p { font-size: 16px; }
+  .stats { gap: 30px; }
+  .stat h3 { font-size: 28px; }
+  .protection-badge { padding: 20px; }
+}
 </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQVK5V7W"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+ 
+<!-- CANVAS PARTICULES -->
+<canvas id="particles-bg"></canvas>
+ 
 <header>
-<div class="logo">
-<img src="logo.png" alt="Shield Digital Logo" />
-</div>
-<nav>
-<a href="#services">Services</a>
-<a href="#pricing">Tarifs</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="logo">
+    <img src="logo.png" alt="Shield Digital Logo" />
+  </div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#pricing">Tarifs</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
-
+ 
 <section class="hero">
-<h1>Supprimez vos contenus piratés</h1>
-
-<div class="protection-badge">
-
-<p>Reprenez le contrôle de votre image et de vos revenus</p>
-
-<a class="btn primary" href="#contact">Obtenir mon scan gratuit</a>
-<a class="btn secondary" href="#pricing">Voir les tarifs</a>
-<p style="margin-top: 20px; font-size: 14px; opacity: 0.7;">
-
-<div class="stats">
-<div class="stat">
-<h3>1000+</h3>
-<p>Liens détectés</p>
-</div>
-<div class="stat">
-<h3>24h</h3>
-<p>Temps moyen d'intervention</p>
-</div>
-<div class="stat">
-<h3>100%</h3>
-<p>Confidentialité</p>
-</div>
-</div>
-
+  <h1>Supprimez vos contenus piratés</h1>
+  <div class="protection-badge">
+    <p>Reprenez le contrôle de votre image et de vos revenus</p>
+    <a class="btn primary" href="#contact">Obtenir mon scan gratuit</a>
+    <a class="btn secondary" href="#pricing">Voir les tarifs</a>
+    <div class="stats">
+      <div class="stat">
+        <h3>1000+</h3>
+        <p>Liens détectés</p>
+      </div>
+      <div class="stat">
+        <h3>24h</h3>
+        <p>Temps moyen d'intervention</p>
+      </div>
+      <div class="stat">
+        <h3>100%</h3>
+        <p>Confidentialité</p>
+      </div>
+    </div>
+  </div>
 </section>
-<section style="margin-top:60px; text-align:center;">
+ 
+<section class="intro-section">
   <h2>Suppression de contenu piraté et protection DMCA</h2>
-  <p style="max-width:700px; margin:auto;">
-  Shield Digital aide les créateurs, influenceurs et professionnels à détecter et supprimer les contenus piratés sur Internet.
-  Grâce à des procédures DMCA rapides, nous protégeons votre image, vos revenus et votre réputation en ligne.
-  </p>
+  <p>Shield Digital aide les créateurs, influenceurs et professionnels à détecter et supprimer les contenus piratés sur Internet.
+  Grâce à des procédures DMCA rapides, nous protégeons votre image, vos revenus et votre réputation en ligne.</p>
 </section>
-
-<section id="process" style="padding:80px 20px; background:#f8fafc; text-align:center;">
-<h2 style="font-size:36px; margin-bottom:40px;">Comment fonctionne Shield Digital</h2>
-
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;max-width:1000px;margin:auto;">
-
-<div style="flex:1;min-width:250px;">
-<h3>1️⃣ Analyse gratuite</h3>
-<p>Nous analysons Internet pour détecter vos contenus piratés et identifier les fuites.</p>
-</div>
-
-<div style="flex:1;min-width:250px;">
-<h3>2️⃣ Suppression rapide</h3>
-<p>Nous envoyons des demandes DMCA officielles et supprimons les contenus illégaux rapidement.</p>
-</div>
-
-<div style="flex:1;min-width:250px;">
-<h3>3️⃣ Protection continue</h3>
-<p>Nous surveillons en continu pour éviter que vos contenus soient republiés.</p>
-</div>
-<div style="text-align:center; margin-top:30px;">
-<a href="#contact" class="btn primary btn-bottom">
-  Lancer mon scan gratuit
-</a>
-  <p style="margin-top:15px; opacity:0.8;">
-    Vous n’avez rien à faire. On s’occupe de tout.
-  </p>
-</div>
+ 
+<section class="process-section">
+  <h2>Comment fonctionne Shield Digital</h2>
+  <div class="process-grid">
+    <div class="process-step">
+      <h3>1️⃣ Analyse gratuite</h3>
+      <p>Nous analysons Internet pour détecter vos contenus piratés et identifier les fuites.</p>
+    </div>
+    <div class="process-step">
+      <h3>2️⃣ Suppression rapide</h3>
+      <p>Nous envoyons des demandes DMCA officielles et supprimons les contenus illégaux rapidement.</p>
+    </div>
+    <div class="process-step">
+      <h3>3️⃣ Protection continue</h3>
+      <p>Nous surveillons en continu pour éviter que vos contenus soient republiés.</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:40px;">
+    <a href="#contact" class="btn-bottom">Lancer mon scan gratuit</a>
+    <p style="margin-top:15px; color:rgba(255,255,255,0.5); font-size:14px;">Vous n'avez rien à faire. On s'occupe de tout.</p>
+  </div>
 </section>
+ 
 <section id="services" class="section">
-<h2>Où nous traquons les leaks</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>📱 Telegram & groupes privés</h3>
-<p>Surveillance des groupes Telegram, forums privés et réseaux de partage où circulent des contenus piratés.</p>
-</div>
-
-<div class="card">
-<h3>🌐 Sites de leaks</h3>
-<p>Détection et suppression sur les sites spécialisés dans la diffusion de contenus piratés et plateformes illégales.</p>
-</div>
-
-<div class="card">
-<h3>🔍 Moteurs de recherche</h3>
-<p>Déréférencement des liens pirates sur Google pour empêcher leur visibilité et protéger votre image.</p>
-</div>
-
-</div>
+  <h2>Où nous traquons les leaks</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>📱 Telegram & groupes privés</h3>
+      <p>Surveillance des groupes Telegram, forums privés et réseaux de partage où circulent des contenus piratés.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Sites de leaks</h3>
+      <p>Détection et suppression sur les sites spécialisés dans la diffusion de contenus piratés et plateformes illégales.</p>
+    </div>
+    <div class="card">
+      <h3>🔍 Moteurs de recherche</h3>
+      <p>Déréférencement des liens pirates sur Google pour empêcher leur visibilité et protéger votre image.</p>
+    </div>
+  </div>
 </section>
-
+ 
 <section class="section">
-<h2>Protection de contenu sur toutes les plateformes</h2>
-<p style="max-width:600px; margin:10px auto 30px; text-align:center; opacity:0.8;">
-Vos contenus sont protégés partout, même là où vous ne les voyez pas.
-</p>
-<div class="platforms">
-<div class="platform">📸 Instagram</div>
-<div class="platform">▶️ YouTube</div>
-<div class="platform">🎮 Twitch</div>
-<div class="platform">🐦 X (Twitter))</div>
-<div class="platform">🔞 OnlyFans</div>
-<div class="platform">💎 MYM</div>
-<div class="platform">🔥 Fansly</div>
-<div class="platform">💬 Telegram</div>
-<div class="platform">💰 Patreon</div>
-</div>
-<div style="text-align:center; margin-top:25px;">
-<a href="#contact" class="btn primary btn-bottom">
-  Lancer mon scan gratuit
-</a>
-</div>
+  <h2>Protection de contenu sur toutes les plateformes</h2>
+  <p style="max-width:600px; margin:0 auto 30px; text-align:center; color:rgba(255,255,255,0.6);">
+    Vos contenus sont protégés partout, même là où vous ne les voyez pas.
+  </p>
+  <div class="platforms">
+    <div class="platform">📸 Instagram</div>
+    <div class="platform">▶️ YouTube</div>
+    <div class="platform">🎮 Twitch</div>
+    <div class="platform">🐦 X (Twitter)</div>
+    <div class="platform">🔞 OnlyFans</div>
+    <div class="platform">💎 MYM</div>
+    <div class="platform">🔥 Fansly</div>
+    <div class="platform">💬 Telegram</div>
+    <div class="platform">💰 Patreon</div>
+  </div>
+  <div style="text-align:center; margin-top:30px;">
+    <a href="#contact" class="btn-bottom">Lancer mon scan gratuit</a>
+  </div>
 </section>
-
+ 
 <section id="pricing" class="section">
-<h2>Choisissez votre niveau de protection</h2>
-
-<p style="text-align:center;max-width:750px;margin:0 auto 20px auto">
-Protection continue de vos contenus et suppression rapide des leaks sur Internet.
-</p>
-
-<div style="display:flex;justify-content:center">
-<div class="pricing-section">
-
-
-<p class="pricing-sub">
-</p>
-
-<div class="pricing-container">
-
-<div class="pricing-card">
-
-<h3>Shield Flash</h3>
-
-<div class="price">99€</div>
-<div class="billing">Paiement unique</div>
-
-<ul>
-<li>Retrait de 1 à 3 liens</li>
-<li>Action sous 24h</li>
-<li>Google & moteurs inclus</li>
-<li>Rapport de clôture</li>
-</ul>
-
-<a class="pricing-btn" href="#contact">Demander une intervention</a>
-
-</div>
-
-
-<div class="pricing-card featured">
-
-<div class="badge">Le plus choisi</div>
-
-<h3>Shield Premium</h3>
-
-<div class="price">299€</div>
-<div class="billing">/ mois</div>
-
-<ul>
-<li>Veille active 24h/24</li>
-<li>Retrait illimité</li>
-<li>Déréférencement complet</li>
-<li>Rapport mensuel détaillé</li>
-<li>Support prioritaire</li>
-</ul>
-
-<a class="pricing-btn" href="#contact">Demander un scan</a>
-
-</div>
-
-
-<div class="pricing-card">
-
-<h3>Shield Ultimate</h3>
-
-<div class="price">499€</div>
-<div class="billing">Intervention complète</div>
-
-<ul>
-<li>Nettoyage massif (+50 liens)</li>
-<li>Audit forums & Telegram</li>
-<li>Analyse sécurité comptes</li>
-<li>Expertise personnalisée</li>
-</ul>
-
-<a class="pricing-btn" href="#contact">Demander un audit</a>
-
-</div>
-
-</div>
-
-<p class="pricing-note">
-Paiement sécurisé. Aucun accès à vos comptes n'est requis. Sans engagement, résiliation à tout moment.
-</p>
-<section class="faq-section">
-
-<h2>Questions fréquentes</h2>
-
-<div class="faq-container">
-
-<div class="faq-item">
-<h3>Combien de temps faut-il pour supprimer un leak ?</h3>
-<p>La majorité des suppressions sont effectuées sous 24 à 72 heures selon la plateforme concernée.</p>
-</div>
-
-<div class="faq-item">
-<h3>Travaillez-vous avec Telegram et les forums privés ?</h3>
-<p>Oui. Notre système surveille Telegram, forums spécialisés et sites de leaks afin d'identifier rapidement les contenus diffusés illégalement.</p>
-</div>
-
-<div class="faq-item">
-<h3>Dois-je vous donner accès à mes comptes ?</h3>
-<p>Non. Nous n'avons besoin d'aucun accès à vos comptes. Toutes les actions sont réalisées via signalements, DMCA et contact avec les hébergeurs.</p>
-</div>
-
-<div class="faq-item">
-<h3>Le déréférencement Google est-il inclus ?</h3>
-<p>Oui. Lorsque c'est nécessaire nous procédons également au déréférencement des contenus dans les moteurs de recherche.</p>
-</div>
-<div class="faq-item">
-  <h3>Est-ce confidentiel ?</h3>
-  <p>Oui. Toutes les demandes sont traitées de manière strictement confidentielle. Aucune information concernant vos contenus ou votre identité n'est partagée.</p>
-</div>
-<section class="trust-section">
-
-<h2>Protection professionnelle contre les leaks</h2>
-
-<p>
-Nous aidons les créateurs de contenu, influenceurs, streamers et artistes à protéger leurs contenus contre les fuites et la diffusion illégale.
-Notre système de surveillance détecte rapidement les contenus volés afin de les supprimer des plateformes, forums et moteurs de recherche.
-</p>
-
-<div class="trust-points">
-
-<div>✔ Surveillance active</div>
-<div>✔ Suppression rapide</div>
-<div>✔ Déréférencement Google</div>
-<div>✔ Confidentialité garantie</div>
-
-</div>
-
-</section>
-</div>
-
-</section>
-</div>
-</div>
-
-</section>
-
-<section id="contact" class="section">
-<h2>Contact</h2>
-
-<div class="contact-box">
-<form action="https://formsubmit.co/contact@shield-digital.fr" method="POST">
-    <input type="text" name="name" placeholder="Nom" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-    <p class="contact-note">
-        🔒 Réponse sous 24h • Demande confidentielle
+  <h2>Choisissez votre niveau de protection</h2>
+  <p style="text-align:center; max-width:750px; margin:0 auto 10px; color:rgba(255,255,255,0.6);">
+    Protection continue de vos contenus et suppression rapide des leaks sur Internet.
+  </p>
+  <div class="pricing-section">
+    <div class="pricing-container">
+ 
+      <div class="pricing-card">
+        <h3>Shield Flash</h3>
+        <div class="price">99€</div>
+        <div class="billing">Paiement unique</div>
+        <ul>
+          <li>✔ Retrait de 1 à 3 liens</li>
+          <li>✔ Action sous 24h</li>
+          <li>✔ Google & moteurs inclus</li>
+          <li>✔ Rapport de clôture</li>
+        </ul>
+        <a class="pricing-btn" href="#contact">Demander une intervention</a>
+      </div>
+ 
+      <div class="pricing-card featured">
+        <div class="badge">Le plus choisi</div>
+        <h3>Shield Premium</h3>
+        <div class="price">299€</div>
+        <div class="billing">/ mois</div>
+        <ul>
+          <li>✔ Veille active 24h/24</li>
+          <li>✔ Retrait illimité</li>
+          <li>✔ Déréférencement complet</li>
+          <li>✔ Rapport mensuel détaillé</li>
+          <li>✔ Support prioritaire</li>
+        </ul>
+        <a class="pricing-btn" href="#contact">Demander un scan</a>
+      </div>
+ 
+      <div class="pricing-card">
+        <h3>Shield Ultimate</h3>
+        <div class="price">499€</div>
+        <div class="billing">Paiement unique</div>
+        <ul>
+          <li>✔ Nettoyage massif (+50 liens)</li>
+          <li>✔ Audit forums & Telegram</li>
+          <li>✔ Analyse sécurité comptes</li>
+          <li>✔ Expertise personnalisée</li>
+        </ul>
+        <a class="pricing-btn" href="#contact">Demander un audit</a>
+      </div>
+ 
+    </div>
+    <p class="pricing-note">
+      Paiement sécurisé. Aucun accès à vos comptes n'est requis. Sans engagement, résiliation à tout moment.
     </p>
-</form>
-
-<p style="text-align:center;margin-top:20px">Ou contactez-nous directement :</p>
-<div class="contact-email">
-<a href="mailto:contact@shield-digital.fr">
-contact@shield-digital.fr
-</a>
-</div>
-
+  </div>
+ 
+  <div class="faq-section">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h3>Combien de temps faut-il pour supprimer un leak ?</h3>
+        <p>La majorité des suppressions sont effectuées sous 24 à 72 heures selon la plateforme concernée.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Travaillez-vous avec Telegram et les forums privés ?</h3>
+        <p>Oui. Notre système surveille Telegram, forums spécialisés et sites de leaks afin d'identifier rapidement les contenus diffusés illégalement.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Dois-je vous donner accès à mes comptes ?</h3>
+        <p>Non. Nous n'avons besoin d'aucun accès à vos comptes. Toutes les actions sont réalisées via signalements, DMCA et contact avec les hébergeurs.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Le déréférencement Google est-il inclus ?</h3>
+        <p>Oui. Lorsque c'est nécessaire nous procédons également au déréférencement des contenus dans les moteurs de recherche.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Est-ce confidentiel ?</h3>
+        <p>Oui. Toutes les demandes sont traitées de manière strictement confidentielle. Aucune information concernant vos contenus ou votre identité n'est partagée.</p>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="trust-section">
+    <h2>Protection professionnelle contre les leaks</h2>
+    <p>Nous aidons les créateurs de contenu, influenceurs, streamers et artistes à protéger leurs contenus contre les fuites et la diffusion illégale.
+    Notre système de surveillance détecte rapidement les contenus volés afin de les supprimer des plateformes, forums et moteurs de recherche.</p>
+    <div class="trust-points">
+      <div>✔ Surveillance active</div>
+      <div>✔ Suppression rapide</div>
+      <div>✔ Déréférencement Google</div>
+      <div>✔ Confidentialité garantie</div>
+    </div>
+  </div>
 </section>
-
+ 
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="contact-box">
+    <form action="https://formsubmit.co/contact@shield-digital.fr" method="POST">
+      <input type="text" name="name" placeholder="Nom" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+      <p class="contact-note">🔒 Réponse sous 24h • Demande confidentielle</p>
+    </form>
+    <p style="text-align:center; margin-top:20px; color:rgba(255,255,255,0.6);">Ou contactez-nous directement :</p>
+    <div class="contact-email">
+      <a href="mailto:contact@shield-digital.fr">contact@shield-digital.fr</a>
+    </div>
+  </div>
+</section>
+ 
 <footer>
-<p>Shield Digital — Agence de protection de contenu numérique</p>
-<p class="footer-small">Basée en France | Intervention internationale</p>
-<p class="footer-small">© 2026 Shield Digital - Tous droits réservés</p>
-<a href="mentions-legales.html">Mentions légales</a>
-<a href="confidentialite.html">Politique de confidentialité</a>
+  <p>Shield Digital — Agence de protection de contenu numérique</p>
+  <p class="footer-small">Basée en France | Intervention internationale</p>
+  <p class="footer-small">© 2026 Shield Digital - Tous droits réservés</p>
+  <div style="margin-top:12px;">
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="confidentialite.html">Politique de confidentialité</a>
+  </div>
 </footer>
+ 
 <a href="https://instagram.com/official_shield_digital" target="_blank"
-style="position:fixed;bottom:25px;right:25px;background:linear-gradient(45deg, #ff2d55, #ff4d6d);color:white;padding:14px 22px;border-radius:30px;font-weight:600;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.25);z-index:999;">
-📩 Instagram
+style="position:fixed;bottom:25px;right:25px;background:linear-gradient(45deg,#ff2d55,#ff4d6d);color:white;padding:14px 22px;border-radius:30px;font-weight:600;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.35);z-index:999;">
+  📩 Instagram
 </a>
+ 
+<!-- ===================== SCRIPT PARTICULES ===================== -->
 <script>
-document.addEventListener("contextmenu", function(e){
-e.preventDefault();
-});
-
-document.addEventListener("keydown", function(e){
-if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "s")){
-e.preventDefault();
-}
-});
+  const canvas = document.getElementById('particles-bg');
+  const ctx = canvas.getContext('2d');
+ 
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', () => { resize(); initParticles(); });
+ 
+  let particles = [];
+ 
+  function initParticles() {
+    particles = [];
+    const count = Math.floor((canvas.width * canvas.height) / 11000);
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        r: Math.random() * 1.5 + 0.3,
+        alpha: Math.random() * 0.5 + 0.2
+      });
+    }
+  }
+  initParticles();
+ 
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let p of particles) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(99,195,255,${p.alpha})`;
+      ctx.fill();
+    }
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 100) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(99,195,255,${0.15 * (1 - d / 100)})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
 </script>
+<!-- ============================================================= -->
+ 
+<script>
+  document.addEventListener("contextmenu", function(e){ e.preventDefault(); });
+  document.addEventListener("keydown", function(e){
+    if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "s")){ e.preventDefault(); }
+  });
+</script>
+ 
 </body>
-
+</html>
