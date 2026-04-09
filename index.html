@@ -15,921 +15,536 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PQVK5V7W');</script>
-<!-- End Google Tag Manager -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="sJovM7TSXHClPvu1kAjl6tj1lPbvlMfQYxRYG7dSwBU" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="google-site-verification" content="sJovM7TSXHClPvu1kAjl6tj1lPbvlMfQYxRYG7dSwBU"/>
 <title>Shield Digital | Suppression de contenu piraté & protection DMCA</title>
 <meta name="description" content="Suppression de contenu piraté et protection contre les leaks. Shield Digital détecte et supprime vos contenus rapidement grâce aux procédures DMCA. Scan gratuit.">
 <link rel="icon" type="image/png" href="/logo.png">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Shield Digital - Protection contre les leaks">
-<meta property="og:description" content="Shield Digital protège votre contenu et supprime les fuites sur Internet. Sécurisez votre image et vos revenus avec un scan gratuit.">
+<meta property="og:description" content="Shield Digital protège votre contenu et supprime les fuites sur Internet.">
 <meta property="og:url" content="https://shield-digital.fr">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://shield-digital.fr/logo.png">
-<meta name="author" content="Shield Digital">
-<meta name="theme-color" content="#0a0e1a">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#080e20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-* { box-sizing: border-box; }
+:root{
+  --bg:#080e20;--bg2:#0c1428;--bg3:#101c35;
+  --blue:#4da6ff;--blue2:#63c3ff;
+  --blue-dim:rgba(77,166,255,0.12);--blue-glow:rgba(77,166,255,0.25);
+  --accent:#2563eb;--accent2:#3b82f6;
+  --border:rgba(77,166,255,0.1);--border2:rgba(77,166,255,0.22);
+  --white:#e8edf5;--muted:rgba(232,237,245,0.48);--text:rgba(232,237,245,0.72);
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.7;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 120% 60% at 50% -10%,rgba(37,99,235,0.18) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(77,166,255,0.07) 0%,transparent 50%),radial-gradient(ellipse 50% 30% at 10% 60%,rgba(37,99,235,0.08) 0%,transparent 50%);pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;}
+#particles-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+header,section,footer,.platforms-strip,.trust-bar,.divider{position:relative;z-index:1;}
  
-body {
-  margin: 0;
-  font-family: Poppins, Arial;
-  background: #0a0e1a;
-  color: #e2e8f0;
-}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s cubic-bezier(0.22,1,0.36,1),transform 0.75s cubic-bezier(0.22,1,0.36,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-d1{transition-delay:0.1s;}.reveal-d2{transition-delay:0.2s;}.reveal-d3{transition-delay:0.3s;}
  
-#particles-bg {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
- 
-header, section, footer, .hero {
-  position: relative;
-  z-index: 1;
-}
- 
-/* REVEAL */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
- 
-header {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  background: rgba(10, 14, 26, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 16px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(99, 195, 255, 0.1);
-  z-index: 100;
-  transition: all 0.3s;
-}
-header.scrolled {
-  background: rgba(10, 14, 26, 0.97);
-  border-bottom-color: rgba(99, 195, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
-}
- 
-.logo img { height: 60px; }
- 
-nav a {
-  margin-left: 28px;
-  text-decoration: none;
-  color: rgba(255,255,255,0.8);
-  font-weight: 500;
-  transition: color 0.2s;
-}
-nav a:hover { color: #63c3ff; }
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s;}
+header.scrolled{background:rgba(8,14,32,0.96);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 4px 40px rgba(0,0,0,0.5);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo img{height:44px;}
+nav{display:flex;align-items:center;gap:6px;}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px 16px;border-radius:8px;transition:all 0.2s;font-weight:400;}
+nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
+.nav-cta{background:var(--accent)!important;color:white!important;font-weight:600!important;font-size:13px!important;padding:10px 24px!important;border-radius:8px!important;box-shadow:0 0 24px rgba(37,99,235,0.35)!important;}
+.nav-cta:hover{background:var(--accent2)!important;transform:translateY(-1px)!important;}
  
 /* HERO */
-.hero {
-  padding: 160px 20px 100px;
-  text-align: center;
-  color: white;
-}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 60px 80px;max-width:1400px;margin:0 auto;gap:80px;}
+.hero-left{flex:1;max-width:620px;}
+.hero-right{flex:0 0 420px;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--blue-dim);border:1px solid var(--border2);color:var(--blue2);font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:28px;animation:fadeUp 0.6s ease both;}
+.hero-tag-dot{width:7px;height:7px;background:var(--blue2);border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,5vw,68px);font-weight:800;line-height:1.06;letter-spacing:-0.03em;margin-bottom:22px;animation:fadeUp 0.6s 0.1s ease both;}
+.hero h1 .hl{background:linear-gradient(135deg,#63c3ff 0%,#4da6ff 40%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:17px;color:var(--text);max-width:540px;margin-bottom:36px;line-height:1.75;animation:fadeUp 0.6s 0.18s ease both;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;animation:fadeUp 0.6s 0.26s ease both;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;font-weight:600;font-size:14px;padding:15px 28px;border-radius:10px;text-decoration:none;box-shadow:0 0 30px rgba(37,99,235,0.4);transition:all 0.25s;}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 40px rgba(37,99,235,0.5);}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border2);color:var(--blue2);font-weight:500;font-size:14px;padding:15px 28px;border-radius:10px;text-decoration:none;background:var(--blue-dim);transition:all 0.25s;}
+.btn-secondary:hover{background:rgba(77,166,255,0.18);transform:translateY(-2px);}
  
-.hero h1 {
-  font-size: 54px;
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-shadow: 0 0 40px rgba(99,195,255,0.3);
-  animation: fadeUp 0.8s ease both;
-}
+/* HERO STATS — centrés */
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:14px;overflow:hidden;border:1px solid var(--border);animation:fadeUp 0.6s 0.34s ease both;max-width:460px;}
+.h-stat{background:var(--bg2);padding:20px 16px;text-align:center;}
+.h-stat-num{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;font-weight:800;color:var(--blue2);display:block;line-height:1;margin-bottom:4px;}
+.h-stat-label{font-size:12px;color:var(--muted);}
  
-.hero p {
-  font-size: 20px;
-  max-width: 750px;
-  margin: auto;
-  color: rgba(255,255,255,0.75);
-  animation: fadeUp 0.8s 0.1s ease both;
-}
+/* HERO CARD */
+.hero-card{background:linear-gradient(160deg,rgba(12,20,40,0.95),rgba(8,14,32,0.98));border:1px solid var(--border2);border-radius:20px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,0.6),0 0 0 1px var(--border),inset 0 1px 0 rgba(255,255,255,0.06);animation:fadeUp 0.6s 0.2s ease both;}
+.hero-card-title{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.hero-card-title::before{content:'🛡';font-size:18px;}
+.hero-steps{display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
+.hero-step{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:10px;background:rgba(255,255,255,0.03);border:1px solid var(--border);transition:all 0.2s;}
+.hero-step:hover{background:rgba(77,166,255,0.06);border-color:var(--border2);}
+.hero-step-n{width:28px;height:28px;min-width:28px;border-radius:8px;background:var(--blue-dim);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:12px;color:var(--blue2);}
+.hero-step-text{font-size:13px;color:var(--text);}
+.hero-step-text strong{color:var(--white);font-weight:600;}
+.hero-card-cta{display:block;text-align:center;background:var(--accent);color:white;font-weight:600;font-size:14px;padding:14px;border-radius:10px;text-decoration:none;box-shadow:0 0 24px rgba(37,99,235,0.35);transition:all 0.25s;}
+.hero-card-cta:hover{background:var(--accent2);transform:translateY(-1px);}
+.hero-card-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
  
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
- 
-.btn {
-  display: inline-block;
-  margin: 20px 12px;
-  padding: 16px 36px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
- 
-.primary {
-  background: #2563eb;
-  color: white;
-  box-shadow: 0 0 20px rgba(37,99,235,0.4);
-}
-.primary:hover {
-  background: #1d4ed8;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(37,99,235,0.5);
-}
- 
-.secondary {
-  border: 2px solid rgba(99,195,255,0.6);
-  color: #63c3ff;
-}
-.secondary:hover {
-  transform: translateY(-2px);
-  background: rgba(99,195,255,0.08);
-}
- 
-.protection-badge {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(99,195,255,0.2);
-  padding: 30px 40px;
-  border-radius: 20px;
-  display: inline-block;
-  margin: 30px auto 0;
-  animation: fadeUp 0.8s 0.2s ease both;
-}
- 
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
- 
-.stat { text-align: center; }
-.stat h3 { font-size: 40px; margin: 0; color: #63c3ff; }
-.stat p { font-size: 14px; color: rgba(255,255,255,0.6); margin: 4px 0 0; }
+/* PLATFORMS STRIP */
+.platforms-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 60px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;}
+.strip-label{font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-right:8px;white-space:nowrap;}
+.p-chip{background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:7px 16px;border-radius:100px;font-size:13px;color:var(--text);transition:all 0.2s;cursor:default;white-space:nowrap;}
+.p-chip:hover{border-color:var(--border2);color:var(--blue2);background:var(--blue-dim);}
  
 /* SECTIONS */
-.section {
-  padding: 100px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
- 
-.section h2 {
-  text-align: center;
-  margin-bottom: 55px;
-  font-size: 36px;
-  color: #ffffff;
-}
- 
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
- 
-.card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(99,195,255,0.12);
-  border-radius: 14px;
-  padding: 35px;
-  transition: 0.3s;
-  color: #e2e8f0;
-  position: relative;
-  overflow: hidden;
-}
-.card::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at top left, rgba(99,195,255,0.07), transparent 60%);
-  opacity: 0; transition: opacity 0.3s;
-}
-.card:hover::before { opacity: 1; }
-.card h3 { color: #ffffff; }
-.card p { color: rgba(255,255,255,0.65); }
-.card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(99,195,255,0.35);
-  background: rgba(99,195,255,0.06);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-}
- 
-/* PLATFORMS */
-.platforms {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-}
- 
-.platform {
-  background: rgba(99,195,255,0.08);
-  border: 1px solid rgba(99,195,255,0.2);
-  padding: 12px 18px;
-  border-radius: 20px;
-  font-weight: 500;
-  color: #a5d8ff;
-  transition: 0.2s;
-}
-.platform:hover {
-  background: rgba(99,195,255,0.15);
-  border-color: rgba(99,195,255,0.5);
-  transform: translateY(-2px);
-}
+.sec{padding:96px 60px;max-width:1400px;margin:0 auto;}
+.sec-label{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue2);margin-bottom:10px;display:block;}
+.sec-title{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:14px;}
+.sec-sub{max-width:520px;color:var(--text);font-size:15px;margin-bottom:40px;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
  
 /* PRICING */
-.pricing-section { text-align: center; margin-top: 20px; }
+.pricing-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start;}
+.pc{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:36px;position:relative;transition:all 0.3s;overflow:visible;}
+.pc:hover{border-color:var(--border2);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.5);}
+.pc.hot{background:linear-gradient(160deg,rgba(37,99,235,0.15),rgba(12,20,40,0.98));border-color:var(--border2);box-shadow:0 0 60px rgba(37,99,235,0.12);}
+.pc-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:white;padding:5px 18px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:0.08em;white-space:nowrap;box-shadow:0 4px 14px rgba(37,99,235,0.5);font-family:'Bricolage Grotesque',sans-serif;z-index:2;}
+.pc-name{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:800;margin-bottom:6px;}
+.pc-price{font-family:'Bricolage Grotesque',sans-serif;font-size:52px;font-weight:800;color:var(--blue2);line-height:1;margin:18px 0 6px;}
+.pc-price span{font-size:20px;font-weight:400;color:var(--muted);}
+.pc-billing-badge{display:inline-block;padding:4px 13px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:22px;}
+.bb-unique{background:rgba(77,166,255,0.1);border:1px solid rgba(77,166,255,0.25);color:#a5d8ff;}
+.bb-monthly{background:rgba(37,99,235,0.18);border:1px solid rgba(37,99,235,0.35);color:#93c5fd;}
+.pc-divider{height:1px;background:var(--border);margin:20px 0;}
+.pc-features{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:28px;}
+.pc-features li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text);}
+.pc-features li::before{content:'✓';color:var(--blue2);font-weight:700;min-width:14px;}
+.pc-btn{display:block;text-align:center;padding:14px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;transition:all 0.25s;font-family:'Bricolage Grotesque',sans-serif;}
+.pc-btn-outline{border:1px solid var(--border2);color:var(--blue2);background:var(--blue-dim);}
+.pc-btn-outline:hover{background:rgba(77,166,255,0.2);transform:translateY(-1px);}
+.pc-btn-solid{background:var(--accent);color:white;box-shadow:0 0 24px rgba(37,99,235,0.35);}
+.pc-btn-solid:hover{background:var(--accent2);box-shadow:0 6px 30px rgba(37,99,235,0.55);transform:translateY(-1px);}
+.pricing-note{text-align:center;margin-top:28px;color:var(--muted);font-size:13px;}
  
-.pricing-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  padding-top: 24px; /* espace pour le badge "Le plus choisi" */
-}
+/* TRUST BAR */
+.trust-bar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 60px;}
+.trust-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden;border:1px solid var(--border);}
+.trust-item{background:var(--bg2);padding:28px 24px;text-align:center;transition:background 0.2s;}
+.trust-item:hover{background:var(--bg3);}
+.trust-icon{font-size:24px;margin-bottom:10px;display:block;}
+.trust-item strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:700;margin-bottom:4px;}
+.trust-item span{font-size:13px;color:var(--muted);}
  
-.pricing-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(99,195,255,0.12);
-  border-radius: 16px;
-  padding: 40px;
-  width: 300px;
-  text-align: center;
-  transition: 0.3s;
-  position: relative;
-  color: #e2e8f0;
-  overflow: visible; /* important pour le badge */
-}
-.pricing-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(99,195,255,0.35);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-.pricing-card h3 { color: #ffffff; margin-bottom: 10px; }
+/* TWO COL SECTIONS */
+.two-col-wrap{max-width:1400px;margin:0 auto;padding:96px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
  
-.price {
-  font-size: 36px;
-  font-weight: bold;
-  margin: 10px 0 4px;
-  color: #63c3ff;
-}
- 
-/* BILLING BADGES */
-.billing-badge {
-  display: inline-block;
-  padding: 4px 14px;
-  border-radius: 100px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.billing-unique {
-  background: rgba(99,195,255,0.1);
-  border: 1px solid rgba(99,195,255,0.25);
-  color: #a5d8ff;
-}
-.billing-monthly {
-  background: rgba(37,99,235,0.2);
-  border: 1px solid rgba(37,99,235,0.4);
-  color: #93c5fd;
-}
- 
-.pricing-card ul { list-style: none; padding: 0; margin-bottom: 25px; }
-.pricing-card li { margin: 10px 0; color: rgba(255,255,255,0.75); }
- 
-.pricing-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #2563eb;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.2s;
-}
-.pricing-btn:hover {
-  background: #1d4ed8;
-  box-shadow: 0 8px 20px rgba(37,99,235,0.4);
-  transform: translateY(-1px);
-}
- 
-.featured {
-  border: 2px solid #63c3ff;
-  transform: scale(1.05);
-  background: rgba(99,195,255,0.07);
-}
-.featured:hover { transform: scale(1.05) translateY(-8px); }
- 
-.badge {
-  position: absolute;
-  top: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #2563eb;
-  color: white;
-  padding: 5px 16px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(37,99,235,0.4);
-  z-index: 2;
-}
- 
-.pricing-note {
-  margin-top: 30px;
-  color: rgba(255,255,255,0.45);
-  font-size: 14px;
-}
- 
-/* FAQ ACCORDION */
-.faq-section { margin-top: 80px; text-align: center; }
- 
-.faq-container {
-  max-width: 800px;
-  margin: 40px auto 0;
-  text-align: left;
-}
- 
-.faq-item {
-  border: 1px solid rgba(99,195,255,0.12);
-  border-radius: 12px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  transition: border-color 0.25s, box-shadow 0.25s;
-}
-.faq-item.open {
-  border-color: rgba(99,195,255,0.35);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
- 
-.faq-question {
-  width: 100%;
-  background: rgba(255,255,255,0.04);
-  border: none;
-  color: #ffffff;
-  font-family: Poppins, Arial;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 22px 28px;
-  text-align: left;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: rgba(99,195,255,0.05); }
-.faq-item.open .faq-question { background: rgba(99,195,255,0.06); }
- 
-.faq-icon {
-  width: 28px; height: 28px; min-width: 28px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(99,195,255,0.4);
-  color: #63c3ff;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
-  line-height: 1;
-}
-.faq-item.open .faq-icon {
-  background: rgba(99,195,255,0.15);
-  transform: rotate(45deg);
-  border-color: rgba(99,195,255,0.6);
-}
- 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.45s cubic-bezier(0.22,1,0.36,1);
-}
-.faq-answer-inner {
-  padding: 0 28px 22px;
-  color: rgba(255,255,255,0.65);
-  font-size: 15px;
-  line-height: 1.75;
-  border-top: 1px solid rgba(99,195,255,0.08);
-}
- 
-/* TRUST */
-.trust-section { margin-top: 80px; text-align: center; }
-.trust-section p { color: rgba(255,255,255,0.65); max-width: 700px; margin: 10px auto 30px; }
- 
-.trust-points {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.trust-points div {
-  background: rgba(99,195,255,0.07);
-  border: 1px solid rgba(99,195,255,0.2);
-  padding: 12px 22px;
-  border-radius: 10px;
-  color: #a5d8ff;
-  font-weight: 500;
-  transition: 0.2s;
-}
-.trust-points div:hover {
-  background: rgba(99,195,255,0.12);
-  border-color: rgba(99,195,255,0.4);
-  transform: translateY(-2px);
-}
+/* SERVICES */
+.s-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:24px;transition:all 0.3s;position:relative;overflow:hidden;margin-bottom:14px;}
+.s-card:last-child{margin-bottom:0;}
+.s-card::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(77,166,255,0.08),transparent 60%);opacity:0;transition:opacity 0.3s;}
+.s-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.35);}
+.s-card:hover::after{opacity:1;}
+.s-icon{width:42px;height:42px;border-radius:10px;background:var(--blue-dim);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px;}
+.s-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;}
+.s-card p{font-size:14px;color:var(--text);line-height:1.7;}
  
 /* PROCESS */
-.process-section { padding: 80px 20px; text-align: center; }
-.process-section h2 { font-size: 36px; margin-bottom: 40px; color: #ffffff; }
+.proc-step{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:24px;transition:all 0.3s;margin-bottom:14px;}
+.proc-step:last-child{margin-bottom:0;}
+.proc-step:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,0.3);}
+.proc-num{font-family:'Bricolage Grotesque',sans-serif;font-size:40px;font-weight:800;color:rgba(77,166,255,0.15);line-height:1;margin-bottom:12px;transition:color 0.3s;}
+.proc-step:hover .proc-num{color:rgba(77,166,255,0.3);}
+.proc-step h3{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;}
+.proc-step p{font-size:14px;color:var(--text);line-height:1.7;}
  
-.process-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1000px;
-  margin: auto;
-}
- 
-.process-step {
-  flex: 1;
-  min-width: 250px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(99,195,255,0.1);
-  border-radius: 14px;
-  padding: 30px;
-  transition: 0.3s;
-}
-.process-step:hover {
-  border-color: rgba(99,195,255,0.3);
-  background: rgba(99,195,255,0.04);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-}
-.process-step h3 { color: #ffffff; }
-.process-step p { color: rgba(255,255,255,0.6); }
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1100px;margin:0 auto;}
+.faq-item{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color 0.25s;}
+.faq-item.open{border-color:var(--border2);}
+.faq-q{width:100%;background:var(--bg2);border:none;color:var(--white);font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:600;padding:20px 22px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:background 0.2s;}
+.faq-q:hover{background:var(--bg3);}
+.faq-item.open .faq-q{background:rgba(77,166,255,0.06);}
+.faq-icon{width:26px;height:26px;min-width:26px;border-radius:50%;border:1.5px solid var(--border2);color:var(--blue2);display:flex;align-items:center;justify-content:center;font-size:16px;transition:all 0.3s;line-height:1;}
+.faq-item.open .faq-icon{background:var(--blue-dim);transform:rotate(45deg);border-color:var(--blue2);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.22,1,0.36,1);}
+.faq-a-inner{padding:0 22px 18px;color:var(--text);font-size:14px;line-height:1.75;border-top:1px solid var(--border);}
  
 /* CONTACT */
-.contact-box {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(99,195,255,0.15);
-  border-radius: 16px;
-  padding: 45px;
-  max-width: 600px;
-  margin: auto;
-}
- 
-form { display: grid; gap: 15px; }
- 
-input, textarea {
-  padding: 14px;
-  border-radius: 8px;
-  border: 1px solid rgba(99,195,255,0.2);
-  font-family: Poppins;
-  background: rgba(255,255,255,0.05);
-  color: #ffffff;
-  outline: none;
-  transition: border 0.2s, box-shadow 0.2s;
-}
-input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.35); }
-input:focus, textarea:focus {
-  border-color: rgba(99,195,255,0.5);
-  box-shadow: 0 0 0 3px rgba(99,195,255,0.08);
-}
- 
-button {
-  padding: 16px;
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: Poppins;
-  font-size: 16px;
-  transition: 0.2s;
-}
-button:hover {
-  background: #1d4ed8;
-  box-shadow: 0 8px 20px rgba(37,99,235,0.4);
-  transform: translateY(-1px);
-}
- 
-.contact-note {
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  margin-top: 12px;
-  text-align: center;
-}
- 
-.contact-email { text-align: center; margin-top: 10px; }
-.contact-email a { color: #63c3ff; text-decoration: none; font-weight: 600; }
-.contact-email a:hover { text-decoration: underline; }
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1000px;margin:0 auto;}
+.contact-info h3{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:800;margin-bottom:14px;line-height:1.2;}
+.contact-info p{color:var(--text);font-size:15px;margin-bottom:28px;}
+.contact-badges{display:flex;flex-direction:column;gap:12px;}
+.c-badge{display:flex;align-items:center;gap:12px;background:var(--bg2);border:1px solid var(--border);padding:14px 18px;border-radius:10px;font-size:14px;color:var(--text);}
+.c-badge-icon{font-size:18px;}
+.contact-form{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:36px;}
+.form-group{display:flex;flex-direction:column;gap:13px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+input,textarea{width:100%;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;color:var(--white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border 0.2s,box-shadow 0.2s;resize:none;}
+input::placeholder,textarea::placeholder{color:var(--muted);}
+input:focus,textarea:focus{border-color:var(--border2);box-shadow:0 0 0 3px rgba(77,166,255,0.08);}
+.submit-btn{width:100%;padding:16px;background:var(--accent);color:white;border:none;border-radius:10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 0 24px rgba(37,99,235,0.35);transition:all 0.25s;margin-top:4px;}
+.submit-btn:hover{background:var(--accent2);box-shadow:0 6px 30px rgba(37,99,235,0.55);transform:translateY(-1px);}
+.form-note{text-align:center;font-size:12px;color:var(--muted);margin-top:12px;}
  
 /* FOOTER */
-footer {
-  margin-top: 80px;
-  padding: 50px;
-  text-align: center;
-  background: rgba(0,0,0,0.5);
-  border-top: 1px solid rgba(99,195,255,0.1);
-  color: rgba(255,255,255,0.7);
-}
-footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 10px; font-size: 14px; }
-footer a:hover { color: #63c3ff; }
-.footer-small { opacity: 0.5; font-size: 14px; }
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48px 60px;}
+.footer-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer-brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;}
+.footer-brand span{color:var(--blue2);}
+.footer-links{display:flex;gap:6px;flex-wrap:wrap;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:all 0.2s;}
+.footer-links a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
+.footer-copy{font-size:12px;color:rgba(232,237,245,0.25);width:100%;text-align:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
  
-/* INTRO */
-.intro-section { padding: 60px 20px 0; text-align: center; }
-.intro-section h2 { color: #ffffff; font-size: 32px; }
-.intro-section p { max-width: 700px; margin: auto; color: rgba(255,255,255,0.65); }
+/* INSTAGRAM FLOAT */
+.ig-float{position:fixed;bottom:26px;right:26px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:white;padding:13px 22px;border-radius:100px;font-weight:600;font-size:13px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.4);z-index:200;display:flex;align-items:center;gap:8px;transition:transform 0.2s,box-shadow 0.2s;}
+.ig-float:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.5);}
  
-/* BTN BOTTOM */
-.btn-bottom {
-  background: #2563eb;
-  color: white;
-  border-radius: 10px;
-  padding: 14px 28px;
-  font-weight: 600;
-  display: inline-block;
-  text-decoration: none;
-  transition: 0.2s;
-  margin-top: 20px;
-}
-.btn-bottom:hover {
-  background: #1d4ed8;
-  box-shadow: 0 8px 20px rgba(37,99,235,0.4);
-  transform: translateY(-2px);
-}
- 
-.section-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(99,195,255,0.15), transparent);
-  max-width: 800px;
-  margin: 0 auto;
-}
- 
-@media (max-width: 768px) {
-  header { padding: 16px 20px; }
-  .hero h1 { font-size: 32px; }
-  .hero p { font-size: 16px; }
-  .stats { gap: 30px; }
-  .stat h3 { font-size: 28px; }
-  .protection-badge { padding: 20px; }
-  .featured { transform: scale(1); }
-  .featured:hover { transform: translateY(-8px); }
+/* MOBILE */
+@media(max-width:1024px){
+  header{padding:0 24px;}
+  nav a:not(.nav-cta){display:none;}
+  .hero{flex-direction:column;padding:120px 24px 60px;gap:40px;}
+  .hero-right{flex:none;width:100%;}
+  .pricing-wrap{grid-template-columns:1fr;}
+  .two-col-wrap{grid-template-columns:1fr;gap:50px;padding:60px 24px;}
+  .faq-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .sec{padding:70px 24px;}
+  .trust-inner{grid-template-columns:1fr 1fr;}
+  .footer-inner{flex-direction:column;text-align:center;}
+  .platforms-strip{padding:20px 24px;}
+  .trust-bar{padding:40px 24px;}
 }
 </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQVK5V7W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
- 
 <canvas id="particles-bg"></canvas>
  
+<!-- NAV -->
 <header id="main-header">
-  <div class="logo">
-    <img src="logo.png" alt="Shield Digital Logo" />
-  </div>
+  <a href="/" class="logo"><img src="logo.png" alt="Shield Digital"></a>
   <nav>
-    <a href="#services">Services</a>
     <a href="#pricing">Tarifs</a>
-    <a href="#contact">Contact</a>
+    <a href="#services">Services</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="nav-cta">Scan gratuit</a>
   </nav>
 </header>
  
+<!-- HERO -->
 <section class="hero">
-  <h1>Supprimez vos contenus piratés</h1>
-  <div class="protection-badge">
-    <p>Reprenez le contrôle de votre image et de vos revenus</p>
-    <a class="btn primary" href="#contact">Obtenir mon scan gratuit</a>
-    <a class="btn secondary" href="#pricing">Voir les tarifs</a>
-    <div class="stats">
-      <div class="stat"><h3>1000+</h3><p>Liens détectés</p></div>
-      <div class="stat"><h3>24h</h3><p>Temps moyen d'intervention</p></div>
-      <div class="stat"><h3>100%</h3><p>Confidentialité</p></div>
+  <div class="hero-left">
+    <div class="hero-tag"><span class="hero-tag-dot"></span>Protection DMCA professionnelle</div>
+    <h1>Supprimez vos<br>contenus <span class="hl">piratés.</span><br>Reprenez le contrôle.</h1>
+    <p class="hero-sub">Shield Digital détecte et supprime vos leaks sur Internet en moins de 24h. DMCA officiel, déréférencement Google, surveillance Telegram — on gère tout, vous ne faites rien.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">🛡 Obtenir mon scan gratuit</a>
+      <a href="#pricing" class="btn-secondary">Voir les tarifs →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="h-stat"><span class="h-stat-num">1000+</span><span class="h-stat-label">Liens supprimés</span></div>
+      <div class="h-stat"><span class="h-stat-num">24h</span><span class="h-stat-label">Délai d'intervention</span></div>
+      <div class="h-stat"><span class="h-stat-num">100%</span><span class="h-stat-label">Confidentiel</span></div>
     </div>
   </div>
-</section>
- 
-<section class="intro-section reveal">
-  <h2>Suppression de contenu piraté et protection DMCA</h2>
-  <p>Shield Digital aide les créateurs, influenceurs et professionnels à détecter et supprimer les contenus piratés sur Internet.
-  Grâce à des procédures DMCA rapides, nous protégeons votre image, vos revenus et votre réputation en ligne.</p>
-</section>
- 
-<section class="process-section reveal">
-  <h2>Comment fonctionne Shield Digital</h2>
-  <div class="process-grid">
-    <div class="process-step">
-      <h3>1️⃣ Analyse gratuite</h3>
-      <p>Nous analysons Internet pour détecter vos contenus piratés et identifier les fuites.</p>
-    </div>
-    <div class="process-step">
-      <h3>2️⃣ Suppression rapide</h3>
-      <p>Nous envoyons des demandes DMCA officielles et supprimons les contenus illégaux rapidement.</p>
-    </div>
-    <div class="process-step">
-      <h3>3️⃣ Protection continue</h3>
-      <p>Nous surveillons en continu pour éviter que vos contenus soient republiés.</p>
-    </div>
-  </div>
-  <div style="text-align:center; margin-top:40px;">
-    <a href="#contact" class="btn-bottom">Lancer mon scan gratuit</a>
-    <p style="margin-top:15px; color:rgba(255,255,255,0.5); font-size:14px;">Vous n'avez rien à faire. On s'occupe de tout.</p>
-  </div>
-</section>
- 
-<div class="section-divider"></div>
- 
-<section id="services" class="section reveal">
-  <h2>Où nous traquons les leaks</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>📱 Telegram & groupes privés</h3>
-      <p>Surveillance des groupes Telegram, forums privés et réseaux de partage où circulent des contenus piratés.</p>
-    </div>
-    <div class="card">
-      <h3>🌐 Sites de leaks</h3>
-      <p>Détection et suppression sur les sites spécialisés dans la diffusion de contenus piratés et plateformes illégales.</p>
-    </div>
-    <div class="card">
-      <h3>🔍 Moteurs de recherche</h3>
-      <p>Déréférencement des liens pirates sur Google pour empêcher leur visibilité et protéger votre image.</p>
-    </div>
-  </div>
-</section>
- 
-<div class="section-divider"></div>
- 
-<section class="section reveal">
-  <h2>Protection de contenu sur toutes les plateformes</h2>
-  <p style="max-width:600px; margin:0 auto 30px; text-align:center; color:rgba(255,255,255,0.6);">
-    Vos contenus sont protégés partout, même là où vous ne les voyez pas.
-  </p>
-  <div class="platforms">
-    <div class="platform">📸 Instagram</div>
-    <div class="platform">▶️ YouTube</div>
-    <div class="platform">🎮 Twitch</div>
-    <div class="platform">🐦 X (Twitter)</div>
-    <div class="platform">🔞 OnlyFans</div>
-    <div class="platform">💎 MYM</div>
-    <div class="platform">🔥 Fansly</div>
-    <div class="platform">💬 Telegram</div>
-    <div class="platform">💰 Patreon</div>
-  </div>
-  <div style="text-align:center; margin-top:30px;">
-    <a href="#contact" class="btn-bottom">Lancer mon scan gratuit</a>
-  </div>
-</section>
- 
-<div class="section-divider"></div>
- 
-<section id="pricing" class="section reveal">
-  <h2>Choisissez votre niveau de protection</h2>
-  <div class="pricing-section">
-    <div class="pricing-container">
- 
-      <div class="pricing-card">
-        <h3>Shield Flash</h3>
-        <div class="price">99€</div>
-        <div class="billing-badge billing-unique">Paiement unique</div>
-        <ul>
-          <li>✔ Retrait de 1 à 3 liens</li>
-          <li>✔ Action sous 24h</li>
-          <li>✔ Google & moteurs inclus</li>
-          <li>✔ Rapport de clôture</li>
-        </ul>
-        <a class="pricing-btn" href="#contact">Démarrer maintenant</a>
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="hero-card-title">Comment ça fonctionne</div>
+      <div class="hero-steps">
+        <div class="hero-step"><div class="hero-step-n">01</div><div class="hero-step-text"><strong>Analyse gratuite</strong> — on scanne Internet à votre place</div></div>
+        <div class="hero-step"><div class="hero-step-n">02</div><div class="hero-step-text"><strong>Suppression DMCA</strong> — procédures officielles sous 24-72h</div></div>
+        <div class="hero-step"><div class="hero-step-n">03</div><div class="hero-step-text"><strong>Protection continue</strong> — surveillance permanente incluse</div></div>
       </div>
- 
-      <div class="pricing-card featured">
-        <div class="badge">Le plus choisi</div>
-        <h3>Shield Premium</h3>
-        <div class="price">299€</div>
-        <div class="billing-badge billing-monthly">Mensuel</div>
-        <ul>
-          <li>✔ Veille active 24h/24</li>
-          <li>✔ Retrait illimité</li>
-          <li>✔ Déréférencement complet</li>
-          <li>✔ Rapport mensuel détaillé</li>
-          <li>✔ Support prioritaire</li>
-        </ul>
-        <a class="pricing-btn" href="#contact">Démarrer maintenant</a>
-      </div>
- 
-      <div class="pricing-card">
-        <h3>Shield Ultimate</h3>
-        <div class="price">499€</div>
-        <div class="billing-badge billing-unique">Paiement unique</div>
-        <ul>
-          <li>✔ Nettoyage massif (+50 liens)</li>
-          <li>✔ Audit forums & Telegram</li>
-          <li>✔ Analyse sécurité comptes</li>
-          <li>✔ Expertise personnalisée</li>
-        </ul>
-        <a class="pricing-btn" href="#contact">Démarrer maintenant</a>
-      </div>
- 
+      <a href="#contact" class="hero-card-cta">Démarrer maintenant — C'est gratuit</a>
+      <p class="hero-card-note">🔒 Aucun accès à vos comptes requis</p>
     </div>
-    <p class="pricing-note">
-      Paiement sécurisé. Aucun accès à vos comptes n'est requis. Sans engagement, résiliation à tout moment.
-    </p>
+  </div>
+</section>
+ 
+<!-- PLATFORMS STRIP -->
+<div class="platforms-strip">
+  <span class="strip-label">Plateformes surveillées</span>
+  <div class="p-chip">📸 Instagram</div>
+  <div class="p-chip">▶️ YouTube</div>
+  <div class="p-chip">🎮 Twitch</div>
+  <div class="p-chip">🐦 X / Twitter</div>
+  <div class="p-chip">🔞 OnlyFans</div>
+  <div class="p-chip">💎 MYM</div>
+  <div class="p-chip">🔥 Fansly</div>
+  <div class="p-chip">💬 Telegram</div>
+  <div class="p-chip">💰 Patreon</div>
+</div>
+ 
+<!-- PRICING -->
+<section id="pricing" class="sec">
+  <span class="sec-label reveal" style="text-align:center;display:block;">Tarifs</span>
+  <h2 class="sec-title reveal" style="text-align:center;">Choisissez votre protection</h2>
+  <div class="pricing-wrap reveal" style="margin-top:20px;padding-top:20px;">
+    <div class="pc">
+      <div class="pc-name">Shield Flash</div>
+      <div class="pc-price">99€</div>
+      <div class="pc-billing-badge bb-unique">Paiement unique</div>
+      <div class="pc-divider"></div>
+      <ul class="pc-features">
+        <li>Retrait de 1 à 3 liens</li>
+        <li>Action sous 24h</li>
+        <li>Google & moteurs inclus</li>
+        <li>Rapport de clôture</li>
+      </ul>
+      <a class="pc-btn pc-btn-outline" href="#contact">Démarrer maintenant</a>
+    </div>
+    <div class="pc hot">
+      <div class="pc-badge">⭐ Le plus choisi</div>
+      <div class="pc-name">Shield Premium</div>
+      <div class="pc-price">299€<span>/mois</span></div>
+      <div class="pc-billing-badge bb-monthly">Mensuel</div>
+      <div class="pc-divider"></div>
+      <ul class="pc-features">
+        <li>Veille active 24h/24</li>
+        <li>Retrait illimité</li>
+        <li>Déréférencement complet</li>
+        <li>Rapport mensuel détaillé</li>
+        <li>Support prioritaire</li>
+      </ul>
+      <a class="pc-btn pc-btn-solid" href="#contact">Démarrer maintenant</a>
+    </div>
+    <div class="pc">
+      <div class="pc-name">Shield Ultimate</div>
+      <div class="pc-price">499€</div>
+      <div class="pc-billing-badge bb-unique">Paiement unique</div>
+      <div class="pc-divider"></div>
+      <ul class="pc-features">
+        <li>Nettoyage massif +50 liens</li>
+        <li>Audit forums & Telegram</li>
+        <li>Analyse sécurité comptes</li>
+        <li>Expertise personnalisée</li>
+      </ul>
+      <a class="pc-btn pc-btn-outline" href="#contact">Démarrer maintenant</a>
+    </div>
+  </div>
+  <p class="pricing-note reveal">🔒 Paiement sécurisé · Aucun accès à vos comptes requis · Sans engagement, résiliation à tout moment</p>
+</section>
+ 
+<div class="divider"></div>
+ 
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner reveal">
+    <div class="trust-item"><span class="trust-icon">👁</span><strong>Surveillance active</strong><span>24h/24, 7j/7</span></div>
+    <div class="trust-item"><span class="trust-icon">⚡</span><strong>Intervention rapide</strong><span>Sous 24 à 72h</span></div>
+    <div class="trust-item"><span class="trust-icon">🔍</span><strong>Google DMCA</strong><span>Déréférencement inclus</span></div>
+    <div class="trust-item"><span class="trust-icon">🔒</span><strong>100% Confidentiel</strong><span>Zéro partage de données</span></div>
+  </div>
+</div>
+ 
+<div class="divider"></div>
+ 
+<!-- SERVICES + PROCESS CÔTE À CÔTE -->
+<div class="two-col-wrap">
+ 
+  <!-- SERVICES -->
+  <div id="services">
+    <span class="sec-label reveal">Ce que nous traquons</span>
+    <h2 class="sec-title reveal">Où nous traquons les leaks</h2>
+    <div class="reveal">
+      <div class="s-card">
+        <div class="s-icon">📱</div>
+        <h3>Telegram & groupes privés</h3>
+        <p>Surveillance des groupes Telegram, forums privés et réseaux de partage où circulent des contenus piratés.</p>
+      </div>
+      <div class="s-card">
+        <div class="s-icon">🌐</div>
+        <h3>Sites de leaks</h3>
+        <p>Détection et suppression sur les sites spécialisés dans la diffusion de contenus piratés et plateformes illégales.</p>
+      </div>
+      <div class="s-card">
+        <div class="s-icon">🔍</div>
+        <h3>Moteurs de recherche</h3>
+        <p>Déréférencement des liens pirates sur Google pour empêcher leur visibilité et protéger votre image durablement.</p>
+      </div>
+    </div>
   </div>
  
-  <!-- FAQ -->
-  <div class="faq-section reveal">
-    <h2>Questions fréquentes</h2>
-    <div class="faq-container">
+  <!-- PROCESS -->
+  <div>
+    <span class="sec-label reveal">Notre méthode</span>
+    <h2 class="sec-title reveal">Comment ça fonctionne</h2>
+    <div class="reveal">
+      <div class="proc-step">
+        <div class="proc-num">01</div>
+        <h3>Analyse gratuite</h3>
+        <p>Nous analysons Internet pour détecter vos contenus piratés et identifier toutes les fuites actives sur le web.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">02</div>
+        <h3>Suppression rapide</h3>
+        <p>Nous envoyons des demandes DMCA officielles et supprimons les contenus illégaux sous 24 à 72 heures.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">03</div>
+        <h3>Protection continue</h3>
+        <p>Surveillance permanente pour éviter toute republication. Rapports détaillés envoyés régulièrement.</p>
+      </div>
+    </div>
  
-      <div class="faq-item">
-        <button class="faq-question">
-          Combien de temps faut-il pour supprimer un leak ?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            La majorité des suppressions sont effectuées sous 24 à 72 heures selon la plateforme concernée. Pour certains hébergeurs plus complexes, le délai peut aller jusqu'à 7 jours. Vous êtes tenu informé à chaque étape du processus.
+  </div>
+ 
+</div>
+ 
+<div class="divider"></div>
+ 
+<!-- FAQ -->
+<section id="faq" class="sec">
+  <span class="sec-label reveal" style="text-align:center;display:block;">FAQ</span>
+  <h2 class="sec-title reveal" style="text-align:center;">Questions fréquentes</h2>
+  <p class="sec-sub reveal" style="text-align:center;margin:0 auto 40px;">Tout ce que vous devez savoir avant de nous contacter.</p>
+  <div class="faq-grid reveal">
+    <div class="faq-item">
+      <button class="faq-q">Combien de temps pour supprimer un leak ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">La majorité des suppressions sont effectuées sous 24 à 72 heures selon la plateforme. Pour certains hébergeurs, jusqu'à 7 jours. Vous êtes informé à chaque étape.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Travaillez-vous avec Telegram ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Oui. Nous surveillons Telegram, forums spécialisés et sites de leaks avec des procédures spécifiques adaptées à chaque type de plateforme.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Dois-je donner accès à mes comptes ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Non, absolument pas. Toutes les actions sont réalisées via signalements officiels, procédures DMCA et contact direct avec les hébergeurs.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Le déréférencement Google est-il inclus ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Oui. Le déréférencement via les outils officiels Google est inclus dans toutes nos offres lorsque c'est nécessaire.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Est-ce totalement confidentiel ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Oui. Aucune information concernant vos contenus, votre identité ou votre situation n'est partagée avec des tiers. Confidentialité absolue garantie.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Peut-on résilier à tout moment ?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Oui, l'offre Premium est sans engagement. Vous pouvez résilier à tout moment, sans frais ni justification. Les offres Flash et Ultimate sont à paiement unique.</div></div>
+    </div>
+  </div>
+</section>
+ 
+<div class="divider"></div>
+ 
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <span class="sec-label">Contact</span>
+      <h3>Obtenez votre analyse gratuite</h3>
+      <p>Décrivez votre situation en quelques mots. Nous vous répondons sous 24h en toute confidentialité avec un premier diagnostic.</p>
+      <div class="contact-badges">
+        <div class="c-badge"><span class="c-badge-icon">⚡</span>Réponse sous 24h garantie</div>
+        <div class="c-badge"><span class="c-badge-icon">🔒</span>Demande 100% confidentielle</div>
+        <div class="c-badge"><span class="c-badge-icon">🎯</span>Premier scan offert</div>
+        <div class="c-badge"><span class="c-badge-icon">📧</span><a href="mailto:contact@shield-digital.fr" style="color:var(--blue2);text-decoration:none;font-weight:500;">contact@shield-digital.fr</a></div>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <form action="https://formsubmit.co/contact@shield-digital.fr" method="POST">
+        <div class="form-group">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Votre nom" required/>
+            <input type="email" name="email" placeholder="Votre email" required/>
           </div>
+          <textarea name="message" rows="5" placeholder="Décrivez votre situation (plateforme concernée, type de contenu, urgence...)" required></textarea>
+          <button type="submit" class="submit-btn">Envoyer</button>
         </div>
-      </div>
- 
-      <div class="faq-item">
-        <button class="faq-question">
-          Travaillez-vous avec Telegram et les forums privés ?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            Oui. Notre système surveille Telegram, forums spécialisés et sites de leaks afin d'identifier rapidement les contenus diffusés illégalement. Nous disposons de procédures spécifiques adaptées à chaque type de plateforme.
-          </div>
-        </div>
-      </div>
- 
-      <div class="faq-item">
-        <button class="faq-question">
-          Dois-je vous donner accès à mes comptes ?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            Non, absolument pas. Nous n'avons besoin d'aucun accès à vos comptes personnels ou professionnels. Toutes les actions sont réalisées via signalements officiels, procédures DMCA et contact direct avec les hébergeurs.
-          </div>
-        </div>
-      </div>
- 
-      <div class="faq-item">
-        <button class="faq-question">
-          Le déréférencement Google est-il inclus ?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            Oui. Lorsque c'est nécessaire, nous procédons également au déréférencement des contenus dans les moteurs de recherche via les outils officiels Google. Cette étape est incluse dans toutes nos offres.
-          </div>
-        </div>
-      </div>
- 
-      <div class="faq-item">
-        <button class="faq-question">
-          Est-ce totalement confidentiel ?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            Oui. Toutes les demandes sont traitées de manière strictement confidentielle. Aucune information concernant vos contenus, votre identité ou votre situation n'est partagée avec des tiers. Nos équipes sont soumises à un accord de confidentialité strict.
-          </div>
-        </div>
-      </div>
- 
-    </div>
-  </div>
- 
-  <div class="trust-section reveal">
-    <h2>Protection professionnelle contre les leaks</h2>
-    <p>Nous aidons les créateurs de contenu, influenceurs, streamers et artistes à protéger leurs contenus contre les fuites et la diffusion illégale.
-    Notre système de surveillance détecte rapidement les contenus volés afin de les supprimer des plateformes, forums et moteurs de recherche.</p>
-    <div class="trust-points">
-      <div>✔ Surveillance active</div>
-      <div>✔ Suppression rapide</div>
-      <div>✔ Déréférencement Google</div>
-      <div>✔ Confidentialité garantie</div>
+      </form>
+      <p class="form-note">🔒 Demande confidentielle · Aucun engagement</p>
     </div>
   </div>
 </section>
  
-<div class="section-divider"></div>
- 
-<section id="contact" class="section reveal">
-  <h2>Contact</h2>
-  <div class="contact-box">
-    <form action="https://formsubmit.co/contact@shield-digital.fr" method="POST">
-      <input type="text" name="name" placeholder="Nom" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-      <p class="contact-note">🔒 Réponse sous 24h • Demande confidentielle</p>
-    </form>
-    <p style="text-align:center; margin-top:20px; color:rgba(255,255,255,0.6);">Ou contactez-nous directement :</p>
-    <div class="contact-email">
-      <a href="mailto:contact@shield-digital.fr">contact@shield-digital.fr</a>
-    </div>
-  </div>
-</section>
- 
+<!-- FOOTER -->
 <footer>
-  <p>Shield Digital — Agence de protection de contenu numérique</p>
-  <p class="footer-small">Basée en France | Intervention internationale</p>
-  <p class="footer-small">© 2026 Shield Digital - Tous droits réservés</p>
-  <div style="margin-top:12px;">
-    <a href="mentions-legales.html">Mentions légales</a>
-    <a href="confidentialite.html">Politique de confidentialité</a>
+  <div class="footer-inner">
+    <div class="footer-brand">Shield<span>Digital</span></div>
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="https://instagram.com/official_shield_digital" target="_blank">Instagram</a>
+    </div>
+    <p class="footer-copy">© 2026 Shield Digital — Agence de protection de contenu numérique · Basée en France · Intervention internationale</p>
   </div>
 </footer>
  
-<a href="https://instagram.com/official_shield_digital" target="_blank"
-style="position:fixed;bottom:25px;right:25px;background:linear-gradient(45deg,#ff2d55,#ff4d6d);color:white;padding:14px 22px;border-radius:30px;font-weight:600;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.35);z-index:999;">
-  📩 Instagram
+<a href="https://instagram.com/official_shield_digital" target="_blank" class="ig-float">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+  Instagram
 </a>
  
 <script>
-  const canvas = document.getElementById('particles-bg');
-  const ctx = canvas.getContext('2d');
-  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-  resize();
-  window.addEventListener('resize', () => { resize(); initParticles(); });
-  let particles = [];
-  function initParticles() {
-    particles = [];
-    const count = Math.floor((canvas.width * canvas.height) / 11000);
-    for (let i = 0; i < count; i++) {
-      particles.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, vx: (Math.random()-.5)*.4, vy: (Math.random()-.5)*.4, r: Math.random()*1.5+.3, alpha: Math.random()*.5+.2 });
-    }
+const canvas=document.getElementById('particles-bg');
+const ctx=canvas.getContext('2d');
+function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+resize();
+window.addEventListener('resize',()=>{resize();init();});
+let pts=[];
+function init(){
+  pts=[];
+  const n=Math.floor((canvas.width*canvas.height)/13000);
+  for(let i=0;i<n;i++) pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.3+.3,a:Math.random()*.3+.1});
+}
+init();
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  for(let p of pts){
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
+    if(p.y<0)p.y=canvas.height;if(p.y>canvas.height)p.y=0;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(99,195,255,${p.a})`;ctx.fill();
   }
-  initParticles();
-  function draw() {
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    for (let p of particles) {
-      p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0;
-      if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0;
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(99,195,255,${p.alpha})`; ctx.fill();
-    }
-    for (let i=0;i<particles.length;i++) for (let j=i+1;j<particles.length;j++) {
-      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y, d=Math.sqrt(dx*dx+dy*dy);
-      if(d<100){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(99,195,255,${.15*(1-d/100)})`; ctx.lineWidth=.5; ctx.stroke(); }
-    }
-    requestAnimationFrame(draw);
+  for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
+    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<100){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(99,195,255,${.12*(1-d/100)})`;ctx.lineWidth=.5;ctx.stroke();}
   }
-  draw();
-</script>
+  requestAnimationFrame(draw);
+}
+draw();
  
-<script>
-  window.addEventListener('scroll', () => {
-    document.getElementById('main-header').classList.toggle('scrolled', window.scrollY > 40);
-  });
+window.addEventListener('scroll',()=>{
+  document.getElementById('main-header').classList.toggle('scrolled',window.scrollY>40);
+});
  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
  
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.parentElement;
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-answer').style.maxHeight = null;
-      });
-      if (!isOpen) {
-        item.classList.add('open');
-        const ans = item.querySelector('.faq-answer');
-        ans.style.maxHeight = ans.scrollHeight + 'px';
-      }
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight=null;
     });
+    if(!isOpen){
+      item.classList.add('open');
+      const a=item.querySelector('.faq-a');
+      a.style.maxHeight=a.scrollHeight+'px';
+    }
   });
-</script>
+});
  
-<script>
-  document.addEventListener("contextmenu", function(e){ e.preventDefault(); });
-  document.addEventListener("keydown", function(e){
-    if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "s")){ e.preventDefault(); }
-  });
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("keydown",e=>{if(e.ctrlKey&&['c','u','s'].includes(e.key))e.preventDefault();});
 </script>
- 
 </body>
 </html>
- 
