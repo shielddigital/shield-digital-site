@@ -101,7 +101,7 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
  
 /* PLATFORMS STRIP */
-.platforms-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 60px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;}
+.platforms-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 60px;display:flex;flex-direction:column;align-items:center;gap:0;}
 .strip-label{font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-right:8px;white-space:nowrap;}
 .p-chip{background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:7px 16px;border-radius:100px;font-size:13px;color:var(--text);transition:all 0.2s;cursor:default;white-space:nowrap;}
 .p-chip:hover{border-color:var(--border2);color:var(--blue2);background:var(--blue-dim);}
@@ -275,16 +275,20 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
  
 <!-- PLATFORMS STRIP -->
 <div class="platforms-strip">
-  <span class="strip-label">Plateformes surveillées</span>
-  <div class="p-chip">📸 Instagram</div>
-  <div class="p-chip">▶️ YouTube</div>
-  <div class="p-chip">🎮 Twitch</div>
-  <div class="p-chip">🐦 X / Twitter</div>
-  <div class="p-chip">🔞 OnlyFans</div>
-  <div class="p-chip">💎 MYM</div>
-  <div class="p-chip">🔥 Fansly</div>
-  <div class="p-chip">💬 Telegram</div>
-  <div class="p-chip">💰 Patreon</div>
+  <div style="width:100%;text-align:center;margin-bottom:14px;">
+    <span class="strip-label">Plateformes surveillées</span>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;">
+    <div class="p-chip">📸 Instagram</div>
+    <div class="p-chip">▶️ YouTube</div>
+    <div class="p-chip">🎮 Twitch</div>
+    <div class="p-chip">🐦 X / Twitter</div>
+    <div class="p-chip">🔞 OnlyFans</div>
+    <div class="p-chip">💎 MYM</div>
+    <div class="p-chip">🔥 Fansly</div>
+    <div class="p-chip">💬 Telegram</div>
+    <div class="p-chip">💰 Patreon</div>
+  </div>
 </div>
  
 <!-- PRICING -->
