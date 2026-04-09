@@ -34,7 +34,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
 * { box-sizing: border-box; }
  
-/* ===================== FOND PARTICULES ===================== */
 body {
   margin: 0;
   font-family: Poppins, Arial;
@@ -44,10 +43,8 @@ body {
  
 #particles-bg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   z-index: 0;
   pointer-events: none;
 }
@@ -56,12 +53,21 @@ header, section, footer, .hero {
   position: relative;
   z-index: 1;
 }
-/* =========================================================== */
+ 
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
  
 header {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   background: rgba(10, 14, 26, 0.85);
   backdrop-filter: blur(10px);
@@ -71,6 +77,12 @@ header {
   align-items: center;
   border-bottom: 1px solid rgba(99, 195, 255, 0.1);
   z-index: 100;
+  transition: all 0.3s;
+}
+header.scrolled {
+  background: rgba(10, 14, 26, 0.97);
+  border-bottom-color: rgba(99, 195, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
 }
  
 .logo img { height: 60px; }
@@ -96,6 +108,7 @@ nav a:hover { color: #63c3ff; }
   margin-bottom: 20px;
   color: #ffffff;
   text-shadow: 0 0 40px rgba(99,195,255,0.3);
+  animation: fadeUp 0.8s ease both;
 }
  
 .hero p {
@@ -103,6 +116,12 @@ nav a:hover { color: #63c3ff; }
   max-width: 750px;
   margin: auto;
   color: rgba(255,255,255,0.75);
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+ 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
  
 .btn {
@@ -142,6 +161,8 @@ nav a:hover { color: #63c3ff; }
   border-radius: 20px;
   display: inline-block;
   margin: 30px auto 0;
+  animation: fadeUp 0.8s 0.2s ease both;
+  backdrop-filter: blur(10px);
 }
  
 .stats {
@@ -190,18 +211,27 @@ nav a:hover { color: #63c3ff; }
   border: 1px solid rgba(99,195,255,0.12);
   border-radius: 14px;
   padding: 35px;
-  transition: 0.25s;
+  transition: 0.3s cubic-bezier(0.22,1,0.36,1);
   color: #e2e8f0;
+  position: relative;
+  overflow: hidden;
 }
- 
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top left, rgba(99,195,255,0.07), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card:hover::before { opacity: 1; }
 .card h3 { color: #ffffff; }
 .card p { color: rgba(255,255,255,0.65); }
- 
 .card:hover {
   transform: translateY(-8px);
   border-color: rgba(99,195,255,0.35);
   background: rgba(99,195,255,0.06);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
  
 /* PLATFORMS */
@@ -224,10 +254,11 @@ nav a:hover { color: #63c3ff; }
 .platform:hover {
   background: rgba(99,195,255,0.15);
   border-color: rgba(99,195,255,0.5);
+  transform: translateY(-2px);
 }
  
 /* PRICING */
-.pricing-section { text-align: center; margin-top: 20px; }
+.pricing-section { text-align: center; margin-top: 20px; overflow: visible; }
  
 .pricing-container {
   display: flex;
@@ -235,6 +266,8 @@ nav a:hover { color: #63c3ff; }
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 20px;
+  padding-top: 20px;
+  overflow: visible;
 }
  
 .pricing-card {
@@ -244,27 +277,55 @@ nav a:hover { color: #63c3ff; }
   padding: 40px;
   width: 300px;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.3s cubic-bezier(0.22,1,0.36,1);
   position: relative;
   color: #e2e8f0;
+  overflow: visible;
 }
- 
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, rgba(99,195,255,0.06), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.pricing-card:hover::before { opacity: 1; }
 .pricing-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   border-color: rgba(99,195,255,0.35);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
 }
- 
 .pricing-card h3 { color: #ffffff; margin-bottom: 10px; }
  
 .price {
   font-size: 36px;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 10px 0 4px;
   color: #63c3ff;
 }
  
-.billing { color: rgba(255,255,255,0.5); margin-bottom: 20px; }
+/* BILLING TYPE BADGE */
+.billing-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.billing-unique {
+  background: rgba(99,195,255,0.1);
+  border: 1px solid rgba(99,195,255,0.25);
+  color: #a5d8ff;
+}
+.billing-monthly {
+  background: rgba(37,99,235,0.2);
+  border: 1px solid rgba(37,99,235,0.4);
+  color: #93c5fd;
+}
  
 .pricing-card ul { list-style: none; padding: 0; margin-bottom: 25px; }
 .pricing-card li { margin: 10px 0; color: rgba(255,255,255,0.75); }
@@ -279,17 +340,19 @@ nav a:hover { color: #63c3ff; }
   font-weight: 600;
   transition: 0.2s;
 }
- 
 .pricing-btn:hover {
   background: #1d4ed8;
   box-shadow: 0 8px 20px rgba(37,99,235,0.4);
+  transform: translateY(-1px);
 }
  
 .featured {
   border: 2px solid #63c3ff;
   transform: scale(1.05);
   background: rgba(99,195,255,0.07);
+  margin-top: 16px;
 }
+.featured:hover { transform: scale(1.05) translateY(-10px); }
  
 .badge {
   position: absolute;
@@ -303,6 +366,7 @@ nav a:hover { color: #63c3ff; }
   font-size: 12px;
   font-weight: 600;
   white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.4);
 }
  
 .pricing-note {
@@ -311,25 +375,75 @@ nav a:hover { color: #63c3ff; }
   font-size: 14px;
 }
  
-/* FAQ */
+/* FAQ ACCORDION */
 .faq-section { margin-top: 80px; text-align: center; }
  
 .faq-container {
   max-width: 800px;
   margin: 40px auto 0;
-}
- 
-.faq-item {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(99,195,255,0.1);
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 20px;
   text-align: left;
 }
  
-.faq-item h3 { margin-bottom: 10px; font-size: 18px; color: #ffffff; }
-.faq-item p { color: rgba(255,255,255,0.6); margin: 0; }
+.faq-item {
+  border: 1px solid rgba(99,195,255,0.12);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+.faq-item.open {
+  border-color: rgba(99,195,255,0.35);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+ 
+.faq-question {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: none;
+  color: #ffffff;
+  font-family: Poppins, Arial;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 22px 28px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background 0.2s;
+}
+.faq-question:hover { background: rgba(99,195,255,0.05); }
+.faq-item.open .faq-question { background: rgba(99,195,255,0.06); }
+ 
+.faq-icon {
+  width: 28px; height: 28px; min-width: 28px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(99,195,255,0.4);
+  color: #63c3ff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 300;
+  transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+  line-height: 1;
+}
+.faq-item.open .faq-icon {
+  background: rgba(99,195,255,0.15);
+  transform: rotate(45deg);
+  border-color: rgba(99,195,255,0.6);
+}
+ 
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.22,1,0.36,1);
+}
+.faq-answer-inner {
+  padding: 0 28px 22px;
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  line-height: 1.75;
+  border-top: 1px solid rgba(99,195,255,0.08);
+}
  
 /* TRUST */
 .trust-section { margin-top: 80px; text-align: center; }
@@ -349,6 +463,12 @@ nav a:hover { color: #63c3ff; }
   border-radius: 10px;
   color: #a5d8ff;
   font-weight: 500;
+  transition: 0.2s;
+}
+.trust-points div:hover {
+  background: rgba(99,195,255,0.12);
+  border-color: rgba(99,195,255,0.4);
+  transform: translateY(-2px);
 }
  
 /* PROCESS */
@@ -356,7 +476,6 @@ nav a:hover { color: #63c3ff; }
   padding: 80px 20px;
   text-align: center;
 }
- 
 .process-section h2 { font-size: 36px; margin-bottom: 40px; color: #ffffff; }
  
 .process-grid {
@@ -375,6 +494,13 @@ nav a:hover { color: #63c3ff; }
   border: 1px solid rgba(99,195,255,0.1);
   border-radius: 14px;
   padding: 30px;
+  transition: 0.3s;
+}
+.process-step:hover {
+  border-color: rgba(99,195,255,0.3);
+  background: rgba(99,195,255,0.04);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 .process-step h3 { color: #ffffff; }
 .process-step p { color: rgba(255,255,255,0.6); }
@@ -387,6 +513,7 @@ nav a:hover { color: #63c3ff; }
   padding: 45px;
   max-width: 600px;
   margin: auto;
+  backdrop-filter: blur(10px);
 }
  
 form { display: grid; gap: 15px; }
@@ -399,10 +526,13 @@ input, textarea {
   background: rgba(255,255,255,0.05);
   color: #ffffff;
   outline: none;
-  transition: border 0.2s;
+  transition: border 0.2s, box-shadow 0.2s;
 }
 input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.35); }
-input:focus, textarea:focus { border-color: rgba(99,195,255,0.5); }
+input:focus, textarea:focus {
+  border-color: rgba(99,195,255,0.5);
+  box-shadow: 0 0 0 3px rgba(99,195,255,0.08);
+}
  
 button {
   padding: 16px;
@@ -419,6 +549,7 @@ button {
 button:hover {
   background: #1d4ed8;
   box-shadow: 0 8px 20px rgba(37,99,235,0.4);
+  transform: translateY(-1px);
 }
  
 .contact-note {
@@ -445,7 +576,6 @@ footer {
   border-top: 1px solid rgba(99,195,255,0.1);
   color: rgba(255,255,255,0.7);
 }
- 
 footer a {
   color: rgba(255,255,255,0.5);
   text-decoration: none;
@@ -453,7 +583,6 @@ footer a {
   font-size: 14px;
 }
 footer a:hover { color: #63c3ff; }
- 
 .footer-small { opacity: 0.5; font-size: 14px; }
  
 /* INTRO TEXT */
@@ -479,6 +608,15 @@ footer a:hover { color: #63c3ff; }
 .btn-bottom:hover {
   background: #1d4ed8;
   box-shadow: 0 8px 20px rgba(37,99,235,0.4);
+  transform: translateY(-2px);
+}
+ 
+/* DIVIDER */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,195,255,0.15), transparent);
+  max-width: 800px;
+  margin: 0 auto;
 }
  
 @media (max-width: 768px) {
@@ -488,18 +626,18 @@ footer a:hover { color: #63c3ff; }
   .stats { gap: 30px; }
   .stat h3 { font-size: 28px; }
   .protection-badge { padding: 20px; }
+  .featured { transform: scale(1); }
+  .featured:hover { transform: translateY(-10px); }
 }
 </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQVK5V7W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQVK5V7W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  
-<!-- CANVAS PARTICULES -->
 <canvas id="particles-bg"></canvas>
  
-<header>
+<header id="main-header">
   <div class="logo">
     <img src="logo.png" alt="Shield Digital Logo" />
   </div>
@@ -517,29 +655,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a class="btn primary" href="#contact">Obtenir mon scan gratuit</a>
     <a class="btn secondary" href="#pricing">Voir les tarifs</a>
     <div class="stats">
-      <div class="stat">
-        <h3>1000+</h3>
-        <p>Liens détectés</p>
-      </div>
-      <div class="stat">
-        <h3>24h</h3>
-        <p>Temps moyen d'intervention</p>
-      </div>
-      <div class="stat">
-        <h3>100%</h3>
-        <p>Confidentialité</p>
-      </div>
+      <div class="stat"><h3>1000+</h3><p>Liens détectés</p></div>
+      <div class="stat"><h3>24h</h3><p>Temps moyen d'intervention</p></div>
+      <div class="stat"><h3>100%</h3><p>Confidentialité</p></div>
     </div>
   </div>
 </section>
  
-<section class="intro-section">
+<section class="intro-section reveal">
   <h2>Suppression de contenu piraté et protection DMCA</h2>
   <p>Shield Digital aide les créateurs, influenceurs et professionnels à détecter et supprimer les contenus piratés sur Internet.
   Grâce à des procédures DMCA rapides, nous protégeons votre image, vos revenus et votre réputation en ligne.</p>
 </section>
  
-<section class="process-section">
+<section class="process-section reveal">
   <h2>Comment fonctionne Shield Digital</h2>
   <div class="process-grid">
     <div class="process-step">
@@ -561,7 +690,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
  
-<section id="services" class="section">
+<div class="section-divider"></div>
+ 
+<section id="services" class="section reveal">
   <h2>Où nous traquons les leaks</h2>
   <div class="cards">
     <div class="card">
@@ -579,7 +710,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
  
-<section class="section">
+<div class="section-divider"></div>
+ 
+<section class="section reveal">
   <h2>Protection de contenu sur toutes les plateformes</h2>
   <p style="max-width:600px; margin:0 auto 30px; text-align:center; color:rgba(255,255,255,0.6);">
     Vos contenus sont protégés partout, même là où vous ne les voyez pas.
@@ -600,18 +733,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
  
-<section id="pricing" class="section">
+<div class="section-divider"></div>
+ 
+<section id="pricing" class="section reveal">
   <h2>Choisissez votre niveau de protection</h2>
-  <p style="text-align:center; max-width:750px; margin:0 auto 10px; color:rgba(255,255,255,0.6);">
-    Protection continue de vos contenus et suppression rapide des leaks sur Internet.
-  </p>
+ 
   <div class="pricing-section">
     <div class="pricing-container">
  
       <div class="pricing-card">
         <h3>Shield Flash</h3>
         <div class="price">99€</div>
-        <div class="billing">Paiement unique</div>
+        <div class="billing-badge billing-unique">Paiement unique</div>
         <ul>
           <li>✔ Retrait de 1 à 3 liens</li>
           <li>✔ Action sous 24h</li>
@@ -625,7 +758,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="badge">Le plus choisi</div>
         <h3>Shield Premium</h3>
         <div class="price">299€</div>
-        <div class="billing">/ mois</div>
+        <div class="billing-badge billing-monthly">Mensuel</div>
         <ul>
           <li>✔ Veille active 24h/24</li>
           <li>✔ Retrait illimité</li>
@@ -639,7 +772,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="pricing-card">
         <h3>Shield Ultimate</h3>
         <div class="price">499€</div>
-        <div class="billing">Paiement unique</div>
+        <div class="billing-badge billing-unique">Paiement unique</div>
         <ul>
           <li>✔ Nettoyage massif (+50 liens)</li>
           <li>✔ Audit forums & Telegram</li>
@@ -655,33 +788,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
   </div>
  
-  <div class="faq-section">
+  <!-- FAQ ACCORDION -->
+  <div class="faq-section reveal">
     <h2>Questions fréquentes</h2>
     <div class="faq-container">
+ 
       <div class="faq-item">
-        <h3>Combien de temps faut-il pour supprimer un leak ?</h3>
-        <p>La majorité des suppressions sont effectuées sous 24 à 72 heures selon la plateforme concernée.</p>
+        <button class="faq-question">
+          Combien de temps faut-il pour supprimer un leak ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            La majorité des suppressions sont effectuées sous 24 à 72 heures selon la plateforme concernée. Pour certains hébergeurs plus complexes, le délai peut aller jusqu'à 7 jours. Vous êtes tenu informé à chaque étape du processus.
+          </div>
+        </div>
       </div>
+ 
       <div class="faq-item">
-        <h3>Travaillez-vous avec Telegram et les forums privés ?</h3>
-        <p>Oui. Notre système surveille Telegram, forums spécialisés et sites de leaks afin d'identifier rapidement les contenus diffusés illégalement.</p>
+        <button class="faq-question">
+          Travaillez-vous avec Telegram et les forums privés ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Notre système surveille Telegram, forums spécialisés et sites de leaks afin d'identifier rapidement les contenus diffusés illégalement. Nous disposons de procédures spécifiques adaptées à chaque type de plateforme.
+          </div>
+        </div>
       </div>
+ 
       <div class="faq-item">
-        <h3>Dois-je vous donner accès à mes comptes ?</h3>
-        <p>Non. Nous n'avons besoin d'aucun accès à vos comptes. Toutes les actions sont réalisées via signalements, DMCA et contact avec les hébergeurs.</p>
+        <button class="faq-question">
+          Dois-je vous donner accès à mes comptes ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Non, absolument pas. Nous n'avons besoin d'aucun accès à vos comptes personnels ou professionnels. Toutes les actions sont réalisées via signalements officiels, procédures DMCA et contact direct avec les hébergeurs.
+          </div>
+        </div>
       </div>
+ 
       <div class="faq-item">
-        <h3>Le déréférencement Google est-il inclus ?</h3>
-        <p>Oui. Lorsque c'est nécessaire nous procédons également au déréférencement des contenus dans les moteurs de recherche.</p>
+        <button class="faq-question">
+          Le déréférencement Google est-il inclus ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Lorsque c'est nécessaire, nous procédons également au déréférencement des contenus dans les moteurs de recherche via les outils officiels Google. Cette étape est incluse dans toutes nos offres.
+          </div>
+        </div>
       </div>
+ 
       <div class="faq-item">
-        <h3>Est-ce confidentiel ?</h3>
-        <p>Oui. Toutes les demandes sont traitées de manière strictement confidentielle. Aucune information concernant vos contenus ou votre identité n'est partagée.</p>
+        <button class="faq-question">
+          Est-ce totalement confidentiel ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Toutes les demandes sont traitées de manière strictement confidentielle. Aucune information concernant vos contenus, votre identité ou votre situation n'est partagée avec des tiers. Nos équipes sont soumises à un accord de confidentialité strict.
+          </div>
+        </div>
       </div>
+ 
     </div>
   </div>
  
-  <div class="trust-section">
+  <div class="trust-section reveal">
     <h2>Protection professionnelle contre les leaks</h2>
     <p>Nous aidons les créateurs de contenu, influenceurs, streamers et artistes à protéger leurs contenus contre les fuites et la diffusion illégale.
     Notre système de surveillance détecte rapidement les contenus volés afin de les supprimer des plateformes, forums et moteurs de recherche.</p>
@@ -694,7 +869,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
  
-<section id="contact" class="section">
+<div class="section-divider"></div>
+ 
+<section id="contact" class="section reveal">
   <h2>Contact</h2>
   <div class="contact-box">
     <form action="https://formsubmit.co/contact@shield-digital.fr" method="POST">
@@ -722,73 +899,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
  
 <a href="https://instagram.com/official_shield_digital" target="_blank"
-style="position:fixed;bottom:25px;right:25px;background:linear-gradient(45deg,#ff2d55,#ff4d6d);color:white;padding:14px 22px;border-radius:30px;font-weight:600;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.35);z-index:999;">
+style="position:fixed;bottom:25px;right:25px;background:linear-gradient(45deg,#ff2d55,#ff4d6d);color:white;padding:14px 22px;border-radius:30px;font-weight:600;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.35);z-index:999;display:flex;align-items:center;gap:8px;transition:transform 0.2s,box-shadow 0.2s;"
+onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.45)'"
+onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.35)'">
   📩 Instagram
 </a>
  
-<!-- ===================== SCRIPT PARTICULES ===================== -->
+<!-- PARTICLES -->
 <script>
   const canvas = document.getElementById('particles-bg');
   const ctx = canvas.getContext('2d');
- 
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
   resize();
   window.addEventListener('resize', () => { resize(); initParticles(); });
- 
   let particles = [];
- 
   function initParticles() {
     particles = [];
     const count = Math.floor((canvas.width * canvas.height) / 11000);
     for (let i = 0; i < count; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        r: Math.random() * 1.5 + 0.3,
-        alpha: Math.random() * 0.5 + 0.2
-      });
+      particles.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, vx: (Math.random()-.5)*.4, vy: (Math.random()-.5)*.4, r: Math.random()*1.5+.3, alpha: Math.random()*.5+.2 });
     }
   }
   initParticles();
- 
   function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
     for (let p of particles) {
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0) p.x = canvas.width;
-      if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height;
-      if (p.y > canvas.height) p.y = 0;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(99,195,255,${p.alpha})`;
-      ctx.fill();
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0;
+      if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(99,195,255,${p.alpha})`; ctx.fill();
     }
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 100) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(99,195,255,${0.15 * (1 - d / 100)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
-        }
-      }
+    for (let i=0;i<particles.length;i++) for (let j=i+1;j<particles.length;j++) {
+      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y, d=Math.sqrt(dx*dx+dy*dy);
+      if(d<100){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(99,195,255,${.15*(1-d/100)})`; ctx.lineWidth=.5; ctx.stroke(); }
     }
     requestAnimationFrame(draw);
   }
   draw();
 </script>
-<!-- ============================================================= -->
+ 
+<!-- SCROLL EFFECTS -->
+<script>
+  // Header scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-header').classList.toggle('scrolled', window.scrollY > 40);
+  });
+ 
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+ 
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      // open clicked if was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        const ans = item.querySelector('.faq-answer');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
  
 <script>
   document.addEventListener("contextmenu", function(e){ e.preventDefault(); });
