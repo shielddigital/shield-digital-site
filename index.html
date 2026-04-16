@@ -399,6 +399,7 @@ function setBilling(mode) {
     priceTrimestriel.style.display = 'none';
     // Lien Stripe mensuel
     premiumBtn.href = 'https://buy.stripe.com/3cI8wPewq9Oz5m2bzU6sw06';
+    document.getElementById('premium-name').textContent = 'Shield Premium';
     premiumBtn.textContent = 'Démarrer mon abonnement';
   } else {
     // Toggle style
@@ -413,7 +414,8 @@ function setBilling(mode) {
     priceTrimestriel.style.display = 'block';
     // Lien Stripe trimestriel
     premiumBtn.href = 'https://buy.stripe.com/5kQ8wP1JE0dZ29Q47s6sw07';
-    premiumBtn.textContent = 'Choisir Premium+';
+    document.getElementById('premium-name').textContent = 'Shield Premium +';
+    premiumBtn.textContent = 'Choisir Premium +';
   }
 }
 </script>
