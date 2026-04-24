@@ -67,12 +67,9 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;}
 #particles-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
 header,section,footer,.platforms-strip,.trust-bar,.divider{position:relative;z-index:1;}
- 
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.75s cubic-bezier(0.22,1,0.36,1),transform 0.75s cubic-bezier(0.22,1,0.36,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
 .reveal-d1{transition-delay:0.1s;}.reveal-d2{transition-delay:0.2s;}.reveal-d3{transition-delay:0.3s;}
- 
-/* NAV */
 header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s;}
 header.scrolled{background:rgba(8,14,32,0.96);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 4px 40px rgba(0,0,0,0.5);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
@@ -82,8 +79,6 @@ nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px 16px;bo
 nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .nav-cta{background:var(--accent)!important;color:white!important;font-weight:600!important;font-size:13px!important;padding:10px 24px!important;border-radius:8px!important;box-shadow:0 0 24px rgba(37,99,235,0.35)!important;}
 .nav-cta:hover{background:var(--accent2)!important;transform:translateY(-1px)!important;}
- 
-/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:120px 60px 80px;max-width:1400px;margin:0 auto;gap:80px;}
 .hero-left{flex:1;max-width:620px;}
 .hero-right{flex:0 0 420px;}
@@ -98,14 +93,10 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 40px rgba(37,99,235,0.5);}
 .btn-secondary{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border2);color:var(--blue2);font-weight:500;font-size:14px;padding:15px 28px;border-radius:10px;text-decoration:none;background:var(--blue-dim);transition:all 0.25s;}
 .btn-secondary:hover{background:rgba(77,166,255,0.18);transform:translateY(-2px);}
- 
-/* HERO STATS — centrés */
 .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:14px;overflow:hidden;border:1px solid var(--border);animation:fadeUp 0.6s 0.34s ease both;max-width:460px;}
 .h-stat{background:var(--bg2);padding:20px 16px;text-align:center;}
 .h-stat-num{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;font-weight:800;color:var(--blue2);display:block;line-height:1;margin-bottom:4px;}
 .h-stat-label{font-size:12px;color:var(--muted);}
- 
-/* HERO CARD */
 .hero-card{background:linear-gradient(160deg,rgba(12,20,40,0.95),rgba(8,14,32,0.98));border:1px solid var(--border2);border-radius:20px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,0.6),0 0 0 1px var(--border),inset 0 1px 0 rgba(255,255,255,0.06);animation:fadeUp 0.6s 0.2s ease both;}
 .hero-card-title{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
 .hero-card-title::before{content:'🛡';font-size:18px;}
@@ -119,21 +110,15 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .hero-card-cta:hover{background:var(--accent2);transform:translateY(-1px);}
 .hero-card-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
- 
-/* PLATFORMS STRIP */
 .platforms-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 60px;display:flex;flex-direction:column;align-items:center;gap:0;}
 .strip-label{font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-right:8px;white-space:nowrap;}
 .p-chip{background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:7px 16px;border-radius:100px;font-size:13px;color:var(--text);transition:all 0.2s;cursor:default;white-space:nowrap;}
 .p-chip:hover{border-color:var(--border2);color:var(--blue2);background:var(--blue-dim);}
- 
-/* SECTIONS */
 .sec{padding:96px 60px;max-width:1400px;margin:0 auto;}
 .sec-label{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue2);margin-bottom:10px;display:block;}
 .sec-title{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:14px;}
 .sec-sub{max-width:520px;color:var(--text);font-size:15px;margin-bottom:40px;}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
- 
-/* PRICING */
 .pricing-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start;}
 .pc{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:36px;position:relative;transition:all 0.3s;overflow:visible;}
 .pc:hover{border-color:var(--border2);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,0.5);}
@@ -155,8 +140,6 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .pc-btn-solid{background:var(--accent);color:white;box-shadow:0 0 24px rgba(37,99,235,0.35);}
 .pc-btn-solid:hover{background:var(--accent2);box-shadow:0 6px 30px rgba(37,99,235,0.55);transform:translateY(-1px);}
 .pricing-note{text-align:center;margin-top:28px;color:var(--muted);font-size:13px;}
- 
-/* TRUST BAR */
 .trust-bar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 60px;}
 .trust-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden;border:1px solid var(--border);}
 .trust-item{background:var(--bg2);padding:28px 24px;text-align:center;transition:background 0.2s;}
@@ -164,11 +147,7 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .trust-icon{font-size:24px;margin-bottom:10px;display:block;}
 .trust-item strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:700;margin-bottom:4px;}
 .trust-item span{font-size:13px;color:var(--muted);}
- 
-/* TWO COL SECTIONS */
 .two-col-wrap{max-width:1400px;margin:0 auto;padding:96px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
- 
-/* SERVICES */
 .s-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:24px;transition:all 0.3s;position:relative;overflow:hidden;margin-bottom:14px;}
 .s-card:last-child{margin-bottom:0;}
 .s-card::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(77,166,255,0.08),transparent 60%);opacity:0;transition:opacity 0.3s;}
@@ -177,8 +156,6 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .s-icon{width:42px;height:42px;border-radius:10px;background:var(--blue-dim);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px;}
 .s-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;}
 .s-card p{font-size:14px;color:var(--text);line-height:1.7;}
- 
-/* PROCESS */
 .proc-step{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:24px;transition:all 0.3s;margin-bottom:14px;}
 .proc-step:last-child{margin-bottom:0;}
 .proc-step:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,0.3);}
@@ -186,8 +163,6 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .proc-step:hover .proc-num{color:rgba(77,166,255,0.3);}
 .proc-step h3{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;}
 .proc-step p{font-size:14px;color:var(--text);line-height:1.7;}
- 
-/* FAQ */
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1100px;margin:0 auto;}
 .faq-item{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color 0.25s;}
 .faq-item.open{border-color:var(--border2);}
@@ -198,8 +173,6 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .faq-item.open .faq-icon{background:var(--blue-dim);transform:rotate(45deg);border-color:var(--blue2);}
 .faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.22,1,0.36,1);}
 .faq-a-inner{padding:0 22px 18px;color:var(--text);font-size:14px;line-height:1.75;border-top:1px solid var(--border);}
- 
-/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1000px;margin:0 auto;}
 .contact-info h3{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:800;margin-bottom:14px;line-height:1.2;}
 .contact-info p{color:var(--text);font-size:15px;margin-bottom:28px;}
@@ -215,8 +188,6 @@ input:focus,textarea:focus{border-color:var(--border2);box-shadow:0 0 0 3px rgba
 .submit-btn{width:100%;padding:16px;background:var(--accent);color:white;border:none;border-radius:10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 0 24px rgba(37,99,235,0.35);transition:all 0.25s;margin-top:4px;}
 .submit-btn:hover{background:var(--accent2);box-shadow:0 6px 30px rgba(37,99,235,0.55);transform:translateY(-1px);}
 .form-note{text-align:center;font-size:12px;color:var(--muted);margin-top:12px;}
- 
-/* FOOTER */
 footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48px 60px;}
 .footer-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
 .footer-brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;}
@@ -225,12 +196,14 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 .footer-links a{color:var(--muted);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;transition:all 0.2s;}
 .footer-links a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .footer-copy{font-size:12px;color:rgba(232,237,245,0.25);width:100%;text-align:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
- 
-/* INSTAGRAM FLOAT */
 .ig-float{position:fixed;bottom:26px;right:26px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:white;padding:13px 22px;border-radius:100px;font-weight:600;font-size:13px;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,0.4);z-index:200;display:flex;align-items:center;gap:8px;transition:transform 0.2s,box-shadow 0.2s;}
 .ig-float:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.5);}
- 
-/* MOBILE */
+/* Toggle dans carte */
+.card-toggle{display:flex;background:var(--bg);border:1px solid var(--border);border-radius:100px;padding:4px;gap:3px;margin:16px 0 0;width:fit-content;}
+.card-toggle-btn{padding:7px 18px;border-radius:100px;border:none;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.04em;transition:all 0.25s;}
+.card-toggle-btn.active{background:var(--accent);color:white;box-shadow:0 2px 10px rgba(37,99,235,0.35);}
+.card-toggle-btn.inactive{background:transparent;color:var(--muted);}
+.toggle-discount{background:rgba(77,166,255,0.15);border:1px solid rgba(77,166,255,0.3);color:var(--blue2);font-size:9px;font-weight:700;padding:2px 6px;border-radius:100px;}
 @media(max-width:1024px){
   header{padding:0 24px;}
   nav a:not(.nav-cta){display:none;}
@@ -252,25 +225,23 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQVK5V7W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <canvas id="particles-bg"></canvas>
  
-<!-- NAV -->
 <header id="main-header">
   <a href="/" class="logo"><img src="logo.png" alt="Shield Digital"></a>
   <nav>
     <a href="#pricing">Tarifs</a>
     <a href="#services">Services</a>
     <a href="#faq">FAQ</a>
- <a href="#contact" class="nav-cta" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">Scan gratuit</a>
+    <a href="#contact" class="nav-cta" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">Scan gratuit</a>
   </nav>
 </header>
  
-<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
     <div class="hero-tag"><span class="hero-tag-dot"></span>Protection DMCA professionnelle</div>
     <h1>Supprimez vos<br>contenus <span class="hl">piratés.</span><br>Reprenez le contrôle.</h1>
     <p class="hero-sub">Shield Digital détecte et supprime vos leaks sur Internet en moins de 24h. DMCA officiel, déréférencement Google, surveillance Telegram — on gère tout, vous ne faites rien.</p>
     <div class="hero-actions">
-     <a href="#contact" class="btn-primary" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">🛡 Obtenir mon scan gratuit</a>
+      <a href="#contact" class="btn-primary" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">🛡 Obtenir mon scan gratuit</a>
       <a href="#pricing" class="btn-secondary">Voir les tarifs →</a>
     </div>
     <div class="hero-stats">
@@ -293,7 +264,6 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
   </div>
 </section>
  
-<!-- PLATFORMS STRIP -->
 <div class="platforms-strip">
   <div style="width:100%;text-align:center;margin-bottom:14px;">
     <span class="strip-label">Plateformes surveillées</span>
@@ -311,30 +281,17 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
   </div>
 </div>
  
-<!-- PRICING -->
+<!-- ===== PRICING ===== -->
 <section id="pricing" class="sec">
   <span class="sec-label reveal" style="text-align:center;display:block;">Tarifs</span>
   <h2 class="sec-title reveal" style="text-align:center;">Choisissez votre protection</h2>
  
-  <!-- TOGGLE -->
-  <div class="reveal" style="display:flex;justify-content:center;margin:28px 0 32px;">
-    <div id="billing-toggle" style="display:inline-flex;background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:5px;gap:4px;position:relative;">
-      <button id="btn-mensuel" onclick="setBilling('mensuel')" style="padding:10px 28px;border-radius:100px;border:none;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.04em;transition:all 0.25s;background:var(--accent);color:white;box-shadow:0 2px 12px rgba(37,99,235,0.35);">
-        Mensuel
-      </button>
-      <button id="btn-trimestriel" onclick="setBilling('trimestriel')" style="padding:10px 28px;border-radius:100px;border:none;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.04em;transition:all 0.25s;background:transparent;color:var(--muted);display:flex;align-items:center;gap:8px;">
-        3 Mois
-        <span id="toggle-badge" style="background:rgba(77,166,255,0.15);border:1px solid rgba(77,166,255,0.3);color:var(--blue2);font-size:10px;font-weight:700;padding:2px 8px;border-radius:100px;letter-spacing:0.06em;">- 25%</span>
-      </button>
-    </div>
-  </div>
- 
-  <div class="pricing-wrap reveal" style="margin-top:20px;padding-top:20px;">
+  <div class="pricing-wrap reveal" style="margin-top:40px;padding-top:20px;">
  
     <!-- SHIELD FLASH -->
     <div class="pc">
       <div class="pc-name">Shield Flash</div>
-      <div class="pc-price">149€</div>
+      <div class="pc-price">89€</div>
       <div class="pc-billing-badge bb-unique">Paiement unique</div>
       <div class="pc-divider"></div>
       <ul class="pc-features">
@@ -346,52 +303,68 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
       <a class="pc-btn pc-btn-outline" href="https://buy.stripe.com/5kQ6oH4VQ0dZ15MavQ6sw05" target="_blank">Commander maintenant</a>
     </div>
  
-    <!-- SHIELD PREMIUM (toggle) -->
-    <div class="pc hot" id="card-premium">
-      <div class="pc-badge" id="premium-badge">⭐ Recommandé</div>
-      <div class="pc-name" id="premium-name">Shield Premium</div>
+    <!-- SHIELD STARTER -->
+    <div class="pc">
+      <div class="pc-name">Shield Starter</div>
  
-      <!-- Prix mensuel -->
-      <div id="price-mensuel">
-        <div class="pc-price">399€<span>/Mois</span></div>
-        <div class="pc-billing-badge bb-monthly">Mensuel</div>
+      <div class="card-toggle">
+        <button class="card-toggle-btn active" id="starter-btn-m" onclick="setStarter('mensuel')">Mensuel</button>
+        <button class="card-toggle-btn inactive" id="starter-btn-t" onclick="setStarter('trim')" style="display:flex;align-items:center;gap:6px;">
+          3 Mois <span class="toggle-discount">-10%</span>
+        </button>
       </div>
  
-      <!-- Prix trimestriel (caché par défaut) -->
-      <div id="price-trimestriel" style="display:none;">
-        <div class="pc-price">899€<span>/3 Mois</span></div>
-        <div class="pc-billing-badge bb-monthly" style="background:rgba(77,166,255,0.15);border-color:rgba(77,166,255,0.35);color:var(--blue2);">Premium + · Économisez 298€</div>
+      <div id="starter-m">
+        <div class="pc-price">119€<span>/Mois</span></div>
+        <div class="pc-billing-badge bb-monthly">Sans engagement</div>
+      </div>
+      <div id="starter-t" style="display:none;">
+        <div class="pc-price">321€<span>/3 Mois</span></div>
+        <div class="pc-billing-badge bb-monthly" style="background:rgba(77,166,255,0.15);border-color:rgba(77,166,255,0.35);color:var(--blue2);">Starter+ · Économisez 36€</div>
       </div>
  
       <div class="pc-divider"></div>
       <ul class="pc-features">
-        <li>Suppression & déréférencement</li>
+        <li>Suppression & déréférencement (2 liens/mois)</li>
         <li>Contact hébergeur & registrar</li>
-        <li>Suivi & relances continus</li>
+        <li>Mise en demeure si nécessaire</li>
+        <li>Suivi & relance</li>
+        <li>Rapport mensuel détaillé</li>
+      </ul>
+      <a class="pc-btn pc-btn-outline" id="starter-cta" href="https://buy.stripe.com/STARTER_MENSUEL" target="_blank">Démarrer mon abonnement</a>
+    </div>
+ 
+    <!-- SHIELD PREMIUM -->
+    <div class="pc hot">
+      <div class="pc-badge">⭐ Recommandé</div>
+      <div class="pc-name" id="premium-name">Shield Premium</div>
+ 
+      <div class="card-toggle">
+        <button class="card-toggle-btn active" id="premium-btn-m" onclick="setPremium('mensuel')">Mensuel</button>
+        <button class="card-toggle-btn inactive" id="premium-btn-t" onclick="setPremium('trim')" style="display:flex;align-items:center;gap:6px;">
+          3 Mois <span class="toggle-discount">-25%</span>
+        </button>
+      </div>
+ 
+      <div id="premium-m">
+        <div class="pc-price">399€<span>/Mois</span></div>
+        <div class="pc-billing-badge bb-monthly">Sans engagement</div>
+      </div>
+      <div id="premium-t" style="display:none;">
+        <div class="pc-price">899€<span>/3 Mois</span></div>
+        <div class="pc-billing-badge bb-monthly" style="background:rgba(77,166,255,0.15);border-color:rgba(77,166,255,0.35);color:var(--blue2);">Premium+ · Économisez 298€</div>
+      </div>
+ 
+      <div class="pc-divider"></div>
+      <ul class="pc-features">
+        <li>Suppression & déréférencement illimités</li>
+        <li>Contact hébergeur & registrar</li>
+        <li>Mise en demeure si nécessaire</li>
+        <li>Suivi & relance continus</li>
         <li>Rapport mensuel détaillé</li>
         <li>Support prioritaire</li>
       </ul>
-      <a class="pc-btn pc-btn-solid" id="premium-btn"
-        href="https://buy.stripe.com/3cI8wPewq9Oz5m2bzU6sw06"
-        target="_blank"
-        style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">
-        Démarrer mon abonnement
-      </a>
-    </div>
- 
-    <!-- SHIELD SUR MESURE -->
-    <div class="pc">
-      <div class="pc-name">Shield Sur Mesure</div>
-      <div class="pc-price">Sur devis</div>
-      <div class="pc-billing-badge bb-unique">Personnalisé</div>
-      <div class="pc-divider"></div>
-      <ul class="pc-features">
-        <li>Cas complexes & volume élevé</li>
-        <li>Traitement prioritaire</li>
-        <li>Stratégie personnalisée</li>
-        <li>Accompagnement dédié</li>
-      </ul>
-      <button class="pc-btn pc-btn-outline" onclick="ouvrirDevis()">Obtenir un devis</button>
+      <a class="pc-btn pc-btn-solid" id="premium-cta" href="https://buy.stripe.com/3cI8wPewq9Oz5m2bzU6sw06" target="_blank" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">Démarrer mon abonnement</a>
     </div>
  
   </div>
@@ -399,50 +372,58 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 </section>
  
 <script>
-function setBilling(mode) {
-  const btnMensuel = document.getElementById('btn-mensuel');
-  const btnTrimestriel = document.getElementById('btn-trimestriel');
-  const priceMensuel = document.getElementById('price-mensuel');
-  const priceTrimestriel = document.getElementById('price-trimestriel');
-  const premiumBtn = document.getElementById('premium-btn');
- 
+function setStarter(mode) {
+  const btnM = document.getElementById('starter-btn-m');
+  const btnT = document.getElementById('starter-btn-t');
+  const priceM = document.getElementById('starter-m');
+  const priceT = document.getElementById('starter-t');
+  const cta = document.getElementById('starter-cta');
   if (mode === 'mensuel') {
-    // Toggle style
-    btnMensuel.style.background = 'var(--accent)';
-    btnMensuel.style.color = 'white';
-    btnMensuel.style.boxShadow = '0 2px 12px rgba(37,99,235,0.35)';
-    btnTrimestriel.style.background = 'transparent';
-    btnTrimestriel.style.color = 'var(--muted)';
-    btnTrimestriel.style.boxShadow = 'none';
-    // Prix
-    priceMensuel.style.display = 'block';
-    priceTrimestriel.style.display = 'none';
-    // Lien Stripe mensuel
-    premiumBtn.href = 'https://buy.stripe.com/3cI8wPewq9Oz5m2bzU6sw06';
-    document.getElementById('premium-name').textContent = 'Shield Premium';
-    premiumBtn.textContent = 'Démarrer mon abonnement';
+    btnM.className = 'card-toggle-btn active';
+    btnT.className = 'card-toggle-btn inactive';
+    priceM.style.display = 'block';
+    priceT.style.display = 'none';
+    cta.href = 'https://buy.stripe.com/STARTER_MENSUEL'; // ⚠️ Remplacer par ton lien Stripe
+    cta.textContent = 'Démarrer mon abonnement';
   } else {
-    // Toggle style
-    btnTrimestriel.style.background = 'var(--accent)';
-    btnTrimestriel.style.color = 'white';
-    btnTrimestriel.style.boxShadow = '0 2px 12px rgba(37,99,235,0.35)';
-    btnMensuel.style.background = 'transparent';
-    btnMensuel.style.color = 'var(--muted)';
-    btnMensuel.style.boxShadow = 'none';
-    // Prix
-    priceMensuel.style.display = 'none';
-    priceTrimestriel.style.display = 'block';
-    // Lien Stripe trimestriel
-    premiumBtn.href = 'https://buy.stripe.com/5kQ8wP1JE0dZ29Q47s6sw07';
-    document.getElementById('premium-name').textContent = 'Shield Premium +';
-    premiumBtn.textContent = 'Choisir Premium +';
+    btnT.className = 'card-toggle-btn active';
+    btnM.className = 'card-toggle-btn inactive';
+    priceM.style.display = 'none';
+    priceT.style.display = 'block';
+    cta.href = 'https://buy.stripe.com/STARTER_TRIM'; // ⚠️ Remplacer par ton lien Stripe
+    cta.textContent = 'Choisir Starter+';
+  }
+}
+ 
+function setPremium(mode) {
+  const btnM = document.getElementById('premium-btn-m');
+  const btnT = document.getElementById('premium-btn-t');
+  const priceM = document.getElementById('premium-m');
+  const priceT = document.getElementById('premium-t');
+  const cta = document.getElementById('premium-cta');
+  const name = document.getElementById('premium-name');
+  if (mode === 'mensuel') {
+    btnM.className = 'card-toggle-btn active';
+    btnT.className = 'card-toggle-btn inactive';
+    priceM.style.display = 'block';
+    priceT.style.display = 'none';
+    cta.href = 'https://buy.stripe.com/3cI8wPewq9Oz5m2bzU6sw06';
+    cta.textContent = 'Démarrer mon abonnement';
+    name.textContent = 'Shield Premium';
+  } else {
+    btnT.className = 'card-toggle-btn active';
+    btnM.className = 'card-toggle-btn inactive';
+    priceM.style.display = 'none';
+    priceT.style.display = 'block';
+    cta.href = 'https://buy.stripe.com/5kQ8wP1JE0dZ29Q47s6sw07';
+    cta.textContent = 'Choisir Premium+';
+    name.textContent = 'Shield Premium+';
   }
 }
 </script>
  
 <div class="divider"></div>
  
-<!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner reveal">
     <div class="trust-item"><span class="trust-icon">👁</span><strong>Surveillance active</strong><span>24h/24, 7j/7</span></div>
@@ -453,227 +434,111 @@ function setBilling(mode) {
 </div>
  
 <div class="divider"></div>
-  
- <!-- COMPARATIF -->
-<div class="divider"></div>
  
 <section class="sec">
   <span class="sec-label reveal" style="text-align:center;display:block;">Pourquoi Shield Digital</span>
   <h2 class="sec-title reveal" style="text-align:center;">Un humain dédié à votre dossier,<br>pas un bot — pas un avocat hors de prix</h2>
   <p class="sec-sub reveal" style="text-align:center;margin:0 auto 48px;">Comparez et choisissez la solution qui vous protège vraiment.</p>
- 
   <div class="reveal" style="overflow-x:auto;">
     <table style="width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;border:1px solid var(--border);">
-      
-      <!-- EN-TÊTE -->
       <thead>
         <tr>
           <th style="background:var(--bg2);padding:20px 24px;text-align:left;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:700;color:var(--white);border-bottom:1px solid var(--border);width:28%;">Critère</th>
-          <th style="background:linear-gradient(160deg,rgba(37,99,235,0.2),rgba(12,20,40,0.98));padding:20px 24px;text-align:center;font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:800;color:var(--blue2);border-bottom:1px solid var(--border2);width:24%;border-left:1px solid var(--border2);">
-            🛡 Shield Digital
-          </th>
+          <th style="background:linear-gradient(160deg,rgba(37,99,235,0.2),rgba(12,20,40,0.98));padding:20px 24px;text-align:center;font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:800;color:var(--blue2);border-bottom:1px solid var(--border2);width:24%;border-left:1px solid var(--border2);">🛡 Shield Digital</th>
           <th style="background:var(--bg2);padding:20px 24px;text-align:center;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:700;color:var(--muted);border-bottom:1px solid var(--border);width:24%;border-left:1px solid var(--border);">⚖️ Avocat</th>
           <th style="background:var(--bg2);padding:20px 24px;text-align:center;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:700;color:var(--muted);border-bottom:1px solid var(--border);width:24%;border-left:1px solid var(--border);">🤖 Outil automatisé</th>
         </tr>
       </thead>
- 
       <tbody>
-        <!-- LIGNE 1 -->
         <tr>
           <td style="background:var(--bg2);padding:18px 24px;font-size:14px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);">Délai d'intervention</td>
-          <td style="background:rgba(37,99,235,0.06);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);">
-            <span style="color:#4ade80;font-weight:700;font-size:14px;">✓ 24 à 72h</span>
-          </td>
-          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:var(--muted);font-size:14px;">⏳ Plusieurs semaines</span>
-          </td>
-          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#facc15;font-size:14px;">~ Variable</span>
-          </td>
+          <td style="background:rgba(37,99,235,0.06);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);"><span style="color:#4ade80;font-weight:700;font-size:14px;">✓ 24 à 72h</span></td>
+          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:var(--muted);font-size:14px;">⏳ Plusieurs semaines</span></td>
+          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#facc15;font-size:14px;">~ Variable</span></td>
         </tr>
- 
-        <!-- LIGNE 2 -->
         <tr>
           <td style="background:var(--bg3);padding:18px 24px;font-size:14px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);">Suivi humain dédié</td>
-          <td style="background:rgba(37,99,235,0.08);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);">
-            <span style="color:#4ade80;font-weight:700;font-size:14px;">✓ Oui, sur chaque dossier</span>
-          </td>
-          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#4ade80;font-size:14px;">✓ Oui</span>
-          </td>
-          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#f87171;font-size:14px;">✗ Non</span>
-          </td>
+          <td style="background:rgba(37,99,235,0.08);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);"><span style="color:#4ade80;font-weight:700;font-size:14px;">✓ Oui, sur chaque dossier</span></td>
+          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#4ade80;font-size:14px;">✓ Oui</span></td>
+          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#f87171;font-size:14px;">✗ Non</span></td>
         </tr>
- 
-        <!-- LIGNE 3 -->
         <tr>
           <td style="background:var(--bg2);padding:18px 24px;font-size:14px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);">Tarif</td>
-          <td style="background:rgba(37,99,235,0.06);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);">
-            <span style="color:#4ade80;font-weight:700;font-size:14px;">✓ Dès 149€</span>
-          </td>
-          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#f87171;font-size:14px;">✗ 1 500€ à 5 000€+</span>
-          </td>
-          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#facc15;font-size:14px;">~ Abonnement mensuel</span>
-          </td>
+          <td style="background:rgba(37,99,235,0.06);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);"><span style="color:#4ade80;font-weight:700;font-size:14px;">✓ Dès 89€</span></td>
+          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#f87171;font-size:14px;">✗ 1 500€ à 5 000€+</span></td>
+          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#facc15;font-size:14px;">~ Abonnement mensuel</span></td>
         </tr>
- 
-        <!-- LIGNE 4 -->
         <tr>
           <td style="background:var(--bg3);padding:18px 24px;font-size:14px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);">Déréférencement Google</td>
-          <td style="background:rgba(37,99,235,0.08);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);">
-            <span style="color:#4ade80;font-weight:700;font-size:14px;">✓ Inclus</span>
-          </td>
-          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#f87171;font-size:14px;">✗ Rarement inclus</span>
-          </td>
-          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#facc15;font-size:14px;">~ Parfois</span>
-          </td>
+          <td style="background:rgba(37,99,235,0.08);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);"><span style="color:#4ade80;font-weight:700;font-size:14px;">✓ Inclus</span></td>
+          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#f87171;font-size:14px;">✗ Rarement inclus</span></td>
+          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#facc15;font-size:14px;">~ Parfois</span></td>
         </tr>
- 
-        <!-- LIGNE 5 -->
         <tr>
           <td style="background:var(--bg2);padding:18px 24px;font-size:14px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);">Contact hébergeur & registrar</td>
-          <td style="background:rgba(37,99,235,0.06);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);">
-            <span style="color:#4ade80;font-weight:700;font-size:14px;">✓ Oui</span>
-          </td>
-          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#facc15;font-size:14px;">~ Selon le contrat</span>
-          </td>
-          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#f87171;font-size:14px;">✗ Non</span>
-          </td>
+          <td style="background:rgba(37,99,235,0.06);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);"><span style="color:#4ade80;font-weight:700;font-size:14px;">✓ Oui</span></td>
+          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#facc15;font-size:14px;">~ Selon le contrat</span></td>
+          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#f87171;font-size:14px;">✗ Non</span></td>
         </tr>
- 
-        <!-- LIGNE 6 -->
         <tr>
           <td style="background:var(--bg3);padding:18px 24px;font-size:14px;font-weight:600;color:var(--white);border-bottom:1px solid var(--border);">Confidentialité garantie</td>
-          <td style="background:rgba(37,99,235,0.08);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);">
-            <span style="color:#4ade80;font-weight:700;font-size:14px;">✓ 100%</span>
-          </td>
-          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#4ade80;font-size:14px;">✓ Oui</span>
-          </td>
-          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);">
-            <span style="color:#facc15;font-size:14px;">~ Dépend de l'outil</span>
-          </td>
+          <td style="background:rgba(37,99,235,0.08);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border2);"><span style="color:#4ade80;font-weight:700;font-size:14px;">✓ 100%</span></td>
+          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#4ade80;font-size:14px;">✓ Oui</span></td>
+          <td style="background:var(--bg3);padding:18px 24px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);"><span style="color:#facc15;font-size:14px;">~ Dépend de l'outil</span></td>
         </tr>
- 
-        <!-- LIGNE 7 -->
         <tr>
           <td style="background:var(--bg2);padding:18px 24px;font-size:14px;font-weight:600;color:var(--white);">Spécialisé créatrices MYM/OF</td>
-          <td style="background:rgba(37,99,235,0.06);padding:18px 24px;text-align:center;border-left:1px solid var(--border2);">
-            <span style="color:#4ade80;font-weight:700;font-size:14px;">✓ 100% dédié</span>
-          </td>
-          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-left:1px solid var(--border);">
-            <span style="color:#f87171;font-size:14px;">✗ Généraliste</span>
-          </td>
-          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-left:1px solid var(--border);">
-            <span style="color:#f87171;font-size:14px;">✗ Généraliste</span>
-          </td>
+          <td style="background:rgba(37,99,235,0.06);padding:18px 24px;text-align:center;border-left:1px solid var(--border2);"><span style="color:#4ade80;font-weight:700;font-size:14px;">✓ 100% dédié</span></td>
+          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-left:1px solid var(--border);"><span style="color:#f87171;font-size:14px;">✗ Généraliste</span></td>
+          <td style="background:var(--bg2);padding:18px 24px;text-align:center;border-left:1px solid var(--border);"><span style="color:#f87171;font-size:14px;">✗ Généraliste</span></td>
         </tr>
       </tbody>
     </table>
   </div>
- 
   <div class="reveal" style="text-align:center;margin-top:36px;">
     <a href="#contact" class="btn-primary" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">🛡 Obtenir mon scan gratuit</a>
   </div>
 </section>
-
-<!-- SERVICES + PROCESS CÔTE À CÔTE -->
-<div class="two-col-wrap">
  
-  <!-- SERVICES -->
+<div class="two-col-wrap">
   <div id="services">
     <span class="sec-label reveal">Ce que nous traquons</span>
     <h2 class="sec-title reveal">Où nous traquons les leaks</h2>
     <div class="reveal">
-      <div class="s-card">
-        <div class="s-icon">📱</div>
-        <h3>Telegram & groupes privés</h3>
-        <p>Surveillance des groupes Telegram, forums privés et réseaux de partage où circulent des contenus piratés.</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">🌐</div>
-        <h3>Sites de leaks</h3>
-        <p>Détection et suppression sur les sites spécialisés dans la diffusion de contenus piratés et plateformes illégales.</p>
-      </div>
-      <div class="s-card">
-        <div class="s-icon">🔍</div>
-        <h3>Moteurs de recherche</h3>
-        <p>Déréférencement des liens pirates sur Google pour empêcher leur visibilité et protéger votre image durablement.</p>
-      </div>
+      <div class="s-card"><div class="s-icon">📱</div><h3>Telegram & groupes privés</h3><p>Surveillance des groupes Telegram, forums privés et réseaux de partage où circulent des contenus piratés.</p></div>
+      <div class="s-card"><div class="s-icon">🌐</div><h3>Sites de leaks</h3><p>Détection et suppression sur les sites spécialisés dans la diffusion de contenus piratés et plateformes illégales.</p></div>
+      <div class="s-card"><div class="s-icon">🔍</div><h3>Moteurs de recherche</h3><p>Déréférencement des liens pirates sur Google pour empêcher leur visibilité et protéger votre image durablement.</p></div>
     </div>
   </div>
- 
-  <!-- PROCESS -->
   <div>
     <span class="sec-label reveal">Notre méthode</span>
     <h2 class="sec-title reveal">Comment ça fonctionne</h2>
     <div class="reveal">
-      <div class="proc-step">
-        <div class="proc-num">01</div>
-        <h3>Analyse gratuite</h3>
-        <p>Nous analysons Internet pour détecter vos contenus piratés et identifier toutes les fuites actives sur le web.</p>
-      </div>
-      <div class="proc-step">
-        <div class="proc-num">02</div>
-        <h3>Suppression rapide</h3>
-        <p>Nous envoyons des demandes DMCA officielles et supprimons les contenus illégaux sous 24 à 72 heures.</p>
-      </div>
-      <div class="proc-step">
-        <div class="proc-num">03</div>
-        <h3>Protection continue</h3>
-        <p>Surveillance permanente pour éviter toute republication. Rapports détaillés envoyés régulièrement.</p>
-      </div>
+      <div class="proc-step"><div class="proc-num">01</div><h3>Analyse gratuite</h3><p>Nous analysons Internet pour détecter vos contenus piratés et identifier toutes les fuites actives sur le web.</p></div>
+      <div class="proc-step"><div class="proc-num">02</div><h3>Suppression rapide</h3><p>Nous envoyons des demandes DMCA officielles et supprimons les contenus illégaux sous 24 à 72 heures.</p></div>
+      <div class="proc-step"><div class="proc-num">03</div><h3>Protection continue</h3><p>Surveillance permanente pour éviter toute republication. Rapports détaillés envoyés régulièrement.</p></div>
     </div>
- 
   </div>
- 
 </div>
  
 <div class="divider"></div>
  
-<!-- FAQ -->
 <section id="faq" class="sec">
   <span class="sec-label reveal" style="text-align:center;display:block;">FAQ</span>
   <h2 class="sec-title reveal" style="text-align:center;">Questions fréquentes</h2>
   <p class="sec-sub reveal" style="text-align:center;margin:0 auto 40px;">Tout ce que vous devez savoir avant de nous contacter.</p>
   <div class="faq-grid reveal">
-    <div class="faq-item">
-      <button class="faq-q">Combien de temps pour supprimer un leak ?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">La majorité des suppressions sont effectuées sous 24 à 72 heures selon la plateforme. Pour certains hébergeurs, jusqu'à 7 jours. Vous êtes informé à chaque étape.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">Travaillez-vous avec Telegram ?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">Oui. Nous surveillons Telegram, forums spécialisés et sites de leaks avec des procédures spécifiques adaptées à chaque type de plateforme.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">Dois-je donner accès à mes comptes ?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">Non, absolument pas. Toutes les actions sont réalisées via signalements officiels, procédures DMCA et contact direct avec les hébergeurs.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">Le déréférencement Google est-il inclus ?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">Oui. Le déréférencement via les outils officiels Google est inclus dans toutes nos offres lorsque c'est nécessaire.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">Est-ce totalement confidentiel ?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">Oui. Aucune information concernant vos contenus, votre identité ou votre situation n'est partagée avec des tiers. Confidentialité absolue garantie.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q">Peut-on résilier à tout moment ?<span class="faq-icon">+</span></button>
-      <div class="faq-a"><div class="faq-a-inner">Oui, l'offre Premium est sans engagement. Vous pouvez résilier à tout moment, sans frais ni justification.</div></div>
-    </div>
+    <div class="faq-item"><button class="faq-q">Combien de temps pour supprimer un leak ?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">La majorité des suppressions sont effectuées sous 24 à 72 heures selon la plateforme. Pour certains hébergeurs, jusqu'à 7 jours. Vous êtes informé à chaque étape.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Travaillez-vous avec Telegram ?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Oui. Nous surveillons Telegram, forums spécialisés et sites de leaks avec des procédures spécifiques adaptées à chaque type de plateforme.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Dois-je donner accès à mes comptes ?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Non, absolument pas. Toutes les actions sont réalisées via signalements officiels, procédures DMCA et contact direct avec les hébergeurs.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Le déréférencement Google est-il inclus ?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Oui. Le déréférencement via les outils officiels Google est inclus dans toutes nos offres lorsque c'est nécessaire.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Est-ce totalement confidentiel ?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Oui. Aucune information concernant vos contenus, votre identité ou votre situation n'est partagée avec des tiers. Confidentialité absolue garantie.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Peut-on résilier à tout moment ?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Oui, les offres Starter et Premium sont sans engagement. Vous pouvez résilier à tout moment, sans frais ni justification.</div></div></div>
   </div>
 </section>
  
 <div class="divider"></div>
  
-<!-- CONTACT -->
 <section id="contact" class="sec">
   <div class="contact-grid">
     <div class="contact-info reveal">
@@ -703,7 +568,6 @@ function setBilling(mode) {
   </div>
 </section>
  
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">Shield<span>Digital</span></div>
@@ -779,52 +643,5 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
 document.addEventListener("contextmenu",e=>e.preventDefault());
 document.addEventListener("keydown",e=>{if(e.ctrlKey&&['c','u','s'].includes(e.key))e.preventDefault();});
 </script>
- <div id="devis-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;">
-  <div style="background:#0d1b2a;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;max-width:520px;width:90%;position:relative;">
-    <button onclick="fermerDevis()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:white;font-size:1.5rem;cursor:pointer;">×</button>
-    <h3 style="font-family:'Bricolage Grotesque',sans-serif;color:white;margin-bottom:0.5rem;">Demande de devis sur mesure</h3>
-    <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;margin-bottom:1.5rem;">Décrivez votre situation, nous vous répondons sous 24h.</p>
-    <form action="https://formsubmit.co/contact@shield-digital.fr" method="POST">
-      <input type="hidden" name="_subject" value="Demande de devis sur mesure — Shield Digital">
-      <input type="hidden" name="_template" value="table">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
-        <input type="text" name="name" placeholder="Votre nom" required style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:0.75rem 1rem;color:white;font-size:0.875rem;outline:none;"/>
-        <input type="email" name="email" placeholder="Votre email" required style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:0.75rem 1rem;color:white;font-size:0.875rem;outline:none;"/>
-      </div>
-     <select name="plateforme" required style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:0.75rem 1rem;color:white;font-size:0.875rem;margin-bottom:0.75rem;outline:none;">
-  <option value="" disabled selected style="background:#0d1b2a;color:white;">Plateforme concernée</option>
-  <option value="mym" style="background:#0d1b2a;color:white;">MYM</option>
-  <option value="onlyfans" style="background:#0d1b2a;color:white;">OnlyFans</option>
-  <option value="fansly" style="background:#0d1b2a;color:white;">Fansly</option>
-  <option value="autre" style="background:#0d1b2a;color:white;">Autre</option>
-</select>
-      <input type="number" name="nombre_liens" placeholder="Nombre de liens approximatif" required style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:0.75rem 1rem;color:white;font-size:0.875rem;margin-bottom:0.75rem;outline:none;box-sizing:border-box;"/>
-     <select name="urgence" required style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:0.75rem 1rem;color:white;font-size:0.875rem;margin-bottom:0.75rem;outline:none;">
-  <option value="" disabled selected style="background:#0d1b2a;color:white;">Niveau d'urgence</option>
-  <option value="normal" style="background:#0d1b2a;color:white;">Normal</option>
-  <option value="urgent" style="background:#0d1b2a;color:white;">Urgent</option>
-  <option value="tres_urgent" style="background:#0d1b2a;color:white;">Très urgent</option>
-</select>
-      <textarea name="message" rows="4" placeholder="Décrivez votre situation..." required style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:0.75rem 1rem;color:white;font-size:0.875rem;margin-bottom:0.75rem;outline:none;resize:vertical;box-sizing:border-box;"></textarea>
-      <button type="submit" class="submit-btn" style="width:100%;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">Envoyer ma demande</button>
-    </form>
-    <p class="form-note" style="text-align:center;margin-top:0.75rem;">🔒 Demande confidentielle · Aucun engagement</p>
-  </div>
-</div>
-
-<script>
-function ouvrirDevis() {
-  const modal = document.getElementById('devis-modal');
-  modal.style.display = 'flex';
-}
-function fermerDevis() {
-  const modal = document.getElementById('devis-modal');
-  modal.style.display = 'none';
-}
-window.addEventListener('click', function(e) {
-  const modal = document.getElementById('devis-modal');
-  if (e.target === modal) modal.style.display = 'none';
-});
-</script> 
 </body>
 </html>
