@@ -307,7 +307,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
     <!-- SHIELD STARTER -->
     <div class="pc hot" style="display:flex;flex-direction:column;">
       <div class="pc-badge">⭐ Recommandé</div>
-      <div class="pc-name">Shield Starter</div>
+ <div class="pc-name" id="starter-name">Shield Starter</div>
       <div class="card-toggle">
         <button class="card-toggle-btn active" id="starter-btn-m" onclick="setStarter('mensuel')">Mensuel</button>
         <button class="card-toggle-btn inactive" id="starter-btn-t" onclick="setStarter('trim')" style="display:flex;align-items:center;gap:6px;">3 Mois <span class="toggle-discount">-10%</span></button>
@@ -369,6 +369,7 @@ function setStarter(mode) {
   const priceM = document.getElementById('starter-m');
   const priceT = document.getElementById('starter-t');
   const cta = document.getElementById('starter-cta');
+  const name = document.getElementById('starter-name');
   if (mode === 'mensuel') {
     btnM.className = 'card-toggle-btn active';
     btnT.className = 'card-toggle-btn inactive';
