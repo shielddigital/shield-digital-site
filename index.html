@@ -318,7 +318,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
       </div>
       <div id="starter-t" style="display:none;">
         <div class="pc-price">321€<span>/3 Mois</span></div>
-        <div class="pc-billing-badge bb-monthly" style="width:fit-content;background:rgba(77,166,255,0.15);border-color:rgba(77,166,255,0.35);color:var(--blue2);">Starter+ · Économisez 36€</div>
+        <div class="pc-billing-badge bb-monthly" style="width:fit-content;background:rgba(77,166,255,0.15);border-color:rgba(77,166,255,0.35);color:var(--blue2);">Starter + · Économisez 36€</div>
       </div>
       <div class="pc-divider"></div>
       <ul class="pc-features" style="flex:1;">
@@ -344,7 +344,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
       </div>
       <div id="premium-t" style="display:none;">
         <div class="pc-price">899€<span>/3 Mois</span></div>
-        <div class="pc-billing-badge bb-monthly" style="width:fit-content;background:rgba(77,166,255,0.15);border-color:rgba(77,166,255,0.35);color:var(--blue2);">Premium+ · Économisez 298€</div>
+        <div class="pc-billing-badge bb-monthly" style="width:fit-content;background:rgba(77,166,255,0.15);border-color:rgba(77,166,255,0.35);color:var(--blue2);">Premium + · Économisez 298€</div>
       </div>
       <div class="pc-divider"></div>
       <ul class="pc-features" style="flex:1;">
@@ -376,13 +376,15 @@ function setStarter(mode) {
     priceT.style.display = 'none';
     cta.href = 'https://buy.stripe.com/5kQ28r3RM8Kvg0GavQ6sw09'; 
     cta.textContent = 'Démarrer mon abonnement';
+    name.textContent = 'Shield Starter';
   } else {
     btnT.className = 'card-toggle-btn active';
     btnM.className = 'card-toggle-btn inactive';
     priceM.style.display = 'none';
     priceT.style.display = 'block';
     cta.href = 'https://buy.stripe.com/9B69ATcoi3qb4hY33o6sw0a'; 
-    cta.textContent = 'Choisir Starter+';
+    cta.textContent = 'Choisir Starter +';
+    name.textContent = 'Shield Starter +';
   }
 }
  
@@ -407,8 +409,8 @@ function setPremium(mode) {
     priceM.style.display = 'none';
     priceT.style.display = 'block';
     cta.href = 'https://buy.stripe.com/5kQ8wP1JE0dZ29Q47s6sw07';
-    cta.textContent = 'Choisir Premium+';
-    name.textContent = 'Shield Premium+';
+    cta.textContent = 'Choisir Premium +';
+    name.textContent = 'Shield Premium +';
   }
 }
 </script>
