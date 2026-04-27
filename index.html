@@ -340,9 +340,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
       <ul class="pc-features" style="flex:1;">
         <li>Suppression &amp; déréférencement (3 liens)</li>
         <li>Contact hébergeur &amp; registrar</li>
-        <li>Mise en demeure si nécessaire</li>
         <li>Suivi &amp; relance</li>
-        <li>Rapport mensuel détaillé</li>
+        <li>Mise en demeure si nécessaire</li>
+        <li>Rapport détaillé</li>
       </ul>
       <div id="starter-agency-note" style="display:none;" class="agency-note">★ <strong>15% reversés</strong> pour chaque créateur(trice) recommandé(e)</div>
       <a class="pc-btn pc-btn-solid" id="starter-cta" href="#" target="_blank">Démarrer mon abonnement</a>
@@ -368,8 +368,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
       <ul class="pc-features" style="flex:1;">
         <li>Suppression &amp; déréférencement illimités</li>
         <li>Contact hébergeur &amp; registrar</li>
-        <li>Mise en demeure si nécessaire</li>
         <li>Suivi &amp; relance continus</li>
+        <li>Mise en demeure si nécessaire</li>
         <li>Rapport mensuel détaillé</li>
         <li>Support prioritaire</li>
       </ul>
@@ -403,11 +403,11 @@ function setStarter(mode){
   if(mode==='creatrice'){
     btnC.className='card-toggle-btn active';btnA.className='card-toggle-btn inactive';
     cr.style.display='block';ag.style.display='none';note.style.display='none';
-    cta.textContent='Démarrer mon abonnement';cta.href='#';
+    cta.textContent='Commander maintenantt';cta.href='#';
   }else{
     btnA.className='card-toggle-btn active';btnC.className='card-toggle-btn inactive';
     cr.style.display='none';ag.style.display='block';note.style.display='block';
-    cta.textContent='Nous contacter';cta.href='#contact';
+    cta.textContent='Commander maintenant';cta.href='#contact';
   }
 }
 function setPremium(mode){
@@ -421,7 +421,7 @@ function setPremium(mode){
   }else{
     btnA.className='card-toggle-btn active';btnC.className='card-toggle-btn inactive';
     cr.style.display='none';ag.style.display='block';note.style.display='block';
-    cta.textContent='Nous contacter';cta.href='#contact';
+    cta.textContent='Démarrer mon abonnement';cta.href='#contact';
   }
 }
 </script>
