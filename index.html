@@ -169,6 +169,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 .card-toggle-btn{padding:7px 18px;border-radius:100px;border:none;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.04em;transition:all 0.25s;}
 .card-toggle-btn.active{background:var(--accent);color:white;box-shadow:0 2px 10px rgba(37,99,235,0.35);}
 .card-toggle-btn.inactive{background:transparent;color:var(--muted);}
+.agency-discount-badge{display:inline-block;background:rgba(74,222,128,0.12);border:1px solid rgba(74,222,128,0.25);color:#4ade80;font-size:10px;font-weight:700;padding:2px 7px;border-radius:100px;margin-left:6px;vertical-align:middle;}
 .agency-note{background:rgba(250,204,21,0.08);border:1px solid rgba(250,204,21,0.25);border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:13px;color:#fde68a;line-height:1.5;}
 @media(max-width:1024px){
   header{padding:0 24px;}
@@ -289,80 +290,78 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 <section id="pricing" class="sec">
   <span class="sec-label reveal" style="text-align:center;display:block;">Tarifs</span>
   <h2 class="sec-title reveal" style="text-align:center;">Choisissez votre protection</h2>
- 
-  <div class="pricing-wrap reveal" style="margin-top:40px;padding-top:20px;align-items:stretch;">
+  <div class="pricing-wrap reveal" style="margin-top:40px;padding-top:20px;align-items:stretch;" id="pricing-wrap">
  
     <!-- SHIELD FLASH -->
     <div class="pc" style="display:flex;flex-direction:column;">
       <div class="pc-badge">Idéal pour débuter</div>
-      <div class="pc-name" id="flash-name">Shield Flash</div>
-      <div class="card-toggle">
-        <button class="card-toggle-btn active" id="flash-btn-c" onclick="setFlash('creatrice')">Créateur(trice)</button>
-        <button class="card-toggle-btn inactive" id="flash-btn-a" onclick="setFlash('agence')">Agence</button>
+      <div class="pc-name">Shield Flash</div>
+      <div class="card-toggle" style="pointer-events:none;opacity:0.85;margin-bottom:4px;">
+        <button class="card-toggle-btn active" style="cursor:default;">Indépendant</button>
       </div>
-      <div id="flash-creatrice">
-        <div class="pc-price">59€</div>
-        <div class="pc-billing-badge bb-unique" style="width:fit-content;">Paiement unique</div>
-      </div>
-      <div id="flash-agence" style="display:none;">
-        <div class="pc-price">59€</div>
-        <div class="pc-billing-badge bb-monthly" style="width:fit-content;">Par créateur(trice)</div>
-      </div>
+      <div class="pc-price">59€</div>
+      <div class="pc-billing-badge bb-unique" style="width:fit-content;">Paiement unique</div>
       <div class="pc-divider"></div>
       <ul class="pc-features" style="flex:1;">
-        <li>Suppression &amp; déréférencement (1 lien)</li>
-        <li>Contact hébergeur &amp; registrar</li>
+        <li>1 suppression express</li>
+        <li>Déréférencement inclus</li>
         <li>Suivi &amp; relance</li>
         <li>Mise en demeure si nécessaire</li>
         <li>Rapport détaillé</li>
       </ul>
-      <div id="flash-agency-note" style="display:none;" class="agency-note">★ <strong>15% reversés</strong> pour chaque créateur(trice) recommandé(e)</div>
-      <a class="pc-btn pc-btn-outline" id="flash-cta" href="https://buy.stripe.com/bJe4gz8827GrbKq7jE6sw0b" target="_blank">Commander maintenant</a>
+      <a class="pc-btn pc-btn-outline" href="https://buy.stripe.com/bJe4gz8827GrbKq7jE6sw0b" target="_blank">Commander maintenant</a>
+      <p style="font-size:12px;color:var(--blue2);text-align:center;margin-top:12px;">Pour un contenu urgent à faire disparaître rapidement</p>
     </div>
  
     <!-- SHIELD STARTER -->
     <div class="pc" style="display:flex;flex-direction:column;">
       <div class="pc-badge">Plus populaire</div>
-      <div class="pc-name" id="starter-name">Shield Starter</div>
-      <div class="card-toggle">
-        <button class="card-toggle-btn active" id="starter-btn-c" onclick="setStarter('creatrice')">Créateur(trice)</button>
-        <button class="card-toggle-btn inactive" id="starter-btn-a" onclick="setStarter('agence')">Agence</button>
+      <div class="pc-name">Shield Starter</div>
+      <div class="card-toggle" style="pointer-events:none;opacity:0.85;margin-bottom:4px;">
+        <button class="card-toggle-btn active" style="cursor:default;">Indépendant</button>
       </div>
-      <div id="starter-creatrice">
-        <div class="pc-price">167€</div>
-        <div class="pc-billing-badge bb-unique" style="width:fit-content;">Paiement unique</div>
-      </div>
-      <div id="starter-agence" style="display:none;">
-        <div class="pc-price">167€<span>/Mois</span></div>
-        <div class="pc-billing-badge bb-monthly" style="width:fit-content;">Par créateur(trice)</div>
-      </div>
+      <div class="pc-price">167€</div>
+      <div class="pc-billing-badge bb-unique" style="width:fit-content;">Paiement unique</div>
       <div class="pc-divider"></div>
       <ul class="pc-features" style="flex:1;">
-        <li>Suppression &amp; déréférencement (3 liens)</li>
-        <li>Contact hébergeur &amp; registrar</li>
+        <li>3 suppressions ciblées</li>
+        <li>Déréférencement inclus</li>
         <li>Suivi &amp; relance</li>
         <li>Mise en demeure si nécessaire</li>
         <li>Rapport détaillé</li>
       </ul>
-      <div id="starter-agency-note" style="display:none;" class="agency-note">★ <strong>15% reversés</strong> pour chaque créateur(trice) recommandé(e)</div>
-      <a class="pc-btn pc-btn-solid" id="starter-cta" href="https://buy.stripe.com/8x29AT0FAf8TcOufQa6sw0c" target="_blank">Démarrer mon abonnement</a>
+      <a class="pc-btn pc-btn-solid" href="https://buy.stripe.com/8x29AT0FAf8TcOufQa6sw0c" target="_blank">Commander maintenant</a>
+      <p style="font-size:12px;color:var(--blue2);text-align:center;margin-top:12px;">Pour gérer plusieurs leaks identifiés</p>
     </div>
  
     <!-- SHIELD PREMIUM -->
     <div class="pc hot" style="display:flex;flex-direction:column;">
       <div class="pc-badge">⭐ Meilleure protection</div>
-      <div class="pc-name" id="premium-name">Shield Premium</div>
+      <div class="pc-name">Shield Premium</div>
       <div class="card-toggle">
-        <button class="card-toggle-btn active" id="premium-btn-c" onclick="setPremium('creatrice')">Créateur(trice)</button>
+        <button class="card-toggle-btn active" id="premium-btn-c" onclick="setPremium('creatrice')">Indépendant</button>
         <button class="card-toggle-btn inactive" id="premium-btn-a" onclick="setPremium('agence')">Agence</button>
       </div>
+      <!-- Mode Créateur(trice) -->
       <div id="premium-creatrice">
         <div class="pc-price">399€<span>/Mois</span></div>
         <div class="pc-billing-badge bb-monthly" style="width:fit-content;">Sans engagement</div>
       </div>
+      <!-- Mode Agence -->
       <div id="premium-agence" style="display:none;">
-        <div class="pc-price">399€<span>/Mois</span></div>
+        <div class="pc-price" id="premium-agence-price">399€<span>/Mois</span></div>
         <div class="pc-billing-badge bb-monthly" style="width:fit-content;">Par créateur(trice)</div>
+        <!-- Slider -->
+        <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-top:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <span style="font-size:12px;color:var(--muted);">Nombre de profils</span>
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:800;color:var(--blue2);" id="premium-count">1 créateur</span>
+          </div>
+          <input type="range" min="1" max="20" value="1" id="premium-slider"
+            style="-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:4px;background:var(--border2);outline:none;cursor:pointer;display:block;margin-bottom:10px;"
+            oninput="onPremiumSlider()">
+          <div style="font-size:13px;color:var(--text);text-align:center;" id="premium-total">Total : <strong style="color:var(--white);">399€/mois</strong></div>
+        </div>
       </div>
       <div class="pc-divider"></div>
       <ul class="pc-features" style="flex:1;">
@@ -373,8 +372,9 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
         <li>Rapport mensuel détaillé</li>
         <li>Support prioritaire</li>
       </ul>
-      <div id="premium-agency-note" style="display:none;" class="agency-note">★ <strong>15% reversés</strong> pour chaque créateur(trice) recommandé(e)</div>
-      <a class="pc-btn pc-btn-outline" id="premium-cta" href="https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d" target="_blank" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:0.01em;">Démarrer mon abonnement</a>
+      <div id="premium-agency-note" style="display:none;" class="agency-note">★ <strong>15% reversés</strong> pour chaque profil recommandé</div>
+      <a class="pc-btn pc-btn-outline" id="premium-cta" href="https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d" target="_blank">Démarrer mon abonnement</a>
+      <p style="font-size:12px;color:var(--blue2);text-align:center;margin-top:12px;">Pour une protection continue</p>
     </div>
  
   </div>
@@ -382,46 +382,40 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 </section>
  
 <script>
-function setFlash(mode){
-  var btnC=document.getElementById('flash-btn-c'),btnA=document.getElementById('flash-btn-a');
-  var cr=document.getElementById('flash-creatrice'),ag=document.getElementById('flash-agence');
-  var note=document.getElementById('flash-agency-note'),cta=document.getElementById('flash-cta');
-  if(mode==='creatrice'){
-    btnC.className='card-toggle-btn active';btnA.className='card-toggle-btn inactive';
-    cr.style.display='block';ag.style.display='none';note.style.display='none';
-    cta.textContent='Commander maintenant';cta.href='#';
-  }else{
-    btnA.className='card-toggle-btn active';btnC.className='card-toggle-btn inactive';
-    cr.style.display='none';ag.style.display='block';note.style.display='block';
-    cta.textContent='Commander maintenant';cta.href='https://buy.stripe.com/bJe4gz8827GrbKq7jE6sw0b';
-  }
+var PREMIUM_URL = 'https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d';
+ 
+function onPremiumSlider() {
+  var n = parseInt(document.getElementById('premium-slider').value);
+  var total = 399 * n;
+  document.getElementById('premium-count').textContent = n + (n > 1 ? ' profils' : ' profil');
+  document.getElementById('premium-total').innerHTML = 'Total estimé : <strong style="color:var(--white);">' + total + '€/mois</strong>';
 }
-function setStarter(mode){
-  var btnC=document.getElementById('starter-btn-c'),btnA=document.getElementById('starter-btn-a');
-  var cr=document.getElementById('starter-creatrice'),ag=document.getElementById('starter-agence');
-  var note=document.getElementById('starter-agency-note'),cta=document.getElementById('starter-cta');
-  if(mode==='creatrice'){
-    btnC.className='card-toggle-btn active';btnA.className='card-toggle-btn inactive';
-    cr.style.display='block';ag.style.display='none';note.style.display='none';
-    cta.textContent='Commander maintenantt';cta.href='#';
-  }else{
-    btnA.className='card-toggle-btn active';btnC.className='card-toggle-btn inactive';
-    cr.style.display='none';ag.style.display='block';note.style.display='block';
-    cta.textContent='Commander maintenant';cta.href='https://buy.stripe.com/8x29AT0FAf8TcOufQa6sw0c';
-  }
-}
-function setPremium(mode){
-  var btnC=document.getElementById('premium-btn-c'),btnA=document.getElementById('premium-btn-a');
-  var cr=document.getElementById('premium-creatrice'),ag=document.getElementById('premium-agence');
-  var note=document.getElementById('premium-agency-note'),cta=document.getElementById('premium-cta');
-  if(mode==='creatrice'){
-    btnC.className='card-toggle-btn active';btnA.className='card-toggle-btn inactive';
-    cr.style.display='block';ag.style.display='none';note.style.display='none';
-    cta.textContent='Démarrer mon abonnement';cta.href='#';
-  }else{
-    btnA.className='card-toggle-btn active';btnC.className='card-toggle-btn inactive';
-    cr.style.display='none';ag.style.display='block';note.style.display='block';
-    cta.textContent='Démarrer mon abonnement';cta.href='https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d';
+ 
+function setPremium(mode) {
+  var btnC = document.getElementById('premium-btn-c');
+  var btnA = document.getElementById('premium-btn-a');
+  var cr = document.getElementById('premium-creatrice');
+  var ag = document.getElementById('premium-agence');
+  var note = document.getElementById('premium-agency-note');
+  var cta = document.getElementById('premium-cta');
+  var wrap = document.getElementById('pricing-wrap');
+  if (mode === 'creatrice') {
+    btnC.className = 'card-toggle-btn active';
+    btnA.className = 'card-toggle-btn inactive';
+    cr.style.display = 'block';
+    ag.style.display = 'none';
+    note.style.display = 'none';
+    cta.href = PREMIUM_URL;
+    wrap.style.alignItems = 'stretch';
+  } else {
+    btnA.className = 'card-toggle-btn active';
+    btnC.className = 'card-toggle-btn inactive';
+    cr.style.display = 'none';
+    ag.style.display = 'block';
+    note.style.display = 'block';
+    document.getElementById('premium-slider').value = 1;
+    onPremiumSlider();
+    wrap.style.alignItems = 'start';
   }
 }
 </script>
