@@ -77,10 +77,16 @@ nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
 .hero-card-cta:hover{background:var(--accent2);transform:translateY(-1px);}
 .hero-card-note{text-align:center;font-size:12px;color:var(--muted);margin-top:10px;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-.platforms-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 60px;display:flex;flex-direction:column;align-items:center;gap:0;}
-.strip-label{font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-right:8px;white-space:nowrap;}
-.p-chip{background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:7px 16px;border-radius:100px;font-size:13px;color:var(--text);transition:all 0.2s;cursor:default;white-space:nowrap;}
-.p-chip:hover{border-color:var(--border2);color:var(--blue2);background:var(--blue-dim);}
+.platforms-strip{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 0;display:flex;flex-direction:column;align-items:center;gap:16px;overflow:hidden;}
+.strip-label{font-size:12px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;}
+.strip-track-wrap{width:100%;overflow:hidden;position:relative;}
+.strip-track-wrap::before,.strip-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;}
+.strip-track-wrap::before{left:0;background:linear-gradient(to right,var(--bg2),transparent);}
+.strip-track-wrap::after{right:0;background:linear-gradient(to left,var(--bg2),transparent);}
+.strip-track{display:flex;gap:20px;width:max-content;animation:scrollLeft 28s linear infinite;}
+.strip-track:hover{animation-play-state:paused;}
+@keyframes scrollLeft{0%{transform:translateX(0);}100%{transform:translateX(-25%);}}
+ 
 .sec{padding:96px 60px;max-width:1400px;margin:0 auto;}
 .sec-label{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue2);margin-bottom:10px;display:block;}
 .sec-title{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:14px;}
@@ -208,6 +214,14 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 .hero-step-cn{width:24px;height:24px;min-width:24px;border-radius:6px;background:var(--blue-dim);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:10px;color:var(--blue2);}
 .hero-step-ct{font-size:12px;color:var(--text);}
 .hero-step-ct strong{color:var(--white);font-weight:600;}
+ 
+@keyframes scrollInfinite{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+ 
+.scroll-platforms{display:flex;align-items:center;gap:0;width:max-content;animation:scrollInfinite 40s linear infinite;}
+.scroll-platforms:hover{animation-play-state:paused;}
+.p-chip{font-family:'Bricolage Grotesque',sans-serif;font-size:38px;font-weight:800;color:rgba(232,237,245,0.18);white-space:nowrap;flex-shrink:0;transition:color 0.3s;cursor:default;letter-spacing:-0.03em;background:transparent;border:none;padding:0;}
+.p-chip:hover{color:rgba(232,237,245,0.6);}
+@keyframes scrollInfinite{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 </style>
 </head>
 <body>
@@ -279,12 +293,16 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
   </div>
 </section>
  
-<div class="platforms-strip">
-  <div style="width:100%;text-align:center;margin-bottom:14px;"><span class="strip-label">Plateformes surveillées</span></div>
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;">
-    <div class="p-chip">📸 Instagram</div><div class="p-chip">▶️ YouTube</div><div class="p-chip">🎮 Twitch</div><div class="p-chip">🐦 X / Twitter</div><div class="p-chip">🔞 OnlyFans</div><div class="p-chip">💎 MYM</div><div class="p-chip">🔥 Fansly</div><div class="p-chip">💬 Telegram</div><div class="p-chip">💰 Patreon</div>
+<div style="position:relative;z-index:1;padding:44px 0;overflow:hidden;">
+  <p style="text-align:center;font-size:13px;color:var(--blue2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:28px;font-weight:600;">Plateformes surveillées</p>
+  <div style="position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;bottom:0;width:220px;background:linear-gradient(to right,var(--bg),transparent);z-index:2;pointer-events:none;"></div>
+    <div style="position:absolute;top:0;right:0;bottom:0;width:220px;background:linear-gradient(to left,var(--bg),transparent);z-index:2;pointer-events:none;"></div>
+    <div class="scroll-platforms"><span class="p-chip" style="margin-right:120px;">Instagram</span><span class="p-chip" style="margin-right:120px;">YouTube</span><span class="p-chip" style="margin-right:120px;">Twitch</span><span class="p-chip" style="margin-right:120px;">X / Twitter</span><span class="p-chip" style="margin-right:120px;">OnlyFans</span><span class="p-chip" style="margin-right:120px;">MYM</span><span class="p-chip" style="margin-right:120px;">Fansly</span><span class="p-chip" style="margin-right:120px;">Telegram</span><span class="p-chip" style="margin-right:120px;">Patreon</span><span class="p-chip" style="margin-right:120px;">Sites de leaks</span><span class="p-chip" style="margin-right:120px;">Instagram</span><span class="p-chip" style="margin-right:120px;">YouTube</span><span class="p-chip" style="margin-right:120px;">Twitch</span><span class="p-chip" style="margin-right:120px;">X / Twitter</span><span class="p-chip" style="margin-right:120px;">OnlyFans</span><span class="p-chip" style="margin-right:120px;">MYM</span><span class="p-chip" style="margin-right:120px;">Fansly</span><span class="p-chip" style="margin-right:120px;">Telegram</span><span class="p-chip" style="margin-right:120px;">Patreon</span><span class="p-chip" style="margin-right:120px;">Sites de leaks</span></div>
   </div>
 </div>
+ 
+<div class="divider"></div>
  
 <!-- ===== PRICING ===== -->
 <section id="pricing" class="sec">
