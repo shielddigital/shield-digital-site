@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — Protéger son contenu OnlyFans, MYM, Fansly | Shield Digital</title>
+<meta name="description" content="Guides pratiques pour protéger ton contenu OnlyFans, MYM ou Fansly : DMCA, suppression de leaks, déréférencement Google, droits des créatrices.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://shield-digital.fr/blog">
+<link rel="icon" type="image/png" href="/logo.png">
+<meta property="og:title" content="Blog Shield Digital — Protéger son contenu de créatrice">
+<meta property="og:description" content="Guides pratiques pour supprimer des leaks, utiliser le DMCA et protéger ton contenu.">
+<meta property="og:url" content="https://shield-digital.fr/blog">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080e20;--bg2:#0c1428;--bg3:#101c35;--blue:#4da6ff;--blue2:#63c3ff;--blue-dim:rgba(77,166,255,0.12);--accent:#2563eb;--accent2:#3b82f6;--border:rgba(77,166,255,0.1);--border2:rgba(77,166,255,0.22);--white:#e8edf5;--muted:rgba(232,237,245,0.48);--text:rgba(232,237,245,0.72);--r:14px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.7;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 120% 60% at 50% -10%,rgba(37,99,235,0.18) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(77,166,255,0.07) 0%,transparent 50%);pointer-events:none;z-index:0;}
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,14,32,0.96);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo img{height:44px;}
+nav{display:flex;align-items:center;gap:6px;}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px 16px;border-radius:8px;transition:all 0.2s;}
+nav a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
+.nav-cta{background:var(--accent)!important;color:white!important;font-weight:700!important;font-size:13px!important;padding:10px 24px!important;border-radius:8px!important;font-family:'Bricolage Grotesque',sans-serif!important;}
+ 
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:110px 24px 80px;}
+ 
+/* Hero */
+.blog-hero{text-align:center;margin-bottom:60px;}
+.blog-hero .sec-label{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue2);display:block;margin-bottom:12px;}
+.blog-hero h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(30px,4vw,52px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:16px;}
+.blog-hero h1 span{background:linear-gradient(135deg,#63c3ff 0%,#4da6ff 40%,#2563eb 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.blog-hero p{font-size:17px;color:var(--text);max-width:560px;margin:0 auto;}
+ 
+/* Grid */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+ 
+/* Card */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:16px;transition:all 0.3s;text-decoration:none;position:relative;overflow:hidden;}
+.card::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(77,166,255,0.07),transparent 60%);opacity:0;transition:opacity 0.3s;}
+.card:hover{border-color:var(--border2);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,0.4);}
+.card:hover::after{opacity:1;}
+.card-badge{display:inline-flex;align-items:center;gap:6px;background:var(--blue-dim);border:1px solid var(--border2);color:var(--blue2);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:4px 11px;border-radius:100px;width:fit-content;}
+.card h2{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:700;line-height:1.3;color:var(--white);}
+.card p{font-size:14px;color:var(--text);line-height:1.7;flex:1;}
+.card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:4px;}
+.card-read{font-size:12px;color:var(--muted);}
+.card-arrow{color:var(--blue2);font-size:18px;transition:transform 0.2s;}
+.card:hover .card-arrow{transform:translateX(4px);}
+ 
+/* CTA bas de page */
+.blog-cta{background:linear-gradient(160deg,rgba(37,99,235,0.15),rgba(12,20,40,0.98));border:1px solid var(--border2);border-radius:20px;padding:40px;margin-top:60px;text-align:center;}
+.blog-cta h2{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:800;margin-bottom:12px;}
+.blog-cta p{font-size:16px;color:var(--text);margin-bottom:28px;}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;font-weight:700;font-size:14px;padding:14px 28px;border-radius:10px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;transition:background 0.2s;}
+.btn:hover{background:var(--accent2);}
+ 
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:40px 60px;margin-top:60px;}
+.footer-inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer-brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;}
+.footer-brand span{color:var(--blue2);}
+.footer-links{display:flex;gap:6px;flex-wrap:wrap;}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:6px;}
+.footer-links a:hover{color:var(--white);}
+.footer-copy{font-size:12px;color:rgba(232,237,245,0.25);width:100%;text-align:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
+ 
+@media(max-width:1024px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){header{padding:0 20px;}nav a:not(.nav-cta){display:none;}.wrap{padding:90px 16px 60px;}.blog-grid{grid-template-columns:1fr;}footer{padding:32px 20px;}.footer-inner{flex-direction:column;text-align:center;}}
+</style>
+</head>
+<body>
+ 
+<header>
+  <a href="/" class="logo"><img src="/logo.png" alt="Shield Digital"></a>
+  <nav>
+    <a href="/#pricing">Tarifs</a>
+    <a href="/blog">Blog</a>
+    <a href="/#contact" class="nav-cta">Scan gratuit</a>
+  </nav>
+</header>
+ 
+<main class="wrap">
+ 
+  <div class="blog-hero">
+    <span class="sec-label">Ressources & Guides</span>
+    <h1>Protège ton contenu.<br><span>Connais tes droits.</span></h1>
+    <p>Guides pratiques pour supprimer des leaks, utiliser le DMCA et protéger ton contenu OnlyFans, MYM ou Fansly.</p>
+  </div>
+ 
+  <div class="blog-grid">
+ 
+    <a href="/blog/comment-savoir-si-mon-contenu-fuite" class="card">
+      <span class="card-badge">🔍 Détection</span>
+      <h2>Comment savoir si mon contenu OnlyFans ou MYM fuite</h2>
+      <p>Méthodes simples pour vérifier si tes photos ou vidéos circulent sans ton accord — en moins de 5 minutes.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/dmca-takedown-comment-ca-marche" class="card">
+      <span class="card-badge">⚖️ DMCA</span>
+      <h2>DMCA Takedown : comment ça marche vraiment</h2>
+      <p>Tout ce que tu dois savoir sur la procédure DMCA pour supprimer un contenu piraté, expliqué simplement.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/supprimer-contenu-leakimedia" class="card">
+      <span class="card-badge">🗑️ Leakimedia</span>
+      <h2>Comment supprimer son contenu de Leakimedia</h2>
+      <p>Pourquoi le formulaire DMCA de Leakimedia ne marche pas — et quelle méthode fonctionne vraiment.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/dereferencement-google-photos-videos" class="card">
+      <span class="card-badge">🔍 Google</span>
+      <h2>Comment déréférencer ses photos et vidéos sur Google</h2>
+      <p>Faire disparaître les liens pirates des résultats Google : procédure officielle, délais et astuces.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/contenu-piraté-telegram-que-faire" class="card">
+      <span class="card-badge">📱 Telegram</span>
+      <h2>Ton contenu circule sur Telegram : que faire ?</h2>
+      <p>Telegram est plus difficile à traiter que les sites web — mais des solutions concrètes existent.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/erreurs-a-eviter-face-a-un-leak" class="card">
+      <span class="card-badge">⚠️ Erreurs</span>
+      <h2>Les 7 erreurs à ne pas faire quand ton contenu a été leaké</h2>
+      <p>Dans la panique, beaucoup de créatrices font des erreurs qui aggravent la situation. Les voici.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/proteger-contenu-onlyfans-avant-fuite" class="card">
+      <span class="card-badge">🛡 Prévention</span>
+      <h2>Comment protéger son contenu OnlyFans avant qu'il fuite</h2>
+      <p>Watermarking, gestion des abonnés, sécurité des comptes : les mesures à prendre dès maintenant.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/leak-mym-mes-droits-comment-agir" class="card">
+      <span class="card-badge">⚖️ MYM & Droit</span>
+      <h2>Leak MYM : tes droits et comment agir</h2>
+      <p>Ce que dit le droit français sur les leaks de contenus intimes — et comment t'en servir concrètement.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/identifier-abonne-qui-a-leake-contenu" class="card">
+      <span class="card-badge">🔎 Investigation</span>
+      <h2>Comment identifier quel abonné a leaké ton contenu</h2>
+      <p>Watermarking invisible, métadonnées, historique d'accès : les techniques pour trouver la source.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+    <a href="/blog/fansly-leak-reagir-rapidement" class="card">
+      <span class="card-badge">⚡ Urgence</span>
+      <h2>Fansly leak : comment réagir dans les premières heures</h2>
+      <p>Les premières heures sont cruciales. Un plan d'action étape par étape pour limiter la propagation.</p>
+      <div class="card-footer"><span class="card-read">5 min de lecture</span><span class="card-arrow">→</span></div>
+    </a>
+ 
+  </div>
+ 
+  <div class="blog-cta">
+    <h2>🛡 Tu penses être concernée ?</h2>
+    <p>Obtiens un scan gratuit de ton contenu sur le web. On t'envoie un rapport complet sous 24h, sans engagement et en toute confidentialité.</p>
+    <a href="/#contact" class="btn">Obtenir mon scan gratuit</a>
+  </div>
+ 
+</main>
+ 
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Shield<span>Digital</span></div>
+    <div class="footer-links">
+      <a href="/mentions-legales.html">Mentions légales</a>
+      <a href="/confidentialite.html">Confidentialité</a>
+      <a href="https://instagram.com/official_shield_digital" target="_blank">Instagram</a>
+    </div>
+    <p class="footer-copy">© 2025 Shield Digital — Agence de protection de contenu numérique · France · International</p>
+  </div>
+</footer>
+ 
+</body>
+</html>
