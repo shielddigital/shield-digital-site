@@ -1,20 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://shield-digital.fr/</loc>
-<lastmod>2026-03-16</lastmod>
-<priority>1.0</priority>
-</url>
-
-<url>
-<loc>https://shield-digital.fr/mentions-legales.html</loc>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://shield-digital.fr/confidentialite.html</loc>
-<priority>0.5</priority>
-</url>
-
+  <url>
+    <loc>https://shield-digital.fr/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/mentions-legales.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/confidentialite.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/comment-savoir-si-mon-contenu-fuite</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/dmca-takedown-comment-ca-marche</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/supprimer-contenu-leakimedia</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/dereferencement-google-photos-videos</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/contenu-pirate-telegram-que-faire</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/erreurs-a-eviter-face-a-un-leak</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/proteger-contenu-onlyfans-avant-fuite</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/leak-mym-mes-droits-comment-agir</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/identifier-abonne-qui-a-leake-contenu</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shield-digital.fr/blog/fansly-leak-reagir-rapidement</loc>
+    <lastmod>2026-05-12</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
