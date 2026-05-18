@@ -222,24 +222,6 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 .p-chip{font-family:'Bricolage Grotesque',sans-serif;font-size:38px;font-weight:800;color:rgba(232,237,245,0.18);white-space:nowrap;flex-shrink:0;transition:color 0.3s;cursor:default;letter-spacing:-0.03em;background:transparent;border:none;padding:0;}
 .p-chip:hover{color:rgba(232,237,245,0.6);}
 @keyframes scrollInfinite{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-/* ===== PRICING REFONTE ===== */
-.pricing-wrap-2col{display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:24px;justify-content:center;align-items:stretch;max-width:900px;margin:0 auto;}
-.pc-monthly-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.28);color:#4ade80;font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:16px;}
-.pc-monthly-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:blink 2s infinite;}
-.pc-no-commit{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:var(--blue2);margin-top:14px;font-weight:500;}
-.pc-no-commit svg{flex-shrink:0;}
-.guarantee-block{max-width:760px;margin:32px auto 0;background:linear-gradient(135deg,rgba(74,222,128,0.06),rgba(37,99,235,0.06));border:1px solid rgba(74,222,128,0.22);border-radius:16px;padding:22px 28px;display:flex;align-items:center;gap:18px;}
-.guarantee-icon{font-size:32px;flex-shrink:0;}
-.guarantee-text strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px;}
-.guarantee-text span{font-size:13px;color:var(--text);line-height:1.6;}
-.agency-banner{max-width:760px;margin:24px auto 0;background:linear-gradient(135deg,rgba(250,204,21,0.06),rgba(250,204,21,0.02));border:1px solid rgba(250,204,21,0.22);border-radius:14px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
-.agency-banner-left{display:flex;align-items:center;gap:14px;}
-.agency-banner-icon{font-size:24px;}
-.agency-banner-text strong{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:700;color:#fde68a;margin-bottom:2px;}
-.agency-banner-text span{font-size:13px;color:var(--text);}
-.agency-banner-cta{background:rgba(250,204,21,0.12);border:1px solid rgba(250,204,21,0.35);color:#fde68a;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;padding:10px 20px;border-radius:8px;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
-.agency-banner-cta:hover{background:rgba(250,204,21,0.2);transform:translateY(-1px);}
-@media(max-width:900px){.pricing-wrap-2col{grid-template-columns:1fr;max-width:480px;}.agency-banner{flex-direction:column;text-align:center;}.agency-banner-left{flex-direction:column;text-align:center;}}
 </style>
 </head>
 <body>
@@ -323,86 +305,140 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 
 <div class="divider"></div>
 
-<!-- ===== PRICING (REFONTE PHASE 1) ===== -->
+<!-- ===== PRICING ===== -->
 <section id="pricing" class="sec">
   <span class="sec-label reveal" style="text-align:center;display:block;">Tarifs</span>
   <h2 class="sec-title reveal" style="text-align:center;">Choisissez votre protection</h2>
-  <p class="sec-sub reveal" style="text-align:center;margin:14px auto 48px;">Protection mensuelle, sans engagement, résiliable en 1 clic.</p>
+  <div class="pricing-wrap reveal" style="margin-top:40px;padding-top:20px;align-items:stretch;" id="pricing-wrap">
 
-  <div class="pricing-wrap-2col reveal">
-
-    <!-- SHIELD PRO -->
+    <!-- SHIELD FLASH -->
     <div class="pc" style="display:flex;flex-direction:column;">
-      <div class="pc-name">Shield Pro</div>
-      <div class="pc-monthly-tag"><span class="pc-monthly-dot"></span>Abonnement mensuel</div>
-      <div class="pc-price">297€<span>/mois</span></div>
-      <div class="pc-billing-badge bb-monthly" style="width:fit-content;">Sans engagement</div>
+      <div class="pc-badge">Idéal pour débuter</div>
+      <div class="pc-name">Shield Flash</div>
+      <div class="card-toggle" style="pointer-events:none;opacity:0.85;margin-bottom:4px;">
+        <button class="card-toggle-btn active" style="cursor:default;">Indépendant</button>
+      </div>
+      <div class="pc-price">59€</div>
+      <div class="pc-billing-badge bb-unique" style="width:fit-content;">Paiement unique</div>
       <div class="pc-divider"></div>
       <ul class="pc-features" style="flex:1;">
-        <li><strong>3 suppressions</strong> par mois</li>
-        <li>Déréférencement Google inclus</li>
-        <li>Surveillance hebdomadaire</li>
-        <li>Rapport mensuel détaillé</li>
-        <li>Support email (réponse sous 48h)</li>
+        <li>1 suppression express</li>
+        <li>Déréférencement inclus</li>
+        <li>Suivi &amp; relance</li>
+        <li>Mise en demeure si nécessaire</li>
+        <li>Rapport détaillé</li>
       </ul>
-      <a class="pc-btn pc-btn-outline" href="https://buy.stripe.com/fZucN5aga9Oz15M7jE6sw0f" target="_blank" rel="noopener">Démarrer mon abonnement</a>
-      <div class="pc-no-commit">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        Résiliable en 1 clic depuis votre espace
+      <a class="pc-btn pc-btn-outline" href="https://buy.stripe.com/bJe4gz8827GrbKq7jE6sw0b" target="_blank">Commander maintenant</a>
+      <p style="font-size:12px;color:var(--blue2);text-align:center;margin-top:12px;">Pour un contenu urgent à faire disparaître rapidement</p>
+    </div>
+
+    <!-- SHIELD STARTER -->
+    <div class="pc" style="display:flex;flex-direction:column;">
+      <div class="pc-badge">Plus populaire</div>
+      <div class="pc-name">Shield Starter</div>
+      <div class="card-toggle" style="pointer-events:none;opacity:0.85;margin-bottom:4px;">
+        <button class="card-toggle-btn active" style="cursor:default;">Indépendant</button>
       </div>
-      <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px;">Pour démarrer une protection régulière</p>
+      <div class="pc-price">167€</div>
+      <div class="pc-billing-badge bb-unique" style="width:fit-content;">Paiement unique</div>
+      <div class="pc-divider"></div>
+      <ul class="pc-features" style="flex:1;">
+        <li>3 suppressions ciblées</li>
+        <li>Déréférencement inclus</li>
+        <li>Suivi &amp; relance</li>
+        <li>Mise en demeure si nécessaire</li>
+        <li>Rapport détaillé</li>
+      </ul>
+      <a class="pc-btn pc-btn-solid" href="https://buy.stripe.com/8x29AT0FAf8TcOufQa6sw0c" target="_blank">Commander maintenant</a>
+      <p style="font-size:12px;color:var(--blue2);text-align:center;margin-top:12px;">Pour gérer plusieurs leaks identifiés</p>
     </div>
 
     <!-- SHIELD PREMIUM -->
     <div class="pc hot" style="display:flex;flex-direction:column;">
-      <div class="pc-badge">⭐ Recommandé</div>
+      <div class="pc-badge">⭐ Meilleure protection</div>
       <div class="pc-name">Shield Premium</div>
-      <div class="pc-monthly-tag"><span class="pc-monthly-dot"></span>Abonnement mensuel</div>
-      <div class="pc-price">399€<span>/mois</span></div>
-      <div class="pc-billing-badge bb-monthly" style="width:fit-content;">Sans engagement</div>
+      <div class="card-toggle">
+        <button class="card-toggle-btn active" id="premium-btn-c" onclick="setPremium('creatrice')">Indépendant</button>
+        <button class="card-toggle-btn inactive" id="premium-btn-a" onclick="setPremium('agence')">Agence</button>
+      </div>
+      <!-- Mode Créateur(trice) -->
+      <div id="premium-creatrice">
+        <div class="pc-price">399€<span>/Mois</span></div>
+        <div class="pc-billing-badge bb-monthly" style="width:fit-content;">Sans engagement</div>
+      </div>
+      <!-- Mode Agence -->
+      <div id="premium-agence" style="display:none;">
+        <div class="pc-price" id="premium-agence-price">399€<span>/Mois</span></div>
+        <div class="pc-billing-badge bb-monthly" style="width:fit-content;">Par créateur(trice)</div>
+        <!-- Slider -->
+        <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-top:14px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <span style="font-size:12px;color:var(--muted);">Nombre de profils</span>
+            <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:800;color:var(--blue2);" id="premium-count">1 créateur</span>
+          </div>
+          <input type="range" min="1" max="20" value="1" id="premium-slider"
+            style="-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:4px;background:var(--border2);outline:none;cursor:pointer;display:block;margin-bottom:10px;"
+            oninput="onPremiumSlider()">
+          <div style="font-size:13px;color:var(--text);text-align:center;" id="premium-total">Total : <strong style="color:var(--white);">399€/mois</strong></div>
+        </div>
+      </div>
       <div class="pc-divider"></div>
       <ul class="pc-features" style="flex:1;">
-        <li><strong>Suppressions illimitées</strong></li>
-        <li>Déréférencement Google inclus</li>
-        <li>Surveillance 24/7 continue</li>
+        <li>Suppression &amp; déréférencement illimités</li>
         <li>Contact hébergeur &amp; registrar</li>
+        <li>Suivi &amp; relance continus</li>
         <li>Mise en demeure si nécessaire</li>
-        <li>Rapport hebdomadaire</li>
-        <li>Support prioritaire (réponse sous 24h)</li>
+        <li>Rapport mensuel détaillé</li>
+        <li>Support prioritaire</li>
       </ul>
-      <a class="pc-btn pc-btn-solid" href="https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d" target="_blank" rel="noopener">Démarrer mon abonnement</a>
-      <div class="pc-no-commit">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        Résiliable en 1 clic depuis votre espace
-      </div>
-      <p style="font-size:12px;color:var(--blue2);text-align:center;margin-top:10px;font-weight:500;">Pour une protection complète et continue</p>
+      <div id="premium-agency-note" style="display:none;" class="agency-note">★ <strong>15% reversés</strong> pour chaque profil recommandé</div>
+      <a class="pc-btn pc-btn-outline" id="premium-cta" href="https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d" target="_blank">Démarrer mon abonnement</a>
+      <p style="font-size:12px;color:var(--blue2);text-align:center;margin-top:12px;">Pour une protection continue</p>
     </div>
 
   </div>
-
-  <!-- GARANTIE -->
-  <div class="guarantee-block reveal">
-    <div class="guarantee-icon">🛡</div>
-    <div class="guarantee-text">
-      <strong>Garantie résultat — Premier mois remboursé</strong>
-      <span>Si aucun contenu piraté n'est supprimé dans les 30 premiers jours, votre mois est intégralement remboursé. Sans condition.</span>
-    </div>
-  </div>
-
-  <!-- BANDEAU AGENCE -->
-  <div class="agency-banner reveal">
-    <div class="agency-banner-left">
-      <div class="agency-banner-icon">★</div>
-      <div class="agency-banner-text">
-        <strong>Vous êtes une agence ?</strong>
-        <span>Tarifs dégressifs &amp; commission sur recommandation. Parlons-en.</span>
-      </div>
-    </div>
-    <a href="#contact" class="agency-banner-cta">Nous contacter →</a>
-  </div>
-
-  <p class="pricing-note reveal" style="margin-top:32px;">🔒 Paiement sécurisé Stripe · Aucun accès à vos comptes requis · Données chiffrées</p>
+  <p class="pricing-note reveal">🔒 Paiement sécurisé · Aucun accès à vos comptes requis · Sans engagement, résiliation à tout moment</p>
 </section>
+
+<script>
+var PREMIUM_URL = 'https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d';
+
+function onPremiumSlider() {
+  var n = parseInt(document.getElementById('premium-slider').value);
+  var total = 399 * n;
+  document.getElementById('premium-count').textContent = n + (n > 1 ? ' profils' : ' profil');
+  document.getElementById('premium-total').innerHTML = 'Total estimé : <strong style="color:var(--white);">' + total + '€/mois</strong>';
+}
+
+function setPremium(mode) {
+  var btnC = document.getElementById('premium-btn-c');
+  var btnA = document.getElementById('premium-btn-a');
+  var cr = document.getElementById('premium-creatrice');
+  var ag = document.getElementById('premium-agence');
+  var note = document.getElementById('premium-agency-note');
+  var cta = document.getElementById('premium-cta');
+  var wrap = document.getElementById('pricing-wrap');
+  if (mode === 'creatrice') {
+    btnC.className = 'card-toggle-btn active';
+    btnA.className = 'card-toggle-btn inactive';
+    cr.style.display = 'block';
+    ag.style.display = 'none';
+    note.style.display = 'none';
+    cta.href = PREMIUM_URL;
+    wrap.style.alignItems = 'stretch';
+  } else {
+    btnA.className = 'card-toggle-btn active';
+    btnC.className = 'card-toggle-btn inactive';
+    cr.style.display = 'none';
+    ag.style.display = 'block';
+    note.style.display = 'block';
+    document.getElementById('premium-slider').value = 1;
+    onPremiumSlider();
+    wrap.style.alignItems = 'start';
+  }
+}
+</script>
+
 <div class="divider"></div>
 
 <div class="trust-bar">
