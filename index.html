@@ -236,6 +236,39 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 .guarantee-title{font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px;}
 .guarantee-desc{font-size:14px;color:var(--text);line-height:1.65;max-width:580px;margin:0 auto;}
 @media(max-width:1024px){.pricing-wrap-3col{grid-template-columns:1fr;max-width:480px;gap:20px;}}
+  /* ===== SECTION PREUVES (CARROUSEL) ===== */
+.proofs-section{padding:80px 0;}
+.proofs-section .sec-label,.proofs-section .sec-title,.proofs-section .sec-sub{padding:0 24px;}
+.proof-google-wrap{max-width:900px;margin:0 auto 56px;padding:0 24px;}
+.proof-google{background:linear-gradient(135deg,rgba(255,255,255,0.04),rgba(37,99,235,0.04));border:1px solid var(--border);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px;}
+.proof-google-header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.proof-google-logo{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);padding:6px 12px;border-radius:100px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;color:var(--white);}
+.proof-google-logo::before{content:'G';color:#4285F4;font-weight:900;font-size:16px;}
+.proof-stars{color:#fbbf24;font-size:18px;letter-spacing:2px;}
+.proof-badge-verified{background:rgba(74,222,128,0.12);border:1px solid rgba(74,222,128,0.28);color:#4ade80;font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:100px;}
+.proof-text{font-size:16px;line-height:1.7;color:var(--text);font-style:italic;margin:0;}
+.proof-text::before{content:'"';font-size:48px;color:var(--blue2);line-height:0;position:relative;top:14px;margin-right:4px;}
+.proof-author{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--white);font-size:15px;margin-top:8px;display:flex;align-items:center;gap:10px;}
+.proof-author::before{content:'';width:32px;height:1px;background:var(--blue2);}
+.proof-google-link{align-self:flex-start;color:var(--blue2);font-size:13px;font-weight:600;text-decoration:none;margin-top:4px;}
+.proof-google-link:hover{text-decoration:underline;}
+
+/* CARROUSEL */
+.proofs-carousel{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 8%,#000 92%,transparent 100%);padding:20px 0;}
+.proofs-track{display:flex;gap:24px;width:max-content;animation:proofsScroll 50s linear infinite;}
+.proofs-carousel:hover .proofs-track{animation-play-state:paused;}
+@keyframes proofsScroll{from{transform:translateX(0);}to{transform:translateX(calc(-50% - 12px));}}
+.proof-card{flex-shrink:0;width:280px;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--bg2);cursor:pointer;transition:transform 0.3s,border-color 0.3s;display:block;position:relative;}
+.proof-card:hover{transform:translateY(-6px);border-color:var(--blue2);}
+.proof-card img{width:100%;display:block;height:auto;}
+.proof-image-tag{position:absolute;top:14px;left:14px;background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);color:var(--white);font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:5px 11px;border-radius:100px;border:1px solid rgba(255,255,255,0.15);z-index:2;}
+
+/* LIGHTBOX */
+.proof-lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:9999;align-items:center;justify-content:center;padding:40px 20px;cursor:zoom-out;}
+.proof-lightbox.open{display:flex;}
+.proof-lightbox img{max-width:100%;max-height:90vh;border-radius:12px;}
+.proof-lightbox-close{position:absolute;top:24px;right:24px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;width:44px;height:44px;border-radius:50%;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+@media(max-width:768px){.proof-card{width:240px;}.proofs-track{animation-duration:40s;}}
 </style>
 </head>
 <body>
@@ -318,6 +351,69 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:48
 </div>
 
 <div class="divider"></div>
+  <!-- ===== SECTION PREUVES ===== -->
+<section id="preuves" class="sec proofs-section">
+  <span class="sec-label reveal" style="text-align:center;display:block;">Preuves & témoignages</span>
+  <h2 class="sec-title reveal" style="text-align:center;">Résultats prouvés. Clientes satisfaites.</h2>
+  <p class="sec-sub reveal" style="text-align:center;margin:14px auto 48px;">Voici quelques retours concrets et preuves de notre travail.</p>
+
+  <!-- AVIS GOOGLE FIXE -->
+  <div class="proof-google-wrap reveal">
+    <div class="proof-google">
+      <div class="proof-google-header">
+        <span class="proof-google-logo">Avis Google vérifié</span>
+        <span class="proof-stars">★★★★★</span>
+        <span class="proof-badge-verified">✓ Vérifié</span>
+      </div>
+      <p class="proof-text">Je tiens vraiment à remercier Shield Digital pour son aide et son professionnalisme. J'ai traversé une situation compliquée récemment concernant mon contenu en ligne, et il a su m'accompagner avec sérieux, rapidité et efficacité. Au-delà du résultat, j'ai surtout apprécié l'écoute et l'aspect humain derrière tout ça. Je recommande sincèrement.</p>
+      <div class="proof-author">Julie Cizeron · Mai 2026</div>
+      <a href="https://www.google.com/search?q=Shield+Digital+Avis" target="_blank" rel="noopener" class="proof-google-link">Voir l'avis sur Google →</a>
+    </div>
+  </div>
+
+  <!-- CARROUSEL AUTO-SCROLL -->
+  <div class="proofs-carousel reveal">
+    <div class="proofs-track">
+
+      <!-- Items originaux -->
+      <div class="proof-card" data-img="preuves/preuve-leakimedia.png">
+        <span class="proof-image-tag">Suppression complète</span>
+        <img src="preuves/preuve-leakimedia.png" alt="Preuve suppression Leakimedia">
+      </div>
+      <div class="proof-card" data-img="preuves/preuve-google-anonyme.png">
+        <span class="proof-image-tag">Déréférencement Google</span>
+        <img src="preuves/preuve-google-anonyme.png" alt="Preuve déréférencement Google 24h">
+      </div>
+      <div class="proof-card" data-img="preuves/story-julie.png">
+        <span class="proof-image-tag">Témoignage public</span>
+        <img src="preuves/story-julie.png" alt="Témoignage Julie Cizeron Instagram">
+      </div>
+      <div class="proof-card" data-img="preuves/temoignage-anonyme.png">
+        <span class="proof-image-tag">Cliente anonyme</span>
+        <img src="preuves/temoignage-anonyme.png" alt="Témoignage cliente anonyme">
+      </div>
+
+      <!-- DUPLICATION pour effet boucle infinie (NE PAS SUPPRIMER) -->
+      <div class="proof-card" data-img="preuves/preuve-leakimedia.png">
+        <span class="proof-image-tag">Suppression complète</span>
+        <img src="preuves/preuve-leakimedia.png" alt="Preuve suppression Leakimedia">
+      </div>
+      <div class="proof-card" data-img="preuves/preuve-google-anonyme.png">
+        <span class="proof-image-tag">Déréférencement Google</span>
+        <img src="preuves/preuve-google-anonyme.png" alt="Preuve déréférencement Google 24h">
+      </div>
+      <div class="proof-card" data-img="preuves/story-julie.png">
+        <span class="proof-image-tag">Témoignage public</span>
+        <img src="preuves/story-julie.png" alt="Témoignage Julie Cizeron Instagram">
+      </div>
+      <div class="proof-card" data-img="preuves/temoignage-anonyme.png">
+        <span class="proof-image-tag">Cliente anonyme</span>
+        <img src="preuves/temoignage-anonyme.png" alt="Témoignage cliente anonyme">
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- ===== PRICING (REFONTE PHASE 1 - 3 CARDS) ===== -->
 <section id="pricing" class="sec">
@@ -633,6 +729,20 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
 
 document.addEventListener("contextmenu",e=>e.preventDefault());
 document.addEventListener("keydown",e=>{if(e.ctrlKey&&['c','u','s'].includes(e.key))e.preventDefault();});
+</script>
+  <!-- Lightbox preuves -->
+<div id="proofLightbox" class="proof-lightbox" onclick="this.classList.remove('open');">
+  <button class="proof-lightbox-close" onclick="event.stopPropagation();document.getElementById('proofLightbox').classList.remove('open');">×</button>
+  <img id="proofLightboxImg" src="" alt="">
+</div>
+
+<script>
+document.querySelectorAll('.proof-card').forEach(function(el){
+  el.addEventListener('click', function(){
+    document.getElementById('proofLightboxImg').src = this.getAttribute('data-img');
+    document.getElementById('proofLightbox').classList.add('open');
+  });
+});
 </script>
 </body>
 </html>
