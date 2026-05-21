@@ -82,6 +82,14 @@ nav a:hover{color:var(--ink);}
 .trust-pill-avatars .av:nth-child(2){background:linear-gradient(135deg,#f59e0b,#ec4899);}
 .trust-pill-avatars .av:nth-child(3){background:linear-gradient(135deg,#8b5cf6,#3b82f6);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.platforms-section{padding:60px var(--pad-x) 20px;max-width:var(--max);margin:0 auto;}
+.platforms-label{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:var(--muted);text-align:center;letter-spacing:0.05em;margin-bottom:24px;text-transform:uppercase;}
+.platforms-carousel{max-width:440px;margin:0 auto;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);}
+.platforms-track{display:flex;gap:48px;width:max-content;animation:platformsScroll 35s linear infinite;align-items:center;}
+.platforms-carousel:hover .platforms-track{animation-play-state:paused;}
+@keyframes platformsScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.platform-item{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:600;white-space:nowrap;opacity:0.7;}
+.sec-title em.nowrap{white-space:nowrap;}
 .hero-left{opacity:0;animation:slideLeft 0.9s ease 0.6s forwards;}
 @keyframes slideLeft{from{opacity:0;transform:translateX(-30px) rotate(-3deg);}to{opacity:1;transform:translateX(0) rotate(-3deg);}}
 .report-card{background:white;border-radius:20px;padding:22px;box-shadow:0 30px 60px -20px rgba(10,14,26,0.18),0 1px 0 rgba(255,255,255,1) inset,0 0 0 1px var(--line);transform:rotate(-3deg);transition:transform 0.4s ease;}
@@ -412,10 +420,39 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:64px var(--pad-
   </div>
 </section>
 
+<!-- ============ PLATEFORMES SURVEILLÉES ============ -->
+<section class="platforms-section">
+  <div class="platforms-label">Plateformes surveillées</div>
+  <div class="platforms-carousel">
+    <div class="platforms-track">
+      <span class="platform-item">OnlyFans</span>
+      <span class="platform-item">MYM</span>
+      <span class="platform-item">Instagram</span>
+      <span class="platform-item">YouTube</span>
+      <span class="platform-item">X</span>
+      <span class="platform-item">Reddit</span>
+      <span class="platform-item">Fansly</span>
+      <span class="platform-item">Sites de leaks</span>
+      <span class="platform-item">Telegram</span>
+      <span class="platform-item">TikTok</span>
+      <span class="platform-item">OnlyFans</span>
+      <span class="platform-item">MYM</span>
+      <span class="platform-item">Instagram</span>
+      <span class="platform-item">YouTube</span>
+      <span class="platform-item">X</span>
+      <span class="platform-item">Reddit</span>
+      <span class="platform-item">Fansly</span>
+      <span class="platform-item">Sites de leaks</span>
+      <span class="platform-item">Telegram</span>
+      <span class="platform-item">TikTok</span>
+    </div>
+  </div>
+</section>
+
 <!-- ============ MÉTHODE ============ -->
 <section id="how" class="section">
   <div class="sec-head reveal">
-    <h2 class="sec-title">Trois étapes<br><em>Aucune action de votre part</em></h2>
+    <h2 class="sec-title">Trois étapes<br><em class="nowrap">Aucune action de votre part</em></h2>
     <p class="sec-sub">Aucun accès à transmettre, aucun outil à installer. On gère l'intégralité du processus, de la détection à la suppression.</p>
   </div>
   <div class="method-grid">
