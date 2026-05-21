@@ -40,7 +40,11 @@ header,main,section,footer{position:relative;z-index:2;}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.85s cubic-bezier(0.22,1,0.36,1),transform 0.85s cubic-bezier(0.22,1,0.36,1);}
 .reveal.visible{opacity:1;transform:translateY(0);}
 .reveal-d1{transition-delay:0.08s;}.reveal-d2{transition-delay:0.16s;}.reveal-d3{transition-delay:0.24s;}
-header{position:fixed;top:0;left:0;right:0;padding:0 var(--pad-x);height:76px;display:flex;align-items:center;justify-content:space-between;z-index:100;transition:all 0.35s ease;}
+.marquee-top{position:fixed;top:0;left:0;right:0;height:32px;background:linear-gradient(135deg,var(--sky-600),var(--sky-500));color:white;overflow:hidden;display:flex;align-items:center;z-index:101;}
+.marquee-track{display:flex;width:max-content;animation:marqueeScroll 40s linear infinite;}
+.marquee-item{display:inline-flex;align-items:center;gap:10px;padding:0 24px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:white;white-space:nowrap;}
+@keyframes marqueeScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+header{position:fixed;top:32px;left:0;right:0;padding:0 var(--pad-x);height:76px;display:flex;align-items:center;justify-content:space-between;z-index:100;transition:all 0.35s ease;}
 header.scrolled{background:rgba(248,250,252,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .logo-mark{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--sky-400),var(--sky-600));display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 6px 16px rgba(59,130,246,0.32);}
@@ -273,6 +277,29 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:64px var(--pad-
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQVK5V7W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="marquee-top"><div class="marquee-track">
+<span class="marquee-item">✓ Scan gratuit</span>
+<span class="marquee-item">· DMCA officiel</span>
+<span class="marquee-item">· Suppression sous 72h</span>
+<span class="marquee-item">· Service 100% humain</span>
+<span class="marquee-item">· Agence française</span>
+<span class="marquee-item">· Déréférencement Google</span>
+<span class="marquee-item">· Surveillance 24/7</span>
+<span class="marquee-item">· Avis Google ★★★★★</span>
+<span class="marquee-item">· Sans engagement</span>
+<span class="marquee-item">· Premier mois remboursé</span>
+<span class="marquee-item">· ✓ Scan gratuit</span>
+<span class="marquee-item">· DMCA officiel</span>
+<span class="marquee-item">· Suppression sous 72h</span>
+<span class="marquee-item">· Service 100% humain</span>
+<span class="marquee-item">· Agence française</span>
+<span class="marquee-item">· Déréférencement Google</span>
+<span class="marquee-item">· Surveillance 24/7</span>
+<span class="marquee-item">· Avis Google ★★★★★</span>
+<span class="marquee-item">· Sans engagement</span>
+<span class="marquee-item">· Premier mois remboursé</span>
+</div></div>
 
 <div class="atmosphere">
   <div class="halo-main"></div>
