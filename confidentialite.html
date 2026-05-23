@@ -1,63 +1,547 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PQVK5V7W');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-68583RGCL8"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-68583RGCL8');
+</script>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Politique de confidentialité | Shield Digital</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Politique de confidentialité de Shield Digital — agence française de protection de contenu. Traitement des données conforme RGPD, confidentialité absolue.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://shield-digital.fr/confidentialite.html">
+<link rel="icon" type="image/png" href="/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{
-font-family: Arial, sans-serif;
-max-width: 900px;
-margin: auto;
-padding: 40px;
-line-height: 1.6;
-color: #333;
+:root{
+  --bg:#f8fafc;
+  --bg-2:#ffffff;
+  --ink:#0a0e1a;
+  --ink-soft:#3d4250;
+  --muted:#6b7280;
+  --line:rgba(10,14,26,0.08);
+  --line-strong:rgba(10,14,26,0.14);
+  --sky-50:#eff6ff;
+  --sky-100:#dbeafe;
+  --sky-300:#93c5fd;
+  --sky-400:#60a5fa;
+  --sky-500:#3b82f6;
+  --sky-600:#2563eb;
+  --max:1200px;
+  --pad-x:48px;
+  --r-card:16px;
+  --r-pill:100px;
 }
-h1,h2{
-color:#111;
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;overflow-x:hidden;line-height:1.7;-webkit-font-smoothing:antialiased;}
+
+/* Halo d'ambiance */
+.atmosphere{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.halo-main{position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:1200px;height:800px;background:radial-gradient(ellipse at center,rgba(147,197,253,0.35) 0%,rgba(219,234,254,0.15) 35%,transparent 70%);filter:blur(40px);}
+.halo-side{position:absolute;top:30%;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,0.06) 0%,transparent 70%);filter:blur(60px);}
+
+/* Marquee */
+.marquee-top{position:fixed;top:0;left:0;right:0;height:32px;background:linear-gradient(135deg,var(--sky-600),var(--sky-500));color:white;overflow:hidden;display:flex;align-items:center;z-index:101;}
+.marquee-track{display:flex;width:max-content;animation:marqueeScroll 40s linear infinite;}
+.marquee-item{display:inline-flex;align-items:center;gap:10px;padding:0 24px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:white;white-space:nowrap;}
+@keyframes marqueeScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* Header */
+header{position:fixed;top:32px;left:0;right:0;padding:0 var(--pad-x);height:76px;display:flex;align-items:center;justify-content:space-between;z-index:100;transition:all 0.35s ease;background:rgba(248,250,252,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-img{height:48px;width:auto;}
+nav{display:flex;align-items:center;gap:4px;}
+nav a{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;padding:10px 18px;border-radius:8px;transition:all 0.2s;}
+nav a:hover{color:var(--ink);background:rgba(10,14,26,0.04);}
+.nav-cta{background:var(--ink)!important;color:white!important;font-weight:600!important;font-size:14px!important;padding:11px 22px!important;border-radius:var(--r-pill)!important;font-family:'Inter',sans-serif!important;display:inline-flex!important;align-items:center;gap:6px;transition:transform 0.2s ease!important;}
+.nav-cta:hover{transform:translateY(-1px);background:#1a1f2e!important;}
+
+/* Container */
+.legal-wrap{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:160px var(--pad-x) 80px;}
+
+/* Breadcrumb */
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin-bottom:28px;flex-wrap:wrap;}
+.breadcrumb a{color:var(--sky-600);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--sky-500);}
+.breadcrumb span.sep{color:var(--line-strong);}
+
+/* Header de page */
+.legal-header{margin-bottom:48px;}
+.legal-meta{display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap;}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;background:var(--sky-50);border:1px solid var(--sky-100);border-radius:var(--r-pill);font-size:11.5px;font-weight:600;color:var(--sky-600);letter-spacing:0.08em;text-transform:uppercase;}
+.badge svg{width:13px;height:13px;}
+.meta-info{font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:8px;}
+.meta-info svg{width:14px;height:14px;}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(32px,4.2vw,52px);font-weight:700;line-height:1.08;letter-spacing:-0.03em;margin-bottom:24px;color:var(--ink);}
+h1 .hl{font-style:italic;font-weight:600;background:linear-gradient(135deg,var(--sky-500) 0%,var(--sky-600) 50%,var(--sky-400) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;padding-right:0.12em;padding-left:0.05em;}
+.legal-intro{font-size:17px;color:var(--ink-soft);line-height:1.6;max-width:760px;}
+
+/* Contenu */
+.legal-content{font-size:15.5px;line-height:1.75;color:var(--ink-soft);background:white;border:1px solid var(--line);border-radius:18px;padding:48px;box-shadow:0 4px 20px rgba(10,14,26,0.03);}
+.legal-content h2{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;letter-spacing:-0.02em;color:var(--ink);margin:40px 0 16px;line-height:1.25;display:flex;align-items:center;gap:12px;}
+.legal-content h2:first-child{margin-top:0;}
+.legal-content h2 .num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:var(--sky-50);border:1px solid var(--sky-100);color:var(--sky-600);font-size:14px;font-weight:700;border-radius:10px;font-family:'Inter',sans-serif;flex-shrink:0;}
+.legal-content h3{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:600;letter-spacing:-0.015em;color:var(--ink);margin:24px 0 10px;line-height:1.3;}
+.legal-content p{margin-bottom:14px;}
+.legal-content strong{color:var(--ink);font-weight:600;}
+.legal-content ul, .legal-content ol{margin:8px 0 18px 0;padding-left:0;list-style:none;}
+.legal-content ul li, .legal-content ol li{position:relative;padding-left:26px;margin-bottom:8px;line-height:1.65;}
+.legal-content ul li::before{content:'';position:absolute;left:6px;top:11px;width:5px;height:5px;border-radius:50%;background:var(--sky-500);}
+.legal-content ol{counter-reset:list-counter;}
+.legal-content ol li{counter-increment:list-counter;padding-left:32px;}
+.legal-content ol li::before{content:counter(list-counter);position:absolute;left:0;top:0;width:20px;height:20px;background:var(--sky-50);border:1px solid var(--sky-100);color:var(--sky-600);font-size:11px;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;}
+.legal-content a{color:var(--sky-600);text-decoration:none;border-bottom:1px solid var(--sky-100);transition:all 0.2s;}
+.legal-content a:hover{color:var(--sky-500);border-bottom-color:var(--sky-500);}
+
+/* Info table */
+.info-table{background:var(--sky-50);border:1px solid var(--sky-100);border-radius:12px;padding:20px 22px;margin:16px 0 24px;}
+.info-table dt{font-size:12.5px;font-weight:600;color:var(--sky-600);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:4px;}
+.info-table dd{font-size:15px;color:var(--ink);font-weight:500;margin-bottom:12px;}
+.info-table dd:last-child{margin-bottom:0;}
+
+/* Data table */
+.data-table{width:100%;border-collapse:collapse;margin:16px 0 24px;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px;}
+.data-table thead{background:var(--sky-50);}
+.data-table th{padding:12px 16px;text-align:left;font-family:'Inter',sans-serif;font-size:12px;font-weight:700;color:var(--sky-600);letter-spacing:0.05em;text-transform:uppercase;border-bottom:1px solid var(--sky-100);}
+.data-table td{padding:14px 16px;border-bottom:1px solid var(--line);color:var(--ink-soft);}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:nth-child(even){background:rgba(10,14,26,0.015);}
+.data-table strong{color:var(--ink);}
+
+/* Callout */
+.callout{background:var(--sky-50);border:1px solid var(--sky-100);border-left:3px solid var(--sky-500);border-radius:12px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start;}
+.callout-icon{width:22px;height:22px;flex-shrink:0;color:var(--sky-500);margin-top:1px;}
+.callout-icon svg{width:100%;height:100%;}
+.callout p{margin:0;font-size:14.5px;line-height:1.6;color:var(--ink-soft);}
+.callout p strong{color:var(--ink);}
+.callout.warn{background:#fffbeb;border-color:#fde68a;border-left-color:#f59e0b;}
+.callout.warn .callout-icon{color:#f59e0b;}
+
+/* Update bar */
+.update-bar{display:flex;align-items:center;gap:10px;padding:14px 20px;background:white;border:1px solid var(--line);border-radius:12px;margin-bottom:32px;font-size:13.5px;color:var(--muted);}
+.update-bar svg{width:16px;height:16px;color:var(--sky-500);flex-shrink:0;}
+.update-bar strong{color:var(--ink);font-weight:600;}
+
+/* Retour */
+.back{display:inline-flex;align-items:center;gap:8px;margin-top:40px;color:var(--sky-600);text-decoration:none;font-size:14.5px;font-weight:500;transition:gap 0.2s;}
+.back:hover{gap:14px;}
+
+/* Footer */
+footer{position:relative;z-index:1;background:#0a0e1a;color:white;padding:64px var(--pad-x) 32px;margin-top:80px;}
+.footer-inner{max-width:var(--max);margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand-block{display:flex;flex-direction:column;gap:16px;}
+.footer-logo{background:white;border-radius:12px;padding:12px;width:fit-content;}
+.footer-logo-img{height:36px;width:auto;display:block;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.55;max-width:240px;}
+.footer-col h4{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;}
+.footer-col ul{list-style:none;padding:0;margin:0;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;transition:color 0.2s;}
+.footer-col a:hover{color:white;}
+.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-copy{font-size:12.5px;color:rgba(255,255,255,0.45);}
+.footer-mention{font-size:12.5px;color:rgba(255,255,255,0.45);}
+
+@media (max-width:768px){
+  :root{--pad-x:24px;}
+  .legal-wrap{padding:140px var(--pad-x) 60px;}
+  .legal-content{padding:28px 24px;border-radius:14px;}
+  .legal-content h2{font-size:21px;margin:32px 0 14px;}
+  .legal-content h2 .num{width:30px;height:30px;font-size:12px;}
+  .data-table{font-size:12px;}
+  .data-table th, .data-table td{padding:10px 12px;}
+  nav a:not(.nav-cta){display:none;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-brand-block{grid-column:1/-1;}
 }
 </style>
 </head>
-
 <body>
 
-<h1>Politique de confidentialité</h1>
+<!-- Marquee -->
+<div class="marquee-top"><div class="marquee-track">
+<span class="marquee-item">✓ Scan gratuit</span>
+<span class="marquee-item">· DMCA officiel</span>
+<span class="marquee-item">· Suppression sous 72h</span>
+<span class="marquee-item">· Service 100% confidentiel</span>
+<span class="marquee-item">· Agence française</span>
+<span class="marquee-item">· Déréférencement Google</span>
+<span class="marquee-item">· Surveillance 24/7</span>
+<span class="marquee-item">· Avis Google ★★★★★</span>
+<span class="marquee-item">· Sans engagement</span>
+<span class="marquee-item">· Premier mois remboursé</span>
+<span class="marquee-item">· ✓ Scan gratuit</span>
+<span class="marquee-item">· DMCA officiel</span>
+<span class="marquee-item">· Suppression sous 72h</span>
+<span class="marquee-item">· Service 100% confidentiel</span>
+<span class="marquee-item">· Agence française</span>
+<span class="marquee-item">· Déréférencement Google</span>
+<span class="marquee-item">· Surveillance 24/7</span>
+<span class="marquee-item">· Avis Google ★★★★★</span>
+<span class="marquee-item">· Sans engagement</span>
+<span class="marquee-item">· Premier mois remboursé</span>
+</div></div>
 
-<h2>Collecte des données</h2>
-<p>
-Le site Shield Digital peut collecter certaines informations lorsque vous utilisez le formulaire de contact :
-</p>
+<!-- Atmosphère -->
+<div class="atmosphere">
+  <div class="halo-main"></div>
+  <div class="halo-side"></div>
+</div>
 
-<ul>
-<li>Nom</li>
-<li>Email</li>
-<li>Message</li>
-</ul>
+<!-- Header -->
+<header>
+  <a href="/" class="logo">
+    <img src="/logo.png" alt="Shield Digital" class="logo-img">
+  </a>
+  <nav>
+    <a href="/#how">Méthode</a>
+    <a href="/#preuves">Preuves</a>
+    <a href="/#pricing">Tarifs</a>
+    <a href="/blog">Blog</a>
+    <a href="/#contact" class="nav-cta">Scan gratuit
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </nav>
+</header>
 
-<h2>Utilisation des données</h2>
-<p>
-Les données collectées servent uniquement à répondre aux demandes envoyées via le site.
-Elles ne sont jamais vendues ou partagées avec des tiers.
-</p>
+<main class="legal-wrap">
 
-<h2>Durée de conservation</h2>
-<p>
-Les données sont conservées uniquement le temps nécessaire pour traiter la demande.
-</p>
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="/">Accueil</a><span class="sep">›</span>
+    <span>Politique de confidentialité</span>
+  </nav>
 
-<h2>Droits des utilisateurs</h2>
-<p>
-Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression de vos données personnelles.
-</p>
+  <!-- Header -->
+  <div class="legal-header">
+    <div class="legal-meta">
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Protection des données
+      </span>
+      <span class="meta-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Mise à jour : 23 mai 2026
+      </span>
+    </div>
+    <h1>Politique de <span class="hl">confidentialité</span></h1>
+    <p class="legal-intro">Shield Digital s'engage à protéger la vie privée de ses utilisateurs. Cette politique détaille la manière dont vos données personnelles sont collectées, utilisées et protégées, conformément au RGPD et à la loi Informatique et Libertés.</p>
+  </div>
 
-<p>
-Pour toute demande : contact@shield-digital.fr
-</p>
+  <!-- Contenu -->
+  <article class="legal-content">
 
-<h2>Cookies</h2>
-<p>
-Le site peut utiliser des cookies afin d'améliorer l'expérience utilisateur.
-</p>
+    <div class="update-bar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span><strong>Dernière mise à jour :</strong> 23 mai 2026 — Version 2.0</span>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      <p><strong>Notre engagement :</strong> vos données ne sont <strong>jamais vendues</strong>, <strong>jamais partagées</strong> avec des tiers commerciaux, et <strong>jamais utilisées</strong> à des fins autres que celles strictement nécessaires à la fourniture du service Shield Digital. Confidentialité absolue garantie.</p>
+    </div>
+
+    <!-- ARTICLE 1 -->
+    <h2><span class="num">01</span>Responsable du traitement</h2>
+    <p>Le responsable du traitement des données personnelles collectées sur le site shield-digital.fr est :</p>
+    <div class="info-table">
+      <dl>
+        <dt>Dénomination</dt>
+        <dd>Shield Digital</dd>
+        <dt>Statut</dt>
+        <dd>Entreprise individuelle (auto-entrepreneur)</dd>
+        <dt>Responsable</dt>
+        <dd>Alexis Touzé</dd>
+        <dt>SIRET</dt>
+        <dd>852 450 980 00010</dd>
+        <dt>Contact</dt>
+        <dd><a href="mailto:contact@shield-digital.fr">contact@shield-digital.fr</a></dd>
+      </dl>
+    </div>
+
+    <!-- ARTICLE 2 -->
+    <h2><span class="num">02</span>Données collectées</h2>
+    <p>Shield Digital collecte uniquement les données nécessaires à la fourniture de ses services. Aucune collecte excessive ou non justifiée n'est effectuée.</p>
+
+    <h3>2.1 Données collectées via le formulaire de contact</h3>
+    <ul>
+      <li><strong>Nom et prénom</strong> (facultatif si pseudonyme préféré)</li>
+      <li><strong>Adresse email</strong></li>
+      <li><strong>Message</strong> décrivant votre situation</li>
+    </ul>
+
+    <h3>2.2 Données collectées lors d'une souscription</h3>
+    <ul>
+      <li>Informations de paiement (traitées exclusivement par Stripe — voir section 5)</li>
+      <li>Coordonnées de facturation</li>
+      <li>Plateformes concernées par la protection (OnlyFans, MYM, Fansly, etc.)</li>
+      <li>Liens et URLs des contenus à protéger</li>
+    </ul>
+
+    <h3>2.3 Données collectées automatiquement</h3>
+    <ul>
+      <li>Adresse IP (pour des raisons de sécurité)</li>
+      <li>Type de navigateur et système d'exploitation</li>
+      <li>Pages visitées sur le site (via Google Analytics anonymisé)</li>
+      <li>Durée de visite et source de provenance</li>
+    </ul>
+
+    <!-- ARTICLE 3 -->
+    <h2><span class="num">03</span>Finalités du traitement</h2>
+    <p>Les données collectées sont utilisées exclusivement pour les finalités suivantes :</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Finalité</th>
+          <th>Base légale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Répondre aux demandes de scan gratuit et de contact</td>
+          <td><strong>Consentement</strong></td>
+        </tr>
+        <tr>
+          <td>Exécuter le contrat de service (DMCA, déréférencement, surveillance)</td>
+          <td><strong>Contrat</strong></td>
+        </tr>
+        <tr>
+          <td>Gérer la facturation et les paiements</td>
+          <td><strong>Obligation légale</strong></td>
+        </tr>
+        <tr>
+          <td>Améliorer le site et l'expérience utilisateur</td>
+          <td><strong>Intérêt légitime</strong></td>
+        </tr>
+        <tr>
+          <td>Répondre aux obligations légales et fiscales</td>
+          <td><strong>Obligation légale</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ARTICLE 4 -->
+    <h2><span class="num">04</span>Durée de conservation</h2>
+    <p>Les durées de conservation sont strictement limitées aux nécessités de chaque traitement :</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Type de donnée</th>
+          <th>Durée de conservation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Données de contact (scan gratuit non suivi)</td>
+          <td><strong>6 mois</strong> après dernière interaction</td>
+        </tr>
+        <tr>
+          <td>Données client actif</td>
+          <td>Durée de la relation contractuelle</td>
+        </tr>
+        <tr>
+          <td>Données comptables et de facturation</td>
+          <td><strong>10 ans</strong> (obligation légale)</td>
+        </tr>
+        <tr>
+          <td>Données de navigation (analytics)</td>
+          <td><strong>14 mois maximum</strong></td>
+        </tr>
+        <tr>
+          <td>Cookies techniques</td>
+          <td><strong>13 mois maximum</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ARTICLE 5 -->
+    <h2><span class="num">05</span>Destinataires des données</h2>
+    <p>Vos données personnelles peuvent être transmises aux destinataires suivants, <strong>uniquement dans la mesure strictement nécessaire</strong> :</p>
+
+    <h3>5.1 Sous-traitants techniques</h3>
+    <ul>
+      <li><strong>Stripe</strong> (paiements) — Société irlandaise, données traitées dans l'UE/USA avec clauses contractuelles types conformes RGPD</li>
+      <li><strong>Hostinger</strong> (hébergement web) — Société chypriote, conforme RGPD</li>
+      <li><strong>Formspree</strong> (traitement du formulaire de contact) — Société américaine, conforme RGPD via Data Processing Addendum</li>
+      <li><strong>Google Analytics</strong> (analyses anonymisées) — IP anonymisée, durée de conservation limitée</li>
+    </ul>
+
+    <h3>5.2 Hébergeurs et plateformes tierces</h3>
+    <p>Dans le cadre des procédures DMCA, certaines informations strictement nécessaires sont transmises aux hébergeurs et plateformes destinataires (URLs des contenus, justificatifs de propriété, identifiants techniques requis par la procédure DMCA). Aucune donnée personnelle excessive n'est divulguée.</p>
+
+    <h3>5.3 Aucun partage commercial</h3>
+    <p>Shield Digital <strong>ne vend, ne loue, ne partage en aucun cas vos données</strong> à des fins commerciales, publicitaires ou marketing avec des tiers.</p>
+
+    <!-- ARTICLE 6 -->
+    <h2><span class="num">06</span>Vos droits</h2>
+    <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> — Obtenir confirmation que vos données sont traitées et en demander une copie</li>
+      <li><strong>Droit de rectification</strong> — Corriger des données inexactes ou incomplètes</li>
+      <li><strong>Droit à l'effacement</strong> (« droit à l'oubli ») — Demander la suppression de vos données dans les conditions prévues par la loi</li>
+      <li><strong>Droit à la limitation</strong> — Demander que le traitement soit suspendu temporairement</li>
+      <li><strong>Droit d'opposition</strong> — Vous opposer au traitement pour motif légitime</li>
+      <li><strong>Droit à la portabilité</strong> — Récupérer vos données dans un format lisible et structuré</li>
+      <li><strong>Droit de retrait du consentement</strong> — À tout moment, sans préjudice de la légalité des traitements antérieurs</li>
+      <li><strong>Droit d'introduire une réclamation</strong> auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a></li>
+    </ul>
+    <p>Pour exercer ces droits, contactez-nous à <a href="mailto:contact@shield-digital.fr">contact@shield-digital.fr</a>. Une réponse vous sera apportée sous <strong>30 jours maximum</strong>, conformément à la réglementation.</p>
+
+    <!-- ARTICLE 7 -->
+    <h2><span class="num">07</span>Sécurité des données</h2>
+    <p>Shield Digital met en œuvre toutes les mesures techniques et organisationnelles nécessaires à la protection de vos données :</p>
+    <ul>
+      <li>Chiffrement SSL/TLS sur l'intégralité du site (HTTPS)</li>
+      <li>Mots de passe forts et authentification renforcée sur tous les accès aux données</li>
+      <li>Accès aux données strictement limité aux personnes habilitées</li>
+      <li>Sauvegardes régulières et sécurisées</li>
+      <li>Traitement des paiements via Stripe (certifié PCI DSS niveau 1)</li>
+      <li>Audit régulier des sous-traitants techniques</li>
+    </ul>
+
+    <!-- ARTICLE 8 -->
+    <h2><span class="num">08</span>Cookies</h2>
+    <p>Le site shield-digital.fr utilise des cookies à des fins limitées :</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Type de cookie</th>
+          <th>Finalité</th>
+          <th>Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cookies techniques</strong></td>
+          <td>Fonctionnement essentiel du site</td>
+          <td>Session</td>
+        </tr>
+        <tr>
+          <td><strong>Google Analytics</strong></td>
+          <td>Statistiques de fréquentation anonymisées</td>
+          <td>14 mois</td>
+        </tr>
+        <tr>
+          <td><strong>Google Tag Manager</strong></td>
+          <td>Mesure de performance et conversion</td>
+          <td>13 mois</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Vous pouvez à tout moment :</p>
+    <ul>
+      <li>Refuser ou supprimer les cookies via les paramètres de votre navigateur</li>
+      <li>Désactiver Google Analytics avec l'extension officielle : <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a></li>
+    </ul>
+
+    <!-- ARTICLE 9 -->
+    <h2><span class="num">09</span>Transferts hors Union européenne</h2>
+    <p>Certains sous-traitants techniques (Stripe, Google) peuvent traiter des données en dehors de l'Union européenne. Ces transferts sont encadrés par des garanties appropriées :</p>
+    <ul>
+      <li>Clauses contractuelles types validées par la Commission européenne</li>
+      <li>Mesures techniques complémentaires (chiffrement, pseudonymisation)</li>
+      <li>Audit régulier de la conformité des sous-traitants</li>
+    </ul>
+
+    <!-- ARTICLE 10 -->
+    <h2><span class="num">10</span>Modifications de la politique</h2>
+    <p>Shield Digital se réserve le droit de modifier la présente politique de confidentialité pour l'adapter aux évolutions légales ou techniques. Toute modification substantielle sera notifiée par email aux utilisateurs concernés au moins 30 jours avant son entrée en vigueur. La date de la dernière mise à jour est indiquée en haut de cette page.</p>
+
+    <!-- ARTICLE 11 -->
+    <h2><span class="num">11</span>Contact et réclamation</h2>
+    <p>Pour toute question relative à vos données personnelles, exercer vos droits, ou signaler un incident :</p>
+    <div class="info-table">
+      <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:contact@shield-digital.fr">contact@shield-digital.fr</a></dd>
+        <dt>Délai de réponse maximum</dt>
+        <dd>30 jours</dd>
+        <dt>Autorité de contrôle</dt>
+        <dd>Commission Nationale de l'Informatique et des Libertés (CNIL) — <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></dd>
+      </dl>
+    </div>
+
+    <div class="callout">
+      <span class="callout-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      <p><strong>Votre confidentialité est notre priorité.</strong> Pour toute question, doute ou demande spécifique, contactez-nous à <a href="mailto:contact@shield-digital.fr">contact@shield-digital.fr</a>. Réponse garantie sous 48 heures ouvrées, dans la plus stricte confidentialité.</p>
+    </div>
+
+  </article>
+
+  <a href="/" class="back">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Retour à l'accueil
+  </a>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a href="/" class="footer-logo">
+          <img src="/logo.png" alt="Shield Digital" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">L'agence française dédiée à la protection des créateurs(trices) de contenu.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="/#how">Méthode</a></li>
+          <li><a href="/#preuves">Preuves</a></li>
+          <li><a href="/#pricing">Tarifs</a></li>
+          <li><a href="/#contact">Scan gratuit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="/mentions-legales.html">Mentions légales</a></li>
+          <li><a href="/confidentialite.html">Confidentialité</a></li>
+          <li><a href="/cgv.html">CGV</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Shield Digital — Agence de protection de contenu numérique · France</p>
+      <p class="footer-mention">Made with care in France 🇫🇷</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
