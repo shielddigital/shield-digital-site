@@ -159,34 +159,37 @@ nav a:hover{color:var(--ink);}
 .method-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
 .method-tag{font-size:11px;font-weight:500;color:var(--muted);padding:4px 10px;background:var(--bg);border-radius:6px;}
 .proofs-wrap{padding-bottom:80px;}
-.proofs-julie{max-width:820px;margin:0 auto 40px;background:white;border:1px solid var(--line);border-radius:20px;padding:0;overflow:hidden;display:grid;grid-template-columns:1.4fr 1fr;box-shadow:0 30px 80px -30px rgba(10,14,26,0.18);position:relative;}
-.proofs-julie::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#fbbf24,var(--sky-500),#10b981);}
-.proofs-julie-left{padding:32px 36px;}
-.proofs-julie-google{display:flex;align-items:center;gap:9px;margin-bottom:16px;}
-.proofs-julie-google-icon{width:24px;height:24px;display:flex;align-items:center;justify-content:center;}
-.proofs-julie-google-text{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;color:var(--ink);}
-.proofs-julie-verified{font-size:11px;font-weight:600;color:#065f46;background:#d1fae5;padding:3px 9px;border-radius:var(--r-pill);}
-.proofs-julie-stars{color:#fbbf24;letter-spacing:3px;font-size:16px;margin-bottom:16px;}
-.proofs-julie-quote{font-size:15.5px;line-height:1.6;color:var(--ink);margin-bottom:18px;font-weight:400;}
-.proofs-julie-author{display:flex;align-items:center;gap:11px;padding-top:16px;border-top:1px solid var(--line);}
-.proofs-julie-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#fbbf24,#ec4899);display:flex;align-items:center;justify-content:center;color:white;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:16px;}
-.proofs-julie-name{display:flex;align-items:center;gap:6px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:14px;color:var(--ink);}
-.proofs-julie-name svg{width:14px;height:14px;color:var(--sky-500);}
-.proofs-julie-date{font-size:12px;color:var(--muted);margin-top:2px;}
-.proofs-julie-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--sky-600);text-decoration:none;font-weight:500;margin-top:20px;transition:gap 0.2s;}
+/* PROOFS - Layout 2 colonnes : Julie compact + carrousel vertical infini */
+.proofs-layout{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.proofs-julie-card{background:white;border:1px solid var(--line);border-radius:20px;padding:0;overflow:hidden;box-shadow:0 30px 80px -30px rgba(10,14,26,0.18);position:relative;}
+.proofs-julie-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#fbbf24,var(--sky-500),#10b981);}
+.proofs-julie-content{padding:28px 32px 24px;}
+.proofs-julie-stars-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.proofs-julie-google-icon{width:22px;height:22px;display:flex;align-items:center;justify-content:center;}
+.proofs-julie-google-text{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;color:var(--ink);}
+.proofs-julie-verified{font-size:10.5px;font-weight:600;color:#065f46;background:#d1fae5;padding:2.5px 8px;border-radius:var(--r-pill);}
+.proofs-julie-stars{color:#fbbf24;letter-spacing:3px;font-size:15px;margin-bottom:14px;}
+.proofs-julie-quote{font-size:13.5px;line-height:1.6;color:var(--ink);margin-bottom:16px;font-weight:400;}
+.proofs-julie-author{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--line);}
+.proofs-julie-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#fbbf24,#ec4899);display:flex;align-items:center;justify-content:center;color:white;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:14px;}
+.proofs-julie-name{display:flex;align-items:center;gap:5px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:13px;color:var(--ink);}
+.proofs-julie-name svg{width:13px;height:13px;color:var(--sky-500);}
+.proofs-julie-date{font-size:11px;color:var(--muted);margin-top:2px;}
+.proofs-julie-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--sky-600);text-decoration:none;font-weight:500;margin-top:14px;transition:gap 0.2s;}
 .proofs-julie-link:hover{gap:10px;}
-.proofs-julie-right{background:linear-gradient(160deg,var(--sky-100),var(--bg-soft));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px;text-align:center;border-left:1px solid var(--line);}
-.proofs-julie-big-stars{color:#fbbf24;letter-spacing:4px;font-size:18px;margin-bottom:10px;}
-.proofs-julie-big-num{font-family:'Bricolage Grotesque',sans-serif;font-size:38px;font-weight:700;line-height:1;color:var(--ink);margin-bottom:5px;}
-.proofs-julie-big-num em{font-style:normal;background:linear-gradient(135deg,var(--sky-500),var(--sky-600));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.proofs-julie-big-label{font-size:12px;color:var(--ink-soft);font-weight:500;}
-.proofs-carousel{position:relative;max-width:720px;margin:0 auto;overflow:hidden;border-radius:16px;}
-.proofs-track{display:flex;gap:20px;width:max-content;animation:proofsScroll 30s linear infinite;}
+.proofs-julie-rating{background:linear-gradient(160deg,var(--sky-100),var(--bg-soft));padding:16px 20px;text-align:center;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:14px;}
+.proofs-julie-rating-stars{color:#fbbf24;letter-spacing:3px;font-size:14px;}
+.proofs-julie-rating-num{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;line-height:1;color:var(--ink);}
+.proofs-julie-rating-num em{font-style:normal;background:linear-gradient(135deg,var(--sky-500),var(--sky-600));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.proofs-julie-rating-label{font-size:11px;color:var(--ink-soft);font-weight:500;text-align:left;}
+/* Carrousel vertical infini */
+.proofs-carousel{position:relative;height:480px;overflow:hidden;border-radius:16px;mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);display:flex;justify-content:center;}
+.proofs-track{display:flex;flex-direction:column;gap:20px;animation:proofsScrollVertical 11s linear infinite;will-change:transform;width:280px;}
 .proofs-carousel:hover .proofs-track{animation-play-state:paused;}
-@keyframes proofsScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-.proof-card{width:240px;flex-shrink:0;background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform 0.3s ease,box-shadow 0.3s ease;position:relative;}
-.proof-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -20px rgba(10,14,26,0.18);}
-.proof-card img{width:100%;height:320px;object-fit:cover;display:block;}
+@keyframes proofsScrollVertical{0%{transform:translateY(0);}100%{transform:translateY(-50%);}}
+.proof-card{width:280px;flex-shrink:0;background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform 0.3s ease,box-shadow 0.3s ease;position:relative;}
+.proof-card:hover{transform:translateX(-4px);box-shadow:0 24px 50px -20px rgba(10,14,26,0.18);}
+.proof-card img{width:100%;height:380px;object-fit:cover;display:block;}
 .proof-image-tag{position:absolute;top:12px;left:12px;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border:1px solid var(--line);color:var(--ink);font-size:11px;font-weight:600;padding:5px 11px;border-radius:var(--r-pill);z-index:2;}
 .proof-lightbox{position:fixed;inset:0;background:rgba(248,250,252,0.92);backdrop-filter:blur(12px);z-index:1000;display:none;align-items:center;justify-content:center;padding:40px;}
 .proof-lightbox.open{display:flex;}
@@ -290,10 +293,10 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:64px var(--pad-
 .footer-status{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);}
 .footer-status-dot{width:6px;height:6px;background:#10b981;border-radius:50%;box-shadow:0 0 6px rgba(16,185,129,0.6);animation:pulseDot 2s infinite;}
 @media(max-width:1200px){.hero-grid{grid-template-columns:280px 1fr 280px;gap:20px;}}
-@media(max-width:1024px){:root{--pad-x:24px;--pad-section:64px;}nav a:not(.nav-cta){display:none;}.hero-grid{grid-template-columns:1fr;gap:32px;}.hero-left,.hero-right{max-width:380px;margin:0 auto;}.hero-left{order:2;}.hero-center{order:1;}.hero-right{order:3;}.hero-title .line1{font-size:clamp(28px,6vw,46px);}.hero-title .line2{font-size:clamp(32px,7vw,52px);}.hero-title .line3{font-size:clamp(38px,8.5vw,64px);}.method-grid{grid-template-columns:1fr;}.proofs-julie{grid-template-columns:1fr;}.proofs-julie-right{border-left:none;border-top:1px solid var(--line);}.proofs-julie-big-num{font-size:32px;}.pricing-wrap{grid-template-columns:1fr;max-width:480px;}.contact-inner{grid-template-columns:1fr;gap:48px;}.guarantee{flex-direction:column;text-align:center;padding:24px 20px;gap:18px;}.agency-banner{grid-template-columns:1fr;padding:30px 24px;gap:22px;}.agency-cta{align-items:stretch;}.agency-cta-btn{justify-content:center;}.agency-cta-note{text-align:center;}.footer-top{grid-template-columns:1fr 1fr;gap:40px;}}
+@media(max-width:1024px){:root{--pad-x:24px;--pad-section:64px;}nav a:not(.nav-cta){display:none;}.hero-grid{grid-template-columns:1fr;gap:32px;}.hero-left,.hero-right{max-width:380px;margin:0 auto;}.hero-left{order:2;}.hero-center{order:1;}.hero-right{order:3;}.hero-title .line1{font-size:clamp(28px,6vw,46px);}.hero-title .line2{font-size:clamp(32px,7vw,52px);}.hero-title .line3{font-size:clamp(38px,8.5vw,64px);}.method-grid{grid-template-columns:1fr;}.proofs-layout{grid-template-columns:1fr;gap:32px;}.proofs-carousel{height:420px;}.pricing-wrap{grid-template-columns:1fr;max-width:480px;}.contact-inner{grid-template-columns:1fr;gap:48px;}.guarantee{flex-direction:column;text-align:center;padding:24px 20px;gap:18px;}.agency-banner{grid-template-columns:1fr;padding:30px 24px;gap:22px;}.agency-cta{align-items:stretch;}.agency-cta-btn{justify-content:center;}.agency-cta-note{text-align:center;}.footer-top{grid-template-columns:1fr 1fr;gap:40px;}}
 .logo-img{height:56px;width:auto;display:block;object-fit:contain;}
 .footer-logo-img{height:48px;width:auto;display:block;object-fit:contain;background:white;border-radius:10px;padding:6px 10px;}
-@media(max-width:640px){.hero{padding:100px 18px 60px;}.trust-row{gap:8px;}.trust-pill{padding:8px 14px;font-size:12px;}.sec-title{font-size:32px;}.proofs-julie-left{padding:32px 24px;}.proofs-julie-quote{font-size:16px;}.contact-form{padding:28px 24px;}.form-row{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr;}.pc-price-num{font-size:48px;}.logo-img{height:44px;}.footer-logo-img{height:40px;}.agency-title{font-size:26px;}.agency-banner{padding:32px 24px;}}
+@media(max-width:640px){.hero{padding:100px 18px 60px;}.trust-row{gap:8px;}.trust-pill{padding:8px 14px;font-size:12px;}.sec-title{font-size:32px;}.proofs-julie-content{padding:24px 20px;}.proofs-julie-quote{font-size:13px;}.proofs-carousel{height:360px;}.contact-form{padding:28px 24px;}.form-row{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr;}.pc-price-num{font-size:48px;}.logo-img{height:44px;}.footer-logo-img{height:40px;}.agency-title{font-size:26px;}.agency-banner{padding:32px 24px;}}
 </style>
 </head>
 <body>
@@ -542,68 +545,74 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:64px var(--pad-
     <p class="sec-sub">Quelques retours concrets et preuves de notre travail. Chaque dossier est traité personnellement, avec sérieux et en toute confidentialité.</p>
   </div>
 
-  <div class="proofs-julie reveal">
-    <div class="proofs-julie-left">
-      <div class="proofs-julie-google">
-        <div class="proofs-julie-google-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        </div>
-        <span class="proofs-julie-google-text">Avis Google</span>
-        <span class="proofs-julie-verified">Vérifié</span>
-      </div>
-      <div class="proofs-julie-stars">★★★★★</div>
-      <p class="proofs-julie-quote">"Je tiens vraiment à remercier Shield Digital pour son aide et son professionnalisme. J'ai traversé une situation compliquée récemment concernant mon contenu en ligne, et il a su m'accompagner avec sérieux, rapidité et efficacité. Au-delà du résultat, j'ai surtout apprécié l'écoute et l'aspect humain derrière tout ça. Je recommande sincèrement."</p>
-      <div class="proofs-julie-author">
-        <div class="proofs-julie-avatar">JC</div>
-        <div>
-          <div class="proofs-julie-name">Julie Cizeron
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L9.43 3l-3.86-.86.86 3.86L3 9.43 5.43 12 3 14.57l3.43 2.43-.86 3.86 3.86-.86L12 24l2.57-3 3.86.86-.86-3.86L21 14.57 18.57 12 21 9.43l-3.43-2.43.86-3.86-3.86.86z"/></svg>
+  <div class="proofs-layout reveal">
+    <!-- COLONNE GAUCHE : Avis Julie compact -->
+    <div class="proofs-julie-card">
+      <div class="proofs-julie-content">
+        <div class="proofs-julie-stars-row">
+          <div class="proofs-julie-google-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
           </div>
-          <div class="proofs-julie-date">Mai 2026 · Avis vérifié</div>
+          <span class="proofs-julie-google-text">Avis Google</span>
+          <span class="proofs-julie-verified">Vérifié</span>
         </div>
+        <div class="proofs-julie-stars">★★★★★</div>
+        <p class="proofs-julie-quote">"Je tiens vraiment à remercier Shield Digital pour son aide et son professionnalisme. J'ai traversé une situation compliquée récemment concernant mon contenu en ligne, et il a su m'accompagner avec sérieux, rapidité et efficacité. Au-delà du résultat, j'ai surtout apprécié l'écoute et l'aspect humain derrière tout ça. Je recommande sincèrement."</p>
+        <div class="proofs-julie-author">
+          <div class="proofs-julie-avatar">JC</div>
+          <div>
+            <div class="proofs-julie-name">Julie Cizeron
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L9.43 3l-3.86-.86.86 3.86L3 9.43 5.43 12 3 14.57l3.43 2.43-.86 3.86 3.86-.86L12 24l2.57-3 3.86.86-.86-3.86L21 14.57 18.57 12 21 9.43l-3.43-2.43.86-3.86-3.86.86z"/></svg>
+            </div>
+            <div class="proofs-julie-date">Mai 2026 · Avis vérifié</div>
+          </div>
+        </div>
+        <a href="https://share.google/J2s4cqmil7mF8j6WQ" target="_blank" rel="noopener" class="proofs-julie-link">Voir l'avis sur Google →</a>
       </div>
-      <a href="https://share.google/J2s4cqmil7mF8j6WQ" target="_blank" rel="noopener" class="proofs-julie-link">Voir l'avis sur Google →</a>
+      <div class="proofs-julie-rating">
+        <div class="proofs-julie-rating-stars">★★★★★</div>
+        <div class="proofs-julie-rating-num">5<em>/5</em></div>
+        <div class="proofs-julie-rating-label">Avis Google<br>vérifié</div>
+      </div>
     </div>
-    <div class="proofs-julie-right">
-      <div class="proofs-julie-big-stars">★★★★★</div>
-      <div class="proofs-julie-big-num">5<em>/5</em></div>
-      <div class="proofs-julie-big-label">Avis Google vérifié</div>
-    </div>
-  </div>
 
-  <div class="proofs-carousel reveal">
-    <div class="proofs-track">
-      <div class="proof-card" data-img="preuves/preuve-leakimedia.png">
-        <span class="proof-image-tag">Suppression complète</span>
-        <img src="preuves/preuve-leakimedia.png" alt="Preuve suppression Leakimedia">
-      </div>
-      <div class="proof-card" data-img="preuves/preuve-google-anonyme.png">
-        <span class="proof-image-tag">Déréférencement Google</span>
-        <img src="preuves/preuve-google-anonyme.png" alt="Preuve déréférencement Google 24h">
-      </div>
-      <div class="proof-card" data-img="preuves/story-julie.png">
-        <span class="proof-image-tag">Témoignage public</span>
-        <img src="preuves/story-julie.png" alt="Témoignage Julie Cizeron Instagram">
-      </div>
-      <div class="proof-card" data-img="preuves/temoignage-anonyme.png">
-        <span class="proof-image-tag">Cas anonyme</span>
-        <img src="preuves/temoignage-anonyme.png" alt="Témoignage anonyme">
-      </div>
-      <div class="proof-card" data-img="preuves/preuve-leakimedia.png">
-        <span class="proof-image-tag">Suppression complète</span>
-        <img src="preuves/preuve-leakimedia.png" alt="Preuve suppression Leakimedia">
-      </div>
-      <div class="proof-card" data-img="preuves/preuve-google-anonyme.png">
-        <span class="proof-image-tag">Déréférencement Google</span>
-        <img src="preuves/preuve-google-anonyme.png" alt="Preuve déréférencement Google 24h">
-      </div>
-      <div class="proof-card" data-img="preuves/story-julie.png">
-        <span class="proof-image-tag">Témoignage public</span>
-        <img src="preuves/story-julie.png" alt="Témoignage Julie Cizeron Instagram">
-      </div>
-      <div class="proof-card" data-img="preuves/temoignage-anonyme.png">
-        <span class="proof-image-tag">Cas anonyme</span>
-        <img src="preuves/temoignage-anonyme.png" alt="Témoignage anonyme">
+    <!-- COLONNE DROITE : Carrousel vertical infini -->
+    <div class="proofs-carousel">
+      <div class="proofs-track">
+        <!-- Set 1 -->
+        <div class="proof-card" data-img="preuves/preuve-leakimedia.png">
+          <span class="proof-image-tag">Suppression complète</span>
+          <img src="preuves/preuve-leakimedia.png" alt="Preuve suppression Leakimedia">
+        </div>
+        <div class="proof-card" data-img="preuves/preuve-google-anonyme.png">
+          <span class="proof-image-tag">Déréférencement Google</span>
+          <img src="preuves/preuve-google-anonyme.png" alt="Preuve déréférencement Google 24h">
+        </div>
+        <div class="proof-card" data-img="preuves/story-julie.png">
+          <span class="proof-image-tag">Témoignage public</span>
+          <img src="preuves/story-julie.png" alt="Témoignage Julie Cizeron Instagram">
+        </div>
+        <div class="proof-card" data-img="preuves/temoignage-anonyme.png">
+          <span class="proof-image-tag">Cas anonyme</span>
+          <img src="preuves/temoignage-anonyme.png" alt="Témoignage anonyme">
+        </div>
+        <!-- Set 2 (duplication pour boucle infinie - jamais visible en même temps que le set 1) -->
+        <div class="proof-card" data-img="preuves/preuve-leakimedia.png">
+          <span class="proof-image-tag">Suppression complète</span>
+          <img src="preuves/preuve-leakimedia.png" alt="Preuve suppression Leakimedia">
+        </div>
+        <div class="proof-card" data-img="preuves/preuve-google-anonyme.png">
+          <span class="proof-image-tag">Déréférencement Google</span>
+          <img src="preuves/preuve-google-anonyme.png" alt="Preuve déréférencement Google 24h">
+        </div>
+        <div class="proof-card" data-img="preuves/story-julie.png">
+          <span class="proof-image-tag">Témoignage public</span>
+          <img src="preuves/story-julie.png" alt="Témoignage Julie Cizeron Instagram">
+        </div>
+        <div class="proof-card" data-img="preuves/temoignage-anonyme.png">
+          <span class="proof-image-tag">Cas anonyme</span>
+          <img src="preuves/temoignage-anonyme.png" alt="Témoignage anonyme">
+        </div>
       </div>
     </div>
   </div>
