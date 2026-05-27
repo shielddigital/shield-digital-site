@@ -54,6 +54,24 @@ nav a{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;
 nav a:hover{color:var(--ink);}
 .nav-cta{background:var(--ink) !important;color:white !important;font-weight:500 !important;padding:11px 20px !important;border-radius:var(--r-pill) !important;margin-left:8px;transition:all 0.2s !important;display:inline-flex !important;align-items:center !important;gap:6px !important;}
 .nav-cta:hover{background:var(--sky-600);transform:translateY(-1px);}
+
+/* ===== MENU BURGER MOBILE ===== */
+.burger-btn{display:none;background:transparent;border:none;cursor:pointer;width:40px;height:40px;padding:0;align-items:center;justify-content:center;margin-right:8px;}
+.burger-btn span{display:block;width:22px;height:2px;background:var(--ink);position:relative;transition:all 0.3s ease;}
+.burger-btn span::before,.burger-btn span::after{content:'';position:absolute;left:0;width:22px;height:2px;background:var(--ink);transition:all 0.3s ease;}
+.burger-btn span::before{top:-7px;}
+.burger-btn span::after{top:7px;}
+.burger-btn.open span{background:transparent;}
+.burger-btn.open span::before{top:0;transform:rotate(45deg);}
+.burger-btn.open span::after{top:0;transform:rotate(-45deg);}
+
+.mobile-drawer{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(248,250,252,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity 0.35s ease;}
+.mobile-drawer.open{opacity:1;pointer-events:auto;}
+.mobile-drawer a{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:600;color:var(--ink);text-decoration:none;padding:14px 28px;border-radius:12px;transition:all 0.2s ease;letter-spacing:-0.01em;}
+.mobile-drawer a:hover,.mobile-drawer a:active{background:var(--sky-100);color:var(--sky-700);}
+.mobile-drawer .mobile-cta{background:var(--ink);color:white;padding:16px 36px;border-radius:var(--r-pill);font-size:16px;font-weight:600;margin-top:24px;box-shadow:0 12px 28px -8px rgba(10,14,26,0.4);display:inline-flex;align-items:center;gap:8px;}
+.mobile-drawer .mobile-cta:hover,.mobile-drawer .mobile-cta:active{background:var(--sky-600);color:white;}
+body.drawer-open{overflow:hidden;}
 .hero{min-height:100vh;padding:90px var(--pad-x) 40px;max-width:var(--max);margin:0 auto;position:relative;}
 .hero-grid{display:grid;grid-template-columns:340px 1fr 340px;gap:28px;align-items:center;min-height:auto;}
 .hero-center{text-align:center;display:flex;flex-direction:column;align-items:center;}
@@ -293,7 +311,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:64px var(--pad-
 .footer-status{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.5);}
 .footer-status-dot{width:6px;height:6px;background:#10b981;border-radius:50%;box-shadow:0 0 6px rgba(16,185,129,0.6);animation:pulseDot 2s infinite;}
 @media(max-width:1200px){.hero-grid{grid-template-columns:280px 1fr 280px;gap:20px;}}
-@media(max-width:1024px){:root{--pad-x:24px;--pad-section:64px;}nav a:not(.nav-cta){display:none;}.hero-grid{grid-template-columns:1fr;gap:32px;}.hero-left,.hero-right{max-width:380px;margin:0 auto;}.hero-left{order:2;}.hero-center{order:1;}.hero-right{order:3;}.hero-title .line1{font-size:clamp(26px,5.5vw,42px);}.hero-title .line2{font-size:clamp(30px,6.5vw,48px);}.hero-title .line3{font-size:clamp(36px,8vw,60px);}.method-grid{grid-template-columns:1fr;}.proofs-layout{grid-template-columns:1fr;gap:32px;}.proofs-carousel{height:420px;}.pricing-wrap{grid-template-columns:1fr;max-width:480px;}.contact-inner{grid-template-columns:1fr;gap:48px;}.guarantee{flex-direction:column;text-align:center;padding:24px 20px;gap:18px;}.agency-banner{grid-template-columns:1fr;padding:30px 24px;gap:22px;}.agency-cta{align-items:stretch;}.agency-cta-btn{justify-content:center;}.agency-cta-note{text-align:center;}.footer-top{grid-template-columns:1fr 1fr;gap:40px;}}
+@media(max-width:1024px){:root{--pad-x:24px;--pad-section:64px;}nav a:not(.nav-cta){display:none;}.burger-btn{display:inline-flex;}.hero-grid{grid-template-columns:1fr;gap:32px;}.hero-left,.hero-right{max-width:380px;margin:0 auto;}.hero-left{order:2;}.hero-center{order:1;}.hero-right{order:3;}.hero-title .line1{font-size:clamp(26px,5.5vw,42px);}.hero-title .line2{font-size:clamp(30px,6.5vw,48px);}.hero-title .line3{font-size:clamp(36px,8vw,60px);}.method-grid{grid-template-columns:1fr;}.proofs-layout{grid-template-columns:1fr;gap:32px;}.proofs-carousel{height:420px;}.pricing-wrap{grid-template-columns:1fr;max-width:480px;}.contact-inner{grid-template-columns:1fr;gap:48px;}.guarantee{flex-direction:column;text-align:center;padding:24px 20px;gap:18px;}.agency-banner{grid-template-columns:1fr;padding:30px 24px;gap:22px;}.agency-cta{align-items:stretch;}.agency-cta-btn{justify-content:center;}.agency-cta-note{text-align:center;}.footer-top{grid-template-columns:1fr 1fr;gap:40px;}}
 .logo-img{height:56px;width:auto;display:block;object-fit:contain;}
 .footer-logo-img{height:48px;width:auto;display:block;object-fit:contain;background:white;border-radius:10px;padding:6px 10px;}
 @media(max-width:640px){:root{--pad-x:16px;}.hero{padding:90px 16px 50px;}.trust-row{gap:8px;}.trust-pill{padding:8px 14px;font-size:12px;}.sec-title{font-size:clamp(24px,7vw,32px);}.sec-title em{font-size:inherit;}.sec-title em.nowrap{white-space:normal !important;}.sec-sub{font-size:14px;}.proofs-julie-content{padding:20px 18px;}.proofs-julie-quote{font-size:13px;}.proofs-carousel{height:360px;}.contact-form{padding:24px 18px;}.form-row{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr;}.pc-price-num{font-size:42px;}.pc{padding:24px 20px;}.logo-img{height:40px;}.footer-logo-img{height:40px;}.agency-title{font-size:24px;}.agency-banner{padding:28px 20px;}header{padding:0 16px;height:64px;}.nav-cta{padding:8px 14px !important;font-size:12px !important;}.method-card{padding:22px 18px;}.method-card h3{font-size:17px;}.guarantee{padding:20px 18px;}.contact-info h2{font-size:clamp(24px,7vw,32px);}.contact-section{padding:60px 16px;}.section{padding:60px 16px;}.platforms-section{padding:24px 16px 0;}.mandate-banner{padding:16px 18px;flex-direction:column;text-align:center;gap:12px;}.mandate-banner-text{font-size:12.5px;}}
@@ -339,11 +357,23 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:64px var(--pad-
     <a href="#preuves">Preuves</a>
     <a href="#pricing">Tarifs</a>
     <a href="/blog">Blog</a>
+    <button class="burger-btn" id="burgerBtn" aria-label="Menu"><span></span></button>
     <a href="#contact" class="nav-cta">Scan gratuit
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
   </nav>
 </header>
+
+<!-- Mobile drawer menu -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="#how">Méthode</a>
+  <a href="#preuves">Preuves</a>
+  <a href="#pricing">Tarifs</a>
+  <a href="/blog">Blog</a>
+  <a href="#contact" class="mobile-cta">Scan gratuit
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+</div>
 
 <section class="hero">
   <div class="hero-grid">
@@ -822,6 +852,27 @@ const header = document.getElementById('main-header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 40);
 });
+
+// === Mobile burger menu ===
+const burgerBtn = document.getElementById('burgerBtn');
+const mobileDrawer = document.getElementById('mobileDrawer');
+
+if (burgerBtn && mobileDrawer) {
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = burgerBtn.classList.toggle('open');
+    mobileDrawer.classList.toggle('open');
+    document.body.classList.toggle('drawer-open', isOpen);
+  });
+
+  // Fermer drawer au clic sur un lien
+  mobileDrawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      burgerBtn.classList.remove('open');
+      mobileDrawer.classList.remove('open');
+      document.body.classList.remove('drawer-open');
+    });
+  });
+}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
