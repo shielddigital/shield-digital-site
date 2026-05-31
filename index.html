@@ -316,7 +316,9 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:64px var(--pad-
 .footer-logo-img{height:48px;width:auto;display:block;object-fit:contain;background:white;border-radius:10px;padding:6px 10px;}
 
 /* ===== WIDGET WHATSAPP FLOTTANT ===== */
-.wa-float{position:fixed;bottom:24px;right:24px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:14px;}
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:14px;pointer-events:none;}
+.wa-btn{pointer-events:auto;}
+.wa-card.open{pointer-events:auto;}
 .wa-btn{width:60px;height:60px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.45);transition:all 0.3s ease;animation:waPulse 2.5s infinite;}
 .wa-btn:hover{transform:scale(1.08);box-shadow:0 12px 32px rgba(37,211,102,0.6);}
 .wa-btn svg{width:32px;height:32px;fill:white;}
@@ -807,7 +809,12 @@ footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:64px var(--pad-
     <div class="contact-form reveal reveal-d1">
       <div class="contact-form-title">Lancer mon scan gratuit</div>
       <div class="contact-form-sub">Aucun engagement. Premier diagnostic offert. Confidentialité garantie.</div>
-      <form action="https://formsubmit.co/contact@shield-digital.fr" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="8ce0fe3c-20f3-447c-bea9-67a549e09024">
+        <input type="hidden" name="subject" value="🛡️ Nouveau contact Shield Digital">
+        <input type="hidden" name="from_name" value="Site Shield Digital">
+        <input type="hidden" name="redirect" value="https://shield-digital.fr/?envoye=1">
+        <input type="checkbox" name="botcheck" style="display:none;">
         <div class="form-group">
           <div class="form-row">
             <input type="text" name="name" placeholder="Votre nom" required/>
