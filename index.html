@@ -288,13 +288,12 @@ header.scrolled{background:rgba(250,250,250,0.85);backdrop-filter:blur(18px) sat
 .pricing-sub{font-family:'Geist',sans-serif;font-weight:400;font-size:16px;line-height:1.6;color:var(--ink-mute);max-width:560px;margin:0 auto;}
 
 /* Container fin avec bordure (Stripe style) */
-.pricing-frame{background:linear-gradient(135deg,rgba(255,251,247,0.75) 0%,rgba(255,247,239,0.65) 50%,rgba(255,243,231,0.75) 100%);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(10,11,15,0.10);border-radius:24px;overflow:hidden;box-shadow:0 24px 60px -30px rgba(255,142,92,0.25);}
-.pricing-cards{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.pricing-frame{background:rgba(255,255,255,0.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(10,11,15,0.12);border-radius:24px;padding:16px;overflow:visible;box-shadow:0 20px 50px -28px rgba(10,11,15,0.18);}
+.pricing-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 
-/* Cards à l'intérieur du frame */
-.plan{background:transparent;border:none;border-radius:0;padding:48px 40px;display:flex;flex-direction:column;gap:24px;transition:all 0.35s cubic-bezier(0.22,1,0.36,1);position:relative;}
-.plan:first-child{border-right:1px solid rgba(10,11,15,0.08);}
-.plan:hover{background:rgba(255,255,255,0.35);}
+/* Cards individuelles décollées du cadre - bordures fines, border-radius propre */
+.plan{background:rgba(255,255,255,0.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(10,11,15,0.10);border-radius:16px;padding:42px 36px;display:flex;flex-direction:column;gap:24px;transition:all 0.35s cubic-bezier(0.22,1,0.36,1);position:relative;overflow:hidden;}
+.plan:hover{background:rgba(255,255,255,0.85);transform:translateY(-2px);box-shadow:0 16px 40px -20px rgba(10,11,15,0.18);}
 
 /* Card Pro (gauche) - simple, transparente */
 .plan-tag{font-family:'Geist Mono',monospace;font-size:11px;font-weight:500;color:var(--ink-pale);letter-spacing:0.12em;text-transform:uppercase;}
@@ -305,7 +304,7 @@ header.scrolled{background:rgba(250,250,250,0.85);backdrop-filter:blur(18px) sat
 .plan-desc{font-family:'Geist',sans-serif;font-size:14px;line-height:1.55;color:var(--ink-mute);min-height:48px;}
 
 /* Card Premium (droite) - GRADIENT ORANGE/AMBRE */
-.plan-featured{background:linear-gradient(135deg,#FF8E5C 0%,#FFA56C 50%,#FFB75C 100%);color:#fff;position:relative;overflow:hidden;}
+.plan-featured{background:linear-gradient(135deg,#FF8E5C 0%,#FFA56C 50%,#FFB75C 100%);color:#fff;position:relative;overflow:hidden;border-color:rgba(255,142,92,0.30);}
 .plan-featured::before{content:'';position:absolute;top:-100px;right:-100px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,0.3) 0%,transparent 70%);border-radius:50%;filter:blur(40px);pointer-events:none;}
 .plan-featured > *{position:relative;z-index:1;}
 .plan-featured:hover{background:linear-gradient(135deg,#FF8E5C 0%,#FFA56C 50%,#FFB75C 100%);}
@@ -341,6 +340,30 @@ header.scrolled{background:rgba(250,250,250,0.85);backdrop-filter:blur(18px) sat
 .plan-featured .plan-feat-out > :not(.plan-feat-icon){text-decoration-color:rgba(255,255,255,0.3);}
 .plan-feat-bold{font-weight:600;color:var(--ink);}
 .plan-featured .plan-feat-bold{color:#fff;}
+
+/* ============================= */
+/* AGENCY BANNER - même style frame que les tarifs (palette orange/ambre/jaune) */
+/* ============================= */
+.agency-section{padding:0 40px 140px;position:relative;}
+.agency-frame{max-width:1100px;margin:0 auto;background:rgba(255,255,255,0.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(10,11,15,0.12);border-radius:24px;padding:16px;overflow:visible;box-shadow:0 20px 50px -28px rgba(10,11,15,0.18);position:relative;}
+.agency-cell{padding:36px 40px;display:grid;grid-template-columns:1.4fr auto;gap:40px;align-items:center;position:relative;background:linear-gradient(135deg,#FFF1E0 0%,#FFE8C7 50%,#FFDFA8 100%);border:1px solid rgba(255,142,92,0.20);border-radius:16px;overflow:hidden;}
+.agency-cell::before{content:'';position:absolute;top:-100px;right:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,142,92,0.35) 0%,rgba(255,183,92,0.20) 45%,transparent 70%);filter:blur(45px);pointer-events:none;}
+.agency-cell::after{content:'';position:absolute;bottom:-80px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,183,92,0.25) 0%,transparent 65%);filter:blur(40px);pointer-events:none;}
+.agency-content{position:relative;z-index:2;}
+.agency-label{display:inline-flex;align-items:center;gap:7px;padding:5px 12px;background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border:1px solid rgba(255,142,92,0.30);border-radius:var(--r-pill);font-family:'Geist Mono',monospace;font-size:10.5px;font-weight:500;color:#D65F1F;margin-bottom:18px;letter-spacing:0.06em;text-transform:uppercase;}
+.agency-label-dot{width:6px;height:6px;background:#FF8E5C;border-radius:50%;box-shadow:0 0 8px rgba(255,142,92,0.6);}
+.agency-title{font-family:'Geist',sans-serif;font-size:28px;font-weight:600;color:var(--ink);line-height:1.15;letter-spacing:-0.025em;margin-bottom:12px;}
+.agency-title-accent{background:linear-gradient(135deg,#FF8E5C 0%,#FFB75C 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.agency-desc{font-family:'Geist',sans-serif;font-size:14.5px;color:var(--ink-soft);line-height:1.65;max-width:540px;margin-bottom:22px;}
+.agency-perks{display:flex;flex-wrap:wrap;gap:8px;}
+.agency-perk{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.85);border:1px solid rgba(255,142,92,0.18);border-radius:var(--r-pill);font-family:'Geist',sans-serif;font-size:12px;color:var(--ink);font-weight:500;}
+.agency-perk svg{width:11px;height:11px;color:#FF8E5C;}
+.agency-cta{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.agency-cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;background:var(--ink);color:#fff;font-family:'Geist',sans-serif;font-weight:600;font-size:14px;border-radius:var(--r-pill);text-decoration:none;transition:all 0.25s ease;white-space:nowrap;border:1px solid var(--ink);box-shadow:0 8px 22px -8px rgba(10,11,15,0.25);}
+.agency-cta-btn:hover{background:#FF8E5C;border-color:#FF8E5C;transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(255,142,92,0.45);}
+.agency-cta-btn svg{width:13px;height:13px;transition:transform 0.25s ease;}
+.agency-cta-btn:hover svg{transform:translateX(3px);}
+.agency-cta-note{font-family:'Geist Mono',monospace;font-size:11.5px;color:var(--ink-pale);text-align:right;letter-spacing:0.04em;}
 
 /* Tableau comparatif */
 .compare-table{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;}
@@ -489,12 +512,19 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
   .safeguards-grid{grid-template-columns:1fr;}
   .safeguard-left{min-height:auto;}
   .pricing-cards{grid-template-columns:1fr;}
-  .plan:first-child{border-right:none;border-bottom:1px solid rgba(255,142,92,0.15);}
+  .agency-cell{grid-template-columns:1fr;gap:24px;padding:36px 32px;}
+  .agency-cta{align-items:stretch;}
+  .agency-cta-btn{justify-content:center;}
+  .agency-cta-note{text-align:center;}
   .faq-grid{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;gap:48px;}
   .contact-left{position:static;}
   .footer-top{grid-template-columns:1fr 1fr;gap:36px;}
   .hero-stats{grid-template-columns:1fr 1fr;}
+  .agency-banner{grid-template-columns:1fr;padding:36px 28px;gap:24px;}
+  .agency-cta{align-items:stretch;}
+  .agency-cta-btn{justify-content:center;}
+  .agency-cta-note{text-align:center;}
 }
 @media (max-width:640px){
   header{padding:16px 20px;}
@@ -510,6 +540,9 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
   .mandate-bar-text{font-size:13px;}
   .pricing{padding:90px 20px;}
   .plan{padding:36px 28px;}
+  .agency-section{padding:0 16px 80px;}
+  .agency-cell{padding:32px 24px;}
+  .agency-title{font-size:24px;}
   .compare-cell{padding:14px 16px;font-size:13px;}
   .compare-cell-h{font-size:10px;padding:14px 8px;}
   .faq{padding:90px 20px;}
@@ -846,7 +879,7 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
         </li>
       </ul>
       <a href="https://buy.stripe.com/fZucN5aga9Oz15M7jE6sw0f" target="_blank" rel="noopener" class="plan-cta">
-        Confier mon dossier
+        Démarrer mon abonnement
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -896,10 +929,51 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
         </li>
       </ul>
       <a href="https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d" target="_blank" rel="noopener" class="plan-cta">
-        Confier mon dossier
+        Démarrer mon abonnement
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- AGENCY BANNER -->
+<section class="agency-section">
+  <div class="agency-frame reveal">
+    <div class="agency-cell">
+      <div class="agency-content">
+        <span class="agency-label">
+          <span class="agency-label-dot"></span>
+          Vous êtes une agence ?
+        </span>
+        <h2 class="agency-title">Shield <span class="agency-title-accent">Agency</span><br>Protection multi-comptes</h2>
+        <p class="agency-desc">Offre dédiée aux agences gérant plusieurs créateurs de contenu. Protection complète Premium pour chacune, accompagnement personnalisé et conditions adaptées.</p>
+        <div class="agency-perks">
+          <span class="agency-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Tout Shield Premium inclus
+          </span>
+          <span class="agency-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Rapport consolidé
+          </span>
+          <span class="agency-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            15% de commission par référence
+          </span>
+          <span class="agency-perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Contact direct fondateur
+          </span>
+        </div>
+      </div>
+      <div class="agency-cta">
+        <a href="#contact" class="agency-cta-btn">Devenir partenaire
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <span class="agency-cta-note">À partir de 399€/mois/profil</span>
       </div>
     </div>
   </div>
