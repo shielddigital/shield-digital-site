@@ -471,7 +471,8 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
 .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px;}
 .footer-brand{display:flex;flex-direction:column;gap:16px;}
 .footer-logo{display:flex;align-items:center;gap:10px;}
-.footer-logo-mark{width:32px;height:32px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;}
+.footer-logo-mark{width:32px;height:32px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.footer-logo-mark img{width:26px;height:26px;object-fit:contain;display:block;}
 .footer-logo-mark svg{width:16px;height:16px;color:var(--dark);}
 .footer-logo-text{font-family:'Geist',sans-serif;font-weight:600;font-size:16px;color:#fff;letter-spacing:-0.02em;}
 .footer-desc{font-family:'Geist',sans-serif;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,0.55);max-width:300px;}
@@ -1104,7 +1105,7 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
       <div class="footer-brand">
         <div class="footer-logo">
           <div class="footer-logo-mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5.5 3.84 10.74 9 12 5.16-1.26 9-6.5 9-12V7l-9-5z"/></svg>
+            <img src="/logo.png" alt="Shield Digital" onerror="this.style.display='none'">
           </div>
           <span class="footer-logo-text">Shield Digital</span>
         </div>
