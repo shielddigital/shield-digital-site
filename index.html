@@ -293,6 +293,10 @@ header.scrolled{background:rgba(250,250,250,0.85);backdrop-filter:blur(18px) sat
 .pricing-cards{display:grid;grid-template-columns:1fr 1.05fr 1.05fr;gap:16px;}
 .pricing-cards .plan{padding:36px 28px;}
 .plan-oneshot .plan-price{font-size:48px;}
+.plan-feat-mid{color:var(--ink-soft);}
+.plan-feat-mid .plan-feat-icon{color:#E8763A;}
+.pricing-note{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;font-size:13px;font-weight:500;color:var(--ink-soft);}
+.pricing-note svg{width:15px;height:15px;color:var(--accent);flex-shrink:0;}
 
 /* Cards individuelles décollées du cadre - bordures fines, border-radius propre */
 .plan{background:rgba(255,255,255,0.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(10,11,15,0.10);border-radius:16px;padding:42px 36px;display:flex;flex-direction:column;gap:24px;transition:all 0.35s cubic-bezier(0.22,1,0.36,1);position:relative;overflow:hidden;}
@@ -718,6 +722,8 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
     <a href="#method" class="btn-ghost">Voir la méthode</a>
   </div>
 
+
+
   <div class="hero-stats reveal r-d4">
     <div class="hero-stat">
       <span class="hero-stat-label">Action</span>
@@ -882,14 +888,13 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
       <div class="pricing-cards">
     <div class="plan plan-oneshot reveal">
       <div>
-        <span class="plan-tag">Intervention ponctuelle</span>
+        <span class="plan-tag">Déréférencement uniquement</span>
         <div class="plan-name">Shield One</div>
       </div>
       <div class="plan-price-row">
         <span class="plan-price">29€</span>
         <span class="plan-period">/ lien</span>
       </div>
-      <p class="plan-desc">Déréférencement Google ciblé. Sans abonnement, sans engagement. Remise automatique dès 2 liens.</p>
       <select class="plan-select" id="oneShotQty" aria-label="Nombre de liens à déréférencer">
         <option value="https://buy.stripe.com/cNibJ173Yf8TaGm47s6sw0k" selected>1 lien — 29€</option>
         <option value="https://buy.stripe.com/cNi3cv2NI1i3aGmdI26sw0l">2 liens — 56€ (−2%)</option>
@@ -910,7 +915,7 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Dossier juridique complet (droit à l'oubli, RGPD)
+          Déréférencement Google &amp; Bing
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -936,18 +941,17 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
     </div>
     <div class="plan reveal">
       <div>
-        <span class="plan-tag">Formule standard</span>
+        <span class="plan-tag">L'essentiel de la protection</span>
         <div class="plan-name">Shield Pro</div>
       </div>
       <div class="plan-price-row">
         <span class="plan-price">297€</span>
         <span class="plan-period">/ mois</span>
       </div>
-      <p class="plan-desc">L'essentiel de la protection : audit, retrait, surveillance hebdomadaire.</p>
       <ul class="plan-features">
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Audit confidentiel complet
+          3 suppressions par mois
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -955,7 +959,11 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Déréférencement Google
+          Contact hébergeur &amp; registrar
+        </li>
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Déréférencement Google &amp; Bing
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -963,11 +971,11 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Résiliation à tout moment
+          Rapport mensuel détaillé
         </li>
         <li class="plan-feat plan-feat-out">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-          Mises en demeure formelles
+          Suppressions illimitées
         </li>
         <li class="plan-feat plan-feat-out">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
@@ -975,7 +983,11 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
         </li>
         <li class="plan-feat plan-feat-out">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-          Canal WhatsApp prioritaire
+          Mises en demeure formelles
+        </li>
+        <li class="plan-feat plan-feat-mid">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span>
+          Prise en charge en 48h maximum
         </li>
       </ul>
       <a href="https://buy.stripe.com/fZucN5aga9Oz15M7jE6sw0f" target="_blank" rel="noopener" class="plan-cta">
@@ -986,18 +998,17 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
     <div class="plan plan-featured reveal r-d1">
       <span class="plan-ribbon">Recommandé</span>
       <div>
-        <span class="plan-tag">Formule premium</span>
+        <span class="plan-tag">Protection complète</span>
         <div class="plan-name">Shield Premium</div>
       </div>
       <div class="plan-price-row">
         <span class="plan-price">399€</span>
         <span class="plan-period">/ mois</span>
       </div>
-      <p class="plan-desc">Protection complète : surveillance 24/7, mises en demeure, canal prioritaire.</p>
       <ul class="plan-features">
-        <li class="plan-feat plan-feat-in">
+        <li class="plan-feat plan-feat-in plan-feat-bold">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Audit confidentiel complet
+          Suppressions illimitées
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -1005,27 +1016,31 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Déréférencement Google
-        </li>
-        <li class="plan-feat plan-feat-in plan-feat-bold">
-          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Surveillance 24h/24, 7j/7
-        </li>
-        <li class="plan-feat plan-feat-in plan-feat-bold">
-          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Mises en demeure formelles
-        </li>
-        <li class="plan-feat plan-feat-in plan-feat-bold">
-          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Recherche d'identité d'auteur
-        </li>
-        <li class="plan-feat plan-feat-in plan-feat-bold">
-          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Canal WhatsApp prioritaire
+          Contact hébergeur &amp; registrar
         </li>
         <li class="plan-feat plan-feat-in">
           <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-          Suivi hebdomadaire personnalisé
+          Mises en demeure si nécessaire
+        </li>
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Déréférencement Google &amp; Bing
+        </li>
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Surveillance 24h/24 &amp; 7j/7
+        </li>
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Rapport hebdomadaire
+        </li>
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Rapport mensuel détaillé
+        </li>
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Prise en charge en 24h maximum
         </li>
       </ul>
       <a href="https://buy.stripe.com/fZu00j9c6aSD9Ci33o6sw0d" target="_blank" rel="noopener" class="plan-cta">
@@ -1034,6 +1049,11 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
       </a>
     </div>
       </div>
+      <p class="pricing-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5.5 3.84 10.74 9 12 5.16-1.26 9-6.5 9-12V7l-9-5z"/></svg>
+        Sans engagement &middot; R&eacute;siliable &agrave; tout moment, sans frais ni justificatif
+      </p>
+
     </div>
   </div>
 </section>
