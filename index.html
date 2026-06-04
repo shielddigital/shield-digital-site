@@ -290,7 +290,9 @@ header.scrolled{background:rgba(250,250,250,0.85);backdrop-filter:blur(18px) sat
 
 /* Container fin avec bordure (Stripe style) */
 .pricing-frame{background:rgba(255,255,255,0.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(10,11,15,0.12);border-radius:24px;padding:16px;overflow:visible;box-shadow:0 20px 50px -28px rgba(10,11,15,0.18);}
-.pricing-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.pricing-cards{display:grid;grid-template-columns:1fr 1.05fr 1.05fr;gap:16px;}
+.pricing-cards .plan{padding:36px 28px;}
+.plan-oneshot .plan-price{font-size:48px;}
 
 /* Cards individuelles décollées du cadre - bordures fines, border-radius propre */
 .plan{background:rgba(255,255,255,0.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(10,11,15,0.10);border-radius:16px;padding:42px 36px;display:flex;flex-direction:column;gap:24px;transition:all 0.35s cubic-bezier(0.22,1,0.36,1);position:relative;overflow:hidden;}
@@ -317,7 +319,9 @@ header.scrolled{background:rgba(250,250,250,0.85);backdrop-filter:blur(18px) sat
 .plan-featured .plan-desc{color:rgba(255,255,255,0.92);}
 
 /* CTAs */
-.plan-cta{font-family:'Geist',sans-serif;font-size:14px;font-weight:600;padding:15px 22px;border-radius:var(--r-pill);text-decoration:none;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.25s ease;border:1px solid transparent;}
+.plan-cta{font-family:'Geist',sans-serif;font-size:14px;font-weight:600;padding:15px 22px;border-radius:var(--r-pill);text-decoration:none;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.25s ease;border:1px solid transparent;margin-top:auto;}
+.plan-select{width:100%;padding:13px 16px;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r-sm);font-family:'Geist',sans-serif;font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;transition:all 0.25s ease;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235C6370' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;}
+.plan-select:focus{outline:none;border-color:var(--accent);background-color:#fff;box-shadow:0 0 0 3px var(--accent-pale);}
 .plan .plan-cta{color:#fff;background:var(--ink);border-color:var(--ink);}
 .plan .plan-cta:hover{background:var(--accent);border-color:var(--accent);}
 .plan-featured .plan-cta{color:#FF8E5C;background:#fff;border-color:#fff;font-weight:700;}
@@ -461,7 +465,8 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
 .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px;}
 .footer-brand{display:flex;flex-direction:column;gap:16px;}
 .footer-logo{display:flex;align-items:center;gap:10px;}
-.footer-logo-mark{width:32px;height:32px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;}
+.footer-logo-mark{width:32px;height:32px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.footer-logo-mark img{width:26px;height:26px;object-fit:contain;display:block;}
 .footer-logo-mark svg{width:16px;height:16px;color:var(--dark);}
 .footer-logo-text{font-family:'Geist',sans-serif;font-weight:600;font-size:16px;color:#fff;letter-spacing:-0.02em;}
 .footer-desc{font-family:'Geist',sans-serif;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,0.55);max-width:300px;}
@@ -869,12 +874,66 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
 <section class="pricing" id="pricing">
   <div class="pricing-inner">
     <div class="pricing-header">
-      <h2 class="pricing-title reveal">Deux niveaux <span class="pricing-title-accent">d'accompagnement.</span></h2>
-      <p class="pricing-sub reveal r-d1">Adaptés au volume et à la complexité de votre dossier. Chaque formule inclut l'intégralité de la méthode présentée ci-dessus.</p>
+      <h2 class="pricing-title reveal">Trois niveaux <span class="pricing-title-accent">d'accompagnement.</span></h2>
+      <p class="pricing-sub reveal r-d1">De l'intervention ponctuelle à la protection complète, adaptés au volume et à la complexité de votre dossier.</p>
     </div>
 
     <div class="pricing-frame reveal r-d2">
       <div class="pricing-cards">
+    <div class="plan plan-oneshot reveal">
+      <div>
+        <span class="plan-tag">Intervention ponctuelle</span>
+        <div class="plan-name">Shield One</div>
+      </div>
+      <div class="plan-price-row">
+        <span class="plan-price">29€</span>
+        <span class="plan-period">/ lien</span>
+      </div>
+      <p class="plan-desc">Déréférencement Google ciblé. Sans abonnement, sans engagement. Remise automatique dès 2 liens.</p>
+      <select class="plan-select" id="oneShotQty" aria-label="Nombre de liens à déréférencer">
+        <option value="https://buy.stripe.com/cNibJ173Yf8TaGm47s6sw0k" selected>1 lien — 29€</option>
+        <option value="https://buy.stripe.com/cNi3cv2NI1i3aGmdI26sw0l">2 liens — 56€ (−2%)</option>
+        <option value="https://buy.stripe.com/cNi28ragad0L8yeeM66sw0m">3 liens — 84€ (−3%)</option>
+        <option value="https://buy.stripe.com/6oU9ATaga4uf15MgUe6sw0n">4 liens — 111€ (−4%)</option>
+        <option value="https://buy.stripe.com/6oU4gzgEybWH9Ci8nI6sw0o">5 liens — 137€ (−5%)</option>
+        <option value="https://buy.stripe.com/6oU6oHgEy2m7aGm1Zk6sw0p">6 liens — 163€ (−6%)</option>
+        <option value="https://buy.stripe.com/6oU5kD882f8T7uaavQ6sw0q">7 liens — 188€ (−7%)</option>
+        <option value="https://buy.stripe.com/4gMcN51JE9OzcOudI26sw0r">8 liens — 213€ (−8%)</option>
+        <option value="https://buy.stripe.com/cNi14newq5yj01I47s6sw0s">9 liens — 237€ (−9%)</option>
+        <option value="https://buy.stripe.com/aFa5kD1JEbWHcOu9rM6sw0t">10 liens — 261€ (−10%)</option>
+        <option value="#contact">Plus de 10 — nous contacter</option>
+      </select>
+      <ul class="plan-features">
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Prise en charge sous 24h
+        </li>
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Dossier juridique complet (droit à l'oubli, RGPD)
+        </li>
+        <li class="plan-feat plan-feat-in">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Suivi jusqu'au retrait effectif
+        </li>
+        <li class="plan-feat plan-feat-in plan-feat-bold">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Résultat ou remboursé
+        </li>
+        <li class="plan-feat plan-feat-out">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+          Suppression à la source
+        </li>
+        <li class="plan-feat plan-feat-out">
+          <span class="plan-feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+          Surveillance continue
+        </li>
+      </ul>
+      <a href="https://buy.stripe.com/cNibJ173Yf8TaGm47s6sw0k" target="_blank" rel="noopener" class="plan-cta" id="oneShotCta">
+        Démarrer la suppression
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
     <div class="plan reveal">
       <div>
         <span class="plan-tag">Formule standard</span>
@@ -1057,7 +1116,7 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
             <span>Quelle formule est faite pour moi ?</span>
             <span class="faq-q-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
           </button>
-          <div class="faq-a"><p>Shield Pro convient pour un dossier limité, sans situation conflictuelle. Shield Premium est recommandé pour les dossiers nécessitant des mises en demeure ou un suivi rapproché. En cas de doute, contactez-nous, nous vous orienterons honnêtement.</p></div>
+          <div class="faq-a"><p>Shield One répond à un besoin ponctuel de déréférencement, sans abonnement. Shield Pro convient pour un dossier limité, sans situation conflictuelle. Shield Premium est recommandé pour les dossiers nécessitant des mises en demeure ou un suivi rapproché. En cas de doute, contactez-nous, nous vous orienterons honnêtement.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">
@@ -1154,7 +1213,7 @@ footer{background:var(--dark);color:#fff;padding:80px 40px 32px;position:relativ
       <div class="footer-brand">
         <div class="footer-logo">
           <div class="footer-logo-mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5.5 3.84 10.74 9 12 5.16-1.26 9-6.5 9-12V7l-9-5z"/></svg>
+            <img src="logo.png" alt="Shield Digital" onerror="this.style.display='none'">
           </div>
           <span class="footer-logo-text">Shield Digital</span>
         </div>
@@ -1246,6 +1305,24 @@ burger.addEventListener('click',()=>{
 function closeDrawer(){
   burger.classList.remove('open');
   drawer.classList.remove('open');
+}
+
+// SHIELD ONE - menu quantité -> bouton paiement
+const osQty=document.getElementById('oneShotQty');
+const osCta=document.getElementById('oneShotCta');
+if(osQty&&osCta){
+  const ctaSvg=osCta.querySelector('svg').outerHTML;
+  osQty.addEventListener('change',()=>{
+    const v=osQty.value;
+    osCta.href=v;
+    if(v==='#contact'){
+      osCta.removeAttribute('target');
+      osCta.innerHTML='Nous contacter '+ctaSvg;
+    }else{
+      osCta.setAttribute('target','_blank');
+      osCta.innerHTML='Démarrer la suppression '+ctaSvg;
+    }
+  });
 }
 
 // FAQ
